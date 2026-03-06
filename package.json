@@ -1,0 +1,16 @@
+{
+  "name": "macro-daily",
+  "version": "1.0.0",
+  "description": "FX BTC daily news generator",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch_news.js",
+    "summarize": "node scripts/summarize_news.js",
+    "build": "node scripts/build_article.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "openai": "^6.27.0",
+    "rss-parser": "^3.13.0"
+  }
+}
