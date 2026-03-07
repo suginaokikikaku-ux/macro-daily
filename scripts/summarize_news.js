@@ -43,10 +43,19 @@ if (news.length === 0) {
   process.exit(1);
 }
 
-const headlines = news
-  .slice(0, 5)
-  .map((item, index) => `${index + 1}. ${item.title ?? "タイトルなし"}`)
-  .join("\n");
+const selectedNews = news.slice(0, 12);
+
+const newsListForPrompt = selectedNews
+  .map((item, index) => {
+    return [
+      `${index + 1}. タイトル: ${item.title ?? "タイトルなし"}`,
+      `   取得元: ${item.source ?? "unknown"}`,
+      `   カテゴリ: ${item.category ?? "other"}`,
+      `   公開日: ${item.pubDate ?? ""}`,
+      `   URL: ${item.link ?? ""}`
+    ].join("\n");
+  })
+  .join("\n\n");
 
 async function generate() {
   console.log("Starting OpenAI summarize...");
@@ -55,13 +64,15 @@ async function generate() {
 以下のニュースをもとに、FXとBTCのトレーダー向けの日刊記事を書いてください。
 
 ニュース一覧:
-${headlines}
+${newsListForPrompt}
 
 条件:
 - 日本語で書く
 - 事実ベースで簡潔に書く
 - 煽りすぎない
 - 初心者でも読みやすい
+- 「取得元」や「カテゴリ」の偏りがあれば自然に文中へ反映する
+- 例えば「本日はcrypto系ソースが多め」「FX/macro関連が中心」など、全体傾向を簡潔に触れてよい
 - 見出しごとに整理する
 
 構成:
@@ -91,12 +102,21 @@ ${headlines}
     fs.mkdirSync(dailyDir, { recursive: true });
   }
 
+  const uniqueSources = [...new Set(selectedNews.map((item) => item.source).filter(Boolean))];
+  const uniqueCategories = [...new Set(selectedNews.map((item) => item.category).filter(Boolean))];
+
   fs.writeFileSync(
     outputPath,
     JSON.stringify(
       {
         date: today,
-        article
+        article,
+        meta: {
+          sources: uniqueSources,
+          categories: uniqueCategories,
+          newsCount: selectedNews.length
+        },
+        news: selectedNews
       },
       null,
       2
