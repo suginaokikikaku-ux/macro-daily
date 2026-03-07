@@ -33,13 +33,17 @@ const posts = postFiles.map((file) => {
       const daily = JSON.parse(fs.readFileSync(dailyPath, "utf-8"));
       seoTitle = daily.seoTitle || seoTitle;
       seoDescription = daily.seoDescription || seoDescription;
-    } catch {}
+    } catch (error) {
+      console.error(`Failed to parse ${dailyPath}`);
+      console.error(error);
+    }
   }
 
   return {
     date,
     file,
-    url: `${siteUrl}/posts/${file}`,
+    relativeUrl: `./posts/${file}`,
+    fullUrl: `${siteUrl}/posts/${file}`,
     title: seoTitle,
     description: seoDescription
   };
@@ -50,7 +54,7 @@ const listHtml = posts.length
       .map(
         (post) => `
       <li style="margin-bottom: 24px;">
-        <a href="./posts/${post.file}" style="font-size: 20px; font-weight: 700;">${post.title}</a>
+        <a href="${post.relativeUrl}" style="font-size: 20px; font-weight: 700;">${post.title}</a>
         <div style="color:#666; font-size:14px; margin: 4px 0;">${post.date}</div>
         <div>${post.description}</div>
       </li>`
@@ -100,7 +104,7 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
     .map(
       (post) => `
   <url>
-    <loc>${post.url}</loc>
+    <loc>${post.fullUrl}</loc>
     <lastmod>${post.date}</lastmod>
   </url>`
     )
