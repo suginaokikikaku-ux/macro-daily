@@ -6,11 +6,14 @@
   "scripts": {
     "fetch": "node scripts/fetch_news.js",
     "summarize": "node scripts/summarize_news.js",
-    "build": "node scripts/build_article.js"
+    "build": "node scripts/build_article.js",
+    "build:index": "node scripts/build_index.js",
+    "build:all": "npm run fetch && npm run summarize && npm run build && npm run build:index"
   },
   "dependencies": {
     "dotenv": "^17.3.1",
     "openai": "^6.27.0",
     "rss-parser": "^3.13.0"
   }
+  
 }

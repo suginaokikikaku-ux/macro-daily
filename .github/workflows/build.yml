@@ -32,6 +32,13 @@ jobs:
 
       - name: Build article
         run: npm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+
+      - name: Build index and SEO files
+        run: npm run build:index
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
 
       - name: Commit and push
         run: |

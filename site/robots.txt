@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suginaokikikaku-ux.github.io/macro-daily/sitemap.xml
