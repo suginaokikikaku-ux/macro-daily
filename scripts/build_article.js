@@ -46,6 +46,8 @@ if (!fs.existsSync(postsDir)) {
 const sourceText = sources.length > 0 ? sources.join(" / ") : "不明";
 const categoryText = categories.length > 0 ? categories.join(" / ") : "other";
 
+const introLine = `この記事は${categoryText} を中心に、${sourceText} のニュースをもとに整理しています。`;
+
 const references = news
   .map((item, index) => {
     const title = item.title || "タイトルなし";
@@ -57,8 +59,9 @@ const references = news
   .join("\n");
 
 const markdown = `---
-title: "Macro Daily ${today}"
-date: "${today}"
+# Macro Daily ${today}
+${introLine}
+${article}
 sources: "${sourceText}"
 categories: "${categoryText}"
 ---

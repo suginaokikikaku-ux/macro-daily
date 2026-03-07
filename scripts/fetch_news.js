@@ -28,9 +28,9 @@ const rawDir = "data/raw";
 const outputPath = path.join(rawDir, "news.json");
 
 // 1フィードあたり最大取得件数
-const MAX_ITEMS_PER_FEED = 5;
+const MAX_ITEMS_PER_FEED = 10;
 // 最終的に保存する最大件数
-const MAX_TOTAL_ITEMS = 30;
+const MAX_TOTAL_ITEMS = 100;
 
 function normalizeText(text = "") {
   return text
