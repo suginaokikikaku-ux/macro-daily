@@ -1,5 +1,117 @@
 [
   {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Bitcoin tumbles below $66,000 as oil prices explode nearly 20% higher",
+    "link": "https://www.coindesk.com/markets/2026/03/08/bitcoin-tumbles-below-usd66-000-as-oil-prices-explode-higher",
+    "pubDate": "Sun, 08 Mar 2026 22:43:36 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Crypto’s Rock ’n’ Roll Era Is Over",
+    "link": "https://www.coindesk.com/opinion/2026/03/08/crypto-s-rock-n-roll-era-is-over",
+    "pubDate": "Sun, 08 Mar 2026 19:05:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Bitcoin is still a great way to diversify portfolio even if it trades like a tech stock, analyst says",
+    "link": "https://www.coindesk.com/markets/2026/03/08/bitcoin-is-still-a-great-way-to-diversify-portfolio-even-if-it-trades-like-a-tech-stock-analyst-says",
+    "pubDate": "Sun, 08 Mar 2026 16:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Market structure state of play: State of Crypto",
+    "link": "https://www.coindesk.com/news-analysis/2026/03/01/market-structure-state-of-play-state-of-crypto",
+    "pubDate": "Sun, 08 Mar 2026 14:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Oil leaving Middle East trades over $100 a barrel. Here’s how it could affect bitcoin",
+    "link": "https://www.coindesk.com/markets/2026/03/08/some-middle-east-oil-is-now-over-usd100-a-barrel-here-s-how-it-could-affect-bitcoin",
+    "pubDate": "Sun, 08 Mar 2026 13:41:06 +0000"
+  },
+  {
+    "source": "Investing",
+    "category": "stocks",
+    "title": "1 Stock to Buy, 1 Stock to Sell This Week: Adobe, Lennar",
+    "link": "https://www.investing.com/analysis/1-stock-to-buy-1-stock-to-sell-this-week-adobe-lennar-200676244",
+    "pubDate": "Mar 08, 2026 13:36 GMT"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Tokenized assets exceed $25 billion after nearly quadrupling in a year",
+    "link": "https://www.coindesk.com/markets/2026/03/08/tokenized-assets-exceed-usd25-billion-after-nearly-quadrupling-in-a-year",
+    "pubDate": "Sun, 08 Mar 2026 11:04:48 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Canton’s Yuval Rooz says smart contract blockchains face a reckoning over value gap",
+    "link": "https://www.coindesk.com/business/2026/03/08/canton-s-yuval-rooz-says-smart-contract-blockchains-face-a-reckoning-over-value-gap",
+    "pubDate": "Sun, 08 Mar 2026 11:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Bitcoin dip may not be over as whales sell into retail buying — a bearish signal",
+    "link": "https://www.coindesk.com/markets/2026/03/08/bitcoin-dip-may-not-be-over-as-whales-sell-into-retail-buying-a-bearish-signal",
+    "pubDate": "Sun, 08 Mar 2026 05:16:45 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "XRP slips as traders watch $1.35 support",
+    "link": "https://www.coindesk.com/markets/2026/03/08/xrp-slips-as-traders-watch-usd1-35-support",
+    "pubDate": "Sun, 08 Mar 2026 05:06:07 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "title": "Coinbase says new U.S. tax-reporting rules for crypto are cluttered, confusing",
+    "link": "https://www.coindesk.com/policy/2026/03/07/coinbase-says-new-u-s-tax-reporting-rules-for-crypto-are-wasteful-onerous",
+    "pubDate": "Sat, 07 Mar 2026 21:00:00 +0000"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "title": "Breaking: Iran says no more attacks against neighbouring countries “unless they attack first”",
+    "link": "https://www.fxstreet.com/news/breaking-iran-says-no-more-attacks-against-neighbouring-countries-unless-they-attack-first-202603070946",
+    "pubDate": "Sat, 07 Mar 2026 09:46:41 Z"
+  },
+  {
+    "source": "Investing",
+    "category": "macro",
+    "title": "High-Yield Investments Are Likely to Benefit From This Market Reset",
+    "link": "https://www.investing.com/analysis/highyield-investments-are-likely-to-benefit-from-this-market-reset-200676236",
+    "pubDate": "Mar 07, 2026 07:20 GMT"
+  },
+  {
+    "source": "Investing",
+    "category": "macro",
+    "title": "The ’Fiat Collapse’ Narrative Overlooks the US Dollar’s Next Evolution",
+    "link": "https://www.investing.com/analysis/usd-stablecoins-and-the-rebasement-of-the-us-dollar-200676197",
+    "pubDate": "Mar 07, 2026 07:19 GMT"
+  },
+  {
+    "source": "Investing",
+    "category": "stocks",
+    "title": "Costco Wholesale: Buy Now, Get Paid Later as Cash and Returns Build",
+    "link": "https://www.investing.com/analysis/costco-wholesale-buy-now-get-paid-later-as-cash-and-returns-build-200676237",
+    "pubDate": "Mar 07, 2026 07:07 GMT"
+  },
+  {
+    "source": "Investing",
+    "category": "macro",
+    "title": "The Passive Investing Boom Is Fueling a New Wave of Market Speculation",
+    "link": "https://www.investing.com/analysis/the-passive-agressive-market-bogles-warning-came-true-200676030",
+    "pubDate": "Mar 07, 2026 07:00 GMT"
+  },
+  {
     "source": "FXStreet",
     "category": "fx",
     "title": "China: Inflation and trade data support modest recovery – ING",
@@ -40,13 +152,6 @@
     "title": "Weather and Strikes Weigh on February US Jobs",
     "link": "https://www.investing.com/analysis/weather-and-strikes-weigh-on-february-us-jobs-200676234",
     "pubDate": "Mar 06, 2026 20:19 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "Why bitcoin couldn't hold $70,000 despite its best week of Wall Street news in months",
-    "link": "https://www.coindesk.com/markets/2026/03/06/why-bitcoin-suffered-a-usd110-billion-wipeout-despite-its-best-week-of-wall-street-news-in-months",
-    "pubDate": "Fri, 06 Mar 2026 20:17:14 +0000"
   },
   {
     "source": "Investing",
@@ -119,13 +224,6 @@
     "pubDate": "Mar 06, 2026 19:06 GMT"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "Managing financial AI agents is the only skill you’ll need to survive the AI layoffs",
-    "link": "https://www.coindesk.com/opinion/2026/03/06/managing-financial-ai-agents-is-the-only-skill-you-ll-need-to-survive-the-ai-layoffs",
-    "pubDate": "Fri, 06 Mar 2026 19:00:00 +0000"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "title": "Forecasting the upcoming week: Middle East war boosts Oil, NFP miss shakes US Dollar",
@@ -138,13 +236,6 @@
     "title": "Silver Price Forecast: XAG/USD range-bound as RSI holds near 50 and MACD flattens",
     "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-range-bound-as-rsi-holds-near-50-and-macd-flattens-202603061834",
     "pubDate": "Fri, 06 Mar 2026 18:34:49 Z"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "title": "Fed’s Collins: Fed policy is well positioned",
-    "link": "https://www.fxstreet.com/news/feds-collins-fed-policy-is-well-positioned-202603061833",
-    "pubDate": "Fri, 06 Mar 2026 18:33:45 Z"
   },
   {
     "source": "FXStreet",
@@ -166,13 +257,6 @@
     "title": "Labor Pains Raise Chances of Fed Rate Cuts as Payrolls Decline",
     "link": "https://www.investing.com/analysis/labor-pains-raise-chances-of-fed-rate-cuts-as-payrolls-decline-200676228",
     "pubDate": "Mar 06, 2026 17:47 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "BlackRock private credit fund is latest to crack, hitting crypto prices and DeFi markets",
-    "link": "https://www.coindesk.com/markets/2026/03/06/blackrock-private-credit-fund-is-latest-to-crack-hitting-crypto-prices-and-defi-markets",
-    "pubDate": "Fri, 06 Mar 2026 17:30:48 +0000"
   },
   {
     "source": "Investing",
@@ -211,31 +295,10 @@
   },
   {
     "source": "Investing",
-    "category": "stocks",
-    "title": "Okta Earnings Beat, but Growth Questions Remain",
-    "link": "https://www.investing.com/analysis/okta-earnings-beat-but-growth-questions-remain-200676224",
-    "pubDate": "Mar 06, 2026 16:05 GMT"
-  },
-  {
-    "source": "Investing",
-    "category": "stocks",
-    "title": "The Treasure Hunt Trade: Why Ross and TJX Are Winning the Market",
-    "link": "https://www.investing.com/analysis/the-treasure-hunt-trade-why-ross-and-tjx-are-winning-the-market-200676222",
-    "pubDate": "Mar 06, 2026 15:49 GMT"
-  },
-  {
-    "source": "Investing",
     "category": "crypto",
     "title": "Bitcoin Stabilizes as BlackRock IBIT Drives the Latest ETF Inflow Wave",
     "link": "https://www.investing.com/analysis/bitcoin-stabilizes-as-blackrock-ibit-drives-the-latest-etf-inflow-wave-200676221",
     "pubDate": "Mar 06, 2026 15:41 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "Bitcoin buyers are cashing out fast after short-lived jump to $74,000",
-    "link": "https://www.coindesk.com/markets/2026/03/06/bitcoin-falls-below-usd70-000-as-short-term-holders-take-profits",
-    "pubDate": "Fri, 06 Mar 2026 15:24:21 +0000"
   },
   {
     "source": "Investing",
@@ -266,11 +329,11 @@
     "pubDate": "Fri, 06 Mar 2026 15:02:29 Z"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "Binance tells Senate probe no accounts sent crypto directly to Iran",
-    "link": "https://www.coindesk.com/policy/2026/03/06/binance-tells-senate-probe-no-accounts-sent-crypto-directly-to-iran",
-    "pubDate": "Fri, 06 Mar 2026 15:01:28 +0000"
+    "source": "Investing",
+    "category": "macro",
+    "title": "Week in Focus: US and China Inflation, UK GDP, China Trade and CBRT",
+    "link": "https://www.investing.com/analysis/week-in-focus-us-and-china-inflation-uk-gdp-china-trade-and-cbrt-200676215",
+    "pubDate": "Mar 06, 2026 14:55 GMT"
   },
   {
     "source": "FXStreet",
@@ -280,32 +343,11 @@
     "pubDate": "Fri, 06 Mar 2026 14:54:36 Z"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "'No deal with Iran': Trump demands unconditional surrender, sending oil surging, bitcoin and stocks lower ",
-    "link": "https://www.coindesk.com/markets/2026/03/06/no-deal-with-iran-trump-demands-unconditional-surrender-sending-oil-surging-bitcoin-and-stocks-lower",
-    "pubDate": "Fri, 06 Mar 2026 14:34:58 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "CoinDesk 20 performance update: Aave drops 4.3% as all index constituents trade lower",
-    "link": "https://www.coindesk.com/coindesk-indices/2026/03/06/coindesk-20-performance-update-aave-drops-4-3-as-all-index-constituents-trade-lower",
-    "pubDate": "Fri, 06 Mar 2026 14:18:17 +0000"
-  },
-  {
     "source": "Investing",
     "category": "macro",
     "title": "Markets Could Break Today—Payroll Data May Trigger Selloff",
     "link": "https://www.investing.com/analysis/markets-could-break-todaypayroll-data-may-trigger-selloff-200676213",
     "pubDate": "Mar 06, 2026 13:38 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "U.S. unexpectedly lost 92,000 jobs in February, unemployment rate rose to 4.4%",
-    "link": "https://www.coindesk.com/markets/2026/03/06/u-s-lost-92-000-jobs-in-february-unemployment-rate-rose-to-4-2",
-    "pubDate": "Fri, 06 Mar 2026 13:33:54 +0000"
   },
   {
     "source": "Investing",
@@ -322,25 +364,11 @@
     "pubDate": "Mar 06, 2026 13:32 GMT"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "Kazakhstan central bank to invest $350 million worth of gold, forex reserves into digital assets",
-    "link": "https://www.coindesk.com/business/2026/03/06/kazakhstan-central-bank-to-invest-usd350-million-worth-of-gold-forex-reserves-into-digital-assets",
-    "pubDate": "Fri, 06 Mar 2026 13:08:55 +0000"
-  },
-  {
     "source": "FXStreet",
     "category": "crypto",
     "title": "Pi Network Price Forecast: Bulls extend recovery on strong retail demand",
     "link": "https://www.fxstreet.com/cryptocurrencies/news/pi-network-price-forecast-bulls-extend-recovery-on-strong-retail-demand-202603061227",
     "pubDate": "Fri, 06 Mar 2026 12:27:45 Z"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "title": "Bitcoin hit by short-termism as rally fades ahead of U.S. jobs data",
-    "link": "https://www.coindesk.com/daybook-us/2026/03/06/bitcoin-hit-by-short-termism-as-rally-fades-ahead-of-u-s-jobs-data",
-    "pubDate": "Fri, 06 Mar 2026 12:20:32 +0000"
   },
   {
     "source": "FXStreet",
@@ -362,13 +390,6 @@
     "title": "Bitcoin: Failure at Key Technical Levels Signals Risk of Further Pullback",
     "link": "https://www.investing.com/analysis/bitcoin-failure-at-key-technical-levels-signals-risk-of-further-pullback-200676203",
     "pubDate": "Mar 06, 2026 11:10 GMT"
-  },
-  {
-    "source": "Investing",
-    "category": "macro",
-    "title": "US NFP Report Awaited Amid Iran War",
-    "link": "https://www.investing.com/analysis/us-nfp-report-awaited-amid-iran-war-200676202",
-    "pubDate": "Mar 06, 2026 11:03 GMT"
   },
   {
     "source": "FXStreet",
@@ -407,13 +428,6 @@
   },
   {
     "source": "Investing",
-    "category": "macro",
-    "title": "Oil Prices in the Driving Seat: The Middle East Keeps Markets on Edge",
-    "link": "https://www.investing.com/analysis/oil-prices-in-the-driving-seat-the-middle-east-keeps-markets-on-edge-200676192",
-    "pubDate": "Mar 06, 2026 09:29 GMT"
-  },
-  {
-    "source": "Investing",
     "category": "forex",
     "title": "EUR/USD Breaks Rising Channel as Energy Prices Surge",
     "link": "https://www.investing.com/analysis/eurusd-breaks-rising-channel-as-energy-prices-surge-200676179",
@@ -446,20 +460,6 @@
     "title": "Jobs Data, Monetary Policy and Energy Support Packages",
     "link": "https://www.investing.com/analysis/jobs-data-monetary-policy-and-energy-support-packages-200676186",
     "pubDate": "Mar 06, 2026 08:23 GMT"
-  },
-  {
-    "source": "Investing",
-    "category": "macro",
-    "title": "NFP Preview: The Labor Market Is the Engine but Oil Is the Steering Wheel",
-    "link": "https://www.investing.com/analysis/nfp-preview-the-labor-market-is-the-engine-but-oil-is-the-steering-wheel-200676185",
-    "pubDate": "Mar 06, 2026 08:13 GMT"
-  },
-  {
-    "source": "Investing",
-    "category": "macro",
-    "title": "Gold Rises as Oil Falls After US Waiver While Yields Stay Elevated",
-    "link": "https://www.investing.com/analysis/gold-rises-as-oil-falls-after-us-waiver-while-yields-stay-elevated-200676184",
-    "pubDate": "Mar 06, 2026 07:28 GMT"
   },
   {
     "source": "FXStreet",
@@ -642,12 +642,5 @@
     "title": "EUR/USD Stalls as Traders Wait on Fed Minutes and Capital Flow Clarity",
     "link": "https://www.investing.com/analysis/eurusd-stalls-as-traders-wait-on-fed-minutes-and-capital-flow-clarity-200675138",
     "pubDate": "Feb 17, 2026 11:19 GMT"
-  },
-  {
-    "source": "Investing",
-    "category": "macro_fundamental",
-    "title": "How Private Equity Creates Value Through Buyouts, Growth, and Venture Capital",
-    "link": "https://www.investing.com/analysis/how-private-equity-creates-value-through-buyouts-growth-and-venture-capital-200675092",
-    "pubDate": "Feb 16, 2026 13:23 GMT"
   }
 ]
