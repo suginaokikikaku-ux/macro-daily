@@ -1,0 +1,104 @@
+{
+  "date": "2026-03-13",
+  "article": "# FXとBTCトレーダー向け日刊記事（2026年3月14日）\n\n## 今日の結論\n本日は、FXと仮想通貨市場の動向が注目される一日となっています。特にEUR/USDの動きや、米国の金利政策が影響を与えており、BTC市場もトレーダーの関心を集めています。\n\n## 重要ニュース\n1. **EUR/USDが週末近くで1.1400を下回る**  \n   取得元: [FXStreet](https://www.fxstreet.com/news/eur-usd-price-forecast-ends-week-near-11400-down-below-the-200-dma-202603132152)\n\n2. **米国の裁判官、パウエル連邦準備制度理事会議長に対する召喚状を却下**  \n   取得元: [FXStreet](https://www.fxstreet.com/news/us-judge-dismisses-subpoenas-against-fed-chair-powell-in-doj-probe-wsj-202603132127)\n\n3. **DXYが100.00を超え、金価格が週間で下落の見込み**  \n   取得元: [FXStreet](https://www.fxstreet.com/news/gold-price-heads-for-weekly-loss-as-dxy-surges-above-10000-202603132116)\n\n4. **FEDが利下げを遅らせると予測**  \n   取得元: [Investing](https://www.investing.com/analysis/fed-to-delay-rate-cuts-as-war-clouds-the-outlook-200676642)\n\n5. **DeFiにおけるスリッページ事件、トレーダーが5000万ドルを失う**  \n   取得元: [FXStreet](https://www.fxstreet.com/cryptocurrencies/news/trader-loses-50-million-in-slippage-incident-on-aave-sparking-debate-over-defi-safeguards-202603132032)\n\n## ニュースの背景\n最近の市場においては、EUR/USDが200日移動平均線を下回る結果となり、今後の動向が懸念されています。また、米国の裁判所がパウエル議長に対する召喚状を却下したことで、連邦準備制度の政策に対する影響が注目を集めています。さらに、DXYの上昇により、金価格が下落する見通しも伝えられています。\n\n## 市場の反応\nFX市場では、EUR/USDの動向が注目されつつあり、特にテクニカル面でのサポートラインを下回ったことがトレーダーの心理に影響を与えています。加えて、米国の金利政策に関する不透明感が増す中、投資家はリスク回避の姿勢を取る可能性があります。\n\n## USD/JPYへの影響\n米国の利下げ方針の遅延がUSD/JPYにどのように影響するかは予測が難しいですが、現時点ではドル高が進行する可能性があります。特に、DXYの上昇がドルの強さを示唆していることから、USD/JPYにとってプラス要因となるかもしれません。\n\n## BTCへの影響\n仮想通貨市場では、DeFi関連のスリッページ事件が注目されています。大きな資金が失われたことから、DeFiの安全性に対する懸念が高まっており、BTCの価格も影響を受ける可能性があります。また、コートによるCustodiaと連邦準備制度の関係の合意があったことも、BTCに対する規制の在り方に影響を及ぼすかもしれません。\n\n## トレーダーの注目ポイント\nトレーダーは、EUR/USDのテクニカル面、米国の金利政策、そしてDeFiの安全性に特に注意を払う必要があります。また、BTC市場では、最近のスリッページ事件を受けて安全性への考慮が重要です。現状、リスク管理をしっかりと行い、慎重なトレードを心がけることが求められます。",
+  "meta": {
+    "sources": [
+      "FXStreet",
+      "Investing",
+      "CoinDesk"
+    ],
+    "categories": [
+      "fx",
+      "macro",
+      "crypto",
+      "stocks"
+    ],
+    "newsCount": 12
+  },
+  "news": [
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "title": "EUR/USD Price Forecast: Ends week near 1.1400, down below the 200-DMA",
+      "link": "https://www.fxstreet.com/news/eur-usd-price-forecast-ends-week-near-11400-down-below-the-200-dma-202603132152",
+      "pubDate": "Fri, 13 Mar 2026 21:52:09 Z"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "title": "US Judge dismisses subpoenas against Fed Chair Powell in DOJ probe – WSJ",
+      "link": "https://www.fxstreet.com/news/us-judge-dismisses-subpoenas-against-fed-chair-powell-in-doj-probe-wsj-202603132127",
+      "pubDate": "Fri, 13 Mar 2026 21:28:40 Z"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "title": "Gold price heads for weekly loss as DXY surges above 100.00",
+      "link": "https://www.fxstreet.com/news/gold-price-heads-for-weekly-loss-as-dxy-surges-above-10000-202603132116",
+      "pubDate": "Fri, 13 Mar 2026 21:16:42 Z"
+    },
+    {
+      "source": "Investing",
+      "category": "macro",
+      "title": "More Questions Than Answers: Thinking Through Recession Risks",
+      "link": "https://www.investing.com/analysis/more-questions-than-answers-thinking-through-recession-risks-200676643",
+      "pubDate": "Mar 13, 2026 21:13 GMT"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "title": "Court closes Custodia fight with Federal Reserve just as Fed opens master-account door",
+      "link": "https://www.coindesk.com/policy/2026/03/13/court-closes-custodia-fight-with-federal-reserve-just-as-fed-opens-master-account-door",
+      "pubDate": "Fri, 13 Mar 2026 21:04:03 +0000"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "title": "Trader loses $50 million in slippage incident on Aave, sparking debate over DeFi safeguards",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/trader-loses-50-million-in-slippage-incident-on-aave-sparking-debate-over-defi-safeguards-202603132032",
+      "pubDate": "Fri, 13 Mar 2026 20:32:19 Z"
+    },
+    {
+      "source": "Investing",
+      "category": "macro",
+      "title": "Fed to Delay Rate Cuts as War Clouds the Outlook",
+      "link": "https://www.investing.com/analysis/fed-to-delay-rate-cuts-as-war-clouds-the-outlook-200676642",
+      "pubDate": "Mar 13, 2026 20:30 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "stocks",
+      "title": "Bargain Alert: Wells Fargo and Goldman Sachs Look Deeply Oversold",
+      "link": "https://www.investing.com/analysis/bargain-alert-wells-fargo-and-goldman-sachs-look-deeply-oversold-200676641",
+      "pubDate": "Mar 13, 2026 20:21 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "stocks",
+      "title": "S&P 500 Pattern Since 1928 Suggests Rally Into Late March",
+      "link": "https://www.investing.com/analysis/sp-500-pattern-since-1928-suggests-rally-into-late-march-200676640",
+      "pubDate": "Mar 13, 2026 20:04 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "stocks",
+      "title": "Dollar General Stock Decline Triggers Institutional Buying and Bullish Signals",
+      "link": "https://www.investing.com/analysis/dollar-general-stock-decline-triggers-institutional-buying-and-bullish-signals-200676639",
+      "pubDate": "Mar 13, 2026 20:00 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "title": "USD/KRW: Upside risks with key resistance – OCBC",
+      "link": "https://www.fxstreet.com/news/usd-krw-upside-risks-with-key-resistance-ocbc-202603131947",
+      "pubDate": "Fri, 13 Mar 2026 19:47:00 Z"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "title": "Circle overtakes BlackRock in tokenized Treasuries as market hits record $11 billion",
+      "link": "https://www.coindesk.com/markets/2026/03/13/circle-overtakes-blackrock-in-tokenized-treasuries-as-market-hits-record-usd11-billion",
+      "pubDate": "Fri, 13 Mar 2026 19:41:14 +0000"
+    }
+  ]
+}
