@@ -14,41 +14,336 @@
   <meta property="og:site_name" content="Macro Daily" />
   <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Macro Daily 2026-03-07｜FX・BTC・マクロ市場まとめ","description":"FX・BTC・マクロ市場の注目ニュースを整理。USD/JPYとビットコインへの影響、監視ポイント、今日の結論までまとめています。","datePublished":"2026-03-07","dateModified":"2026-03-07","author":{"@type":"Organization","name":"Macro Daily"},"publisher":{"@type":"Organization","name":"Macro Daily"},"mainEntityOfPage":"https://suginaokikikaku-ux.github.io/macro-daily/posts/2026-03-07.html"}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.8; max-width: 860px; margin: 40px auto; padding: 0 16px; color: #111; }
-    h1, h2, h3 { line-height: 1.4; }
-    .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
-    .box { background: #f7f7f7; border-radius: 12px; padding: 16px; margin: 24px 0; }
-    a { color: #0a58ca; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { padding-left: 20px; }
+    :root {
+      --bg: #0b1120;
+      --bg-soft: #111827;
+      --panel: rgba(15, 23, 42, 0.88);
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --text: #e5e7eb;
+      --text-soft: #94a3b8;
+      --heading: #f8fafc;
+      --accent: #38bdf8;
+      --accent-strong: #0ea5e9;
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 28%),
+        linear-gradient(180deg, #020617 0%, #0b1120 100%);
+      color: var(--text);
+      padding: 32px 16px 64px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #93c5fd;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(30,41,59,0.96));
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(56,189,248,0.14), transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 340px;
+      border-radius: 18px;
+      margin-bottom: 28px;
+      background-image: url("../assets/img/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-image-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at center, rgba(56,189,248,0.22), transparent 35%),
+        linear-gradient(135deg, #111827, #1e293b);
+    }
+
+    .hero-image-fallback-text {
+      font-size: 32px;
+      font-weight: 800;
+      color: #f8fafc;
+      letter-spacing: -0.03em;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(36px, 6vw, 54px);
+      line-height: 1.1;
+      font-weight: 800;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 17px;
+      color: #cbd5e1;
+      max-width: 680px;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-note {
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .content-card,
+    .info-card,
+    .references-card {
+      background: linear-gradient(180deg, rgba(17,24,39,0.92), rgba(15,23,42,0.92));
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius-md);
+      padding: 22px 20px 20px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-card {
+      margin-bottom: 20px;
+    }
+
+    .intro-box {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      color: #dbeafe;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--heading);
+      margin-top: 34px;
+      margin-bottom: 14px;
+      font-size: 25px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .content-card h2:first-child,
+    .info-card h2:first-child,
+    .references-card h2:first-child {
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--heading);
+      margin-top: 24px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 1.45;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #d1d5db;
+      font-size: 16px;
+    }
+
+    strong {
+      color: #f8fafc;
+    }
+
+    ul {
+      padding-left: 22px;
+      color: #d1d5db;
+      margin: 0 0 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .references-card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .references-card a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--panel-border);
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .footer strong {
+      color: var(--heading);
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 22px;
+      }
+
+      .hero-image {
+        height: 220px;
+        margin-bottom: 22px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
-  <p><a href="../index.html">← 記事一覧へ戻る</a></p>
-  <h1>Macro Daily 2026-03-07｜FX・BTC・マクロ市場まとめ</h1>
-  <div class="meta">2026-03-07</div>
+  <div class="container">
+    <a class="back-link" href="../index.html">← 記事一覧へ戻る</a>
 
-  <p>この記事はfx・stocks・crypto・macroを中心に、FXStreet / Investing / CoinDeskのニュースをもとに整理しています。</p><h2>1. 今日の結論</h2>
-本日は、FX市場と暗号資産（クリプト）の市場で異なる動向が見られます。FX関連では中国のインフレや貿易データが回復の兆しを示しており、これが市場のセンチメントに影響を与えています。一方、BTC（ビットコイン）は短期的な価格調整段階にある模様で、重要なサポートラインを維持できるかが焦点となります。</p><h2>2. 重要ニュース</h2>
-<ul><li>中国は、インフレと貿易データが回復を支持していると報じられています（[FXStreet](https://www.fxstreet.com/news/china-inflation-and-trade-data-support-modest-recovery-ing-202603062227)）。</li>
-<li>米ドルに対する人民元（CNY）の流入が分散し、安全資産としての疑念が高まっています（[FXStreet](https://www.fxstreet.com/news/cny-flows-diverge-as-safe-haven-doubts-grow-bny-202603061958)）。</li>
-<li>BTCが一週間で最良のウォールストリートのニュースを受けたにもかかわらず、$70,000を維持できずに価格調整が進行しています（[CoinDesk](https://www.coindesk.com/markets/2026/03/06/why-bitcoin-suffered-a-usd110-billion-wipeout-despite-its-best-week-of-wall-street-news-in-months)）。</li></p><h2>3. ニュースの背景</h2>
-中国の最近のインフレ率と貿易データは、経済回復の兆しとして捉えられています。INGはこの動きが景気回復を支えると分析しています。また、人民元（CNY）の動向に関しては、米ドルの需要が高まっており、これがアップサイドリスクをもたらす要因となっています。</p><p>一方で、ビットコイン市場では、重要なニュースにもかかわらず、BTCが$70,000の壁を越えられず、価格が調整されています。この背景には、投資家の心理やテクニカル指標からくる売り圧力が影響していると考えられます。</p><h2>4. 市場の反応</h2>
-FX市場では、中国の経済指標を受けて、リスクオンの動きが見られ、特に人民元やオーストラリアドルなどが上昇しています。ドルに対する人民元（USD/CNH）にも上昇リスクが指摘されています。</p><p>BTC市場では、仮想通貨のボラティリティが引き続き高く、最近のウォールストリートからの良いニュースが価格維持に貢献しなかったことが懸念されています。</p><h2>5. USD/JPYへの影響</h2>
-中国の経済データが支持される中で、USD/JPYは下支えされていますが、他の市場要因や米国の経済状況に応じて変動があると予測されます。特に、米国の金利政策やインフレについての発言が今後の動向を左右するため、注意が必要です。</p><h2>6. BTCへの影響</h2>
-BTCは直近のサポートラインを維持するための重要な時期を迎えており、$65,000付近が焦点となります。市場のセンチメントと同様に、米国の経済動向や規制動向にも影響されやすく、トレーダーは全体的な市場の動きに対して警戒が必要です。</p><h2>7. トレーダーの注目ポイント</h2>
-<li>中国の経済指標の発表や米国の経済データに注目し、それらがドルや他の通貨に与える影響を分析することが重要です。</li>
-<li>BTC市場では、テクニカル分析に基づき、サポートラインを維持できるかを見守る必要があります。また、重要なニュースの動向も視野に入れておくべきです。</li></ul>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-image" aria-label="記事ヘッダー画像"></div>
+        <div class="eyebrow">DAILY MARKET ARTICLE</div>
+        <h1>Macro Daily 2026-03-07｜FX・BTC・マクロ市場まとめ</h1>
+        <p>FX・BTC・マクロ市場の注目ニュースを整理。USD/JPYとビットコインへの影響、監視ポイント、今日の結論までまとめています。</p>
+        <div class="hero-actions">
+          <span class="hero-note">2026-03-07 / macro・stocks・crypto・fx</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="box">
-    <h2>今日の取得元</h2>
-    <p>FXStreet / Investing / CoinDesk</p>
-    <h2>今日のカテゴリ</h2>
-    <p>fx・stocks・crypto・macro</p>
+    <section class="content-card">
+      <div class="intro-box">この記事はmacro・stocks・crypto・fxを中心に、Investing / CoinDesk / FXStreetのニュースをもとに整理しています。</div>
+      <h3>1. 今日の結論</h3>
+本日は、主にマクロ経済関連のニュースが多く、特に米ドルの動きやビットコインの価格に影響が及ぶ可能性が高い状況です。トレーダーはこれらの情報を注意深く分析し、戦略を立てることが求められます。</p><h3>2. 重要ニュース</h3>
+<ul><li>ビットコインが68,000ドルを下回り、米ドルは過去1年間で最も急激な上昇を記録（CoinDesk）</li>
+<li>投資会社がビットコインはさらなる30%の価格下落の可能性があると警告（CoinDesk）</li>
+<li>中国のインフレと貿易データが回復を示唆（FXStreet）</li>
+<li>USD/CNHが強い基準値と米ドル需要により上昇リスク（FXStreet）</li></p><h3>3. ニュースの背景</h3>
+米ドルの顕著な上昇を背景に、ビットコインは価格調整の局面に入っています。特に米国市場では、過去1年間で最も急激な米ドルの上昇が見られており、これがリスク資産に与える影響が懸念されています。また、中国の経済データは回復基調にある一方で、国際市場では慎重な姿勢が求められています。</p><h3>4. 市場の反応</h3>
+米ドルの急騰により、リスクオフの動きが強まっています。トレーダーたちはビットコインが68,000ドルを下回ったことを受け、下落トレンドに入る可能性を真剣に考慮しています。特に、ビットコインの四年サイクルの強さが指摘されており、さらなる下落が懸念されています。</p><h3>5. USD/JPYへの影響</h3>
+米ドルの強さは、USD/JPYにとって上昇要因となります。市場が米ドルへの需要を高める中で、USD/JPYは上昇トレンドに入る可能性があります。トレーダーはこの動きを追い、適切なエントリーとエグジットのポイントを見極めることが重要です。</p><h3>6. BTCへの影響</h3>
+ビットコインは現在、68,000ドルを下回り、さらなる価格下落の懸念が高まっています。トレーダーは市場心理を考慮し、短期的な売買戦略を見直す必要があります。特に、30%の下落リスクが指摘されているため、ロングポジションを持つ投資家は慎重な判断が求められます。</p><h3>7. トレーダーの注目ポイント</h3>
+トレーダーは以下の点に注目する必要があります：
+<li>米ドルの動向とその影響（特にUSD/JPY）</li>
+<li>ビットコインの価格推移および短期的なトレンド</li>
+<li>中国経済の回復状況と、それがグローバル市場に及ぼす影響</li></ul><p>今後の市場動向を注視し、冷静にトレードを行うことが成功への鍵となります。各情報源を参照しつつ、戦略を柔軟に調整してください。</p>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h2>今日の取得元</h2>
+        <p>Investing / CoinDesk / FXStreet</p>
+      </div>
+
+      <div class="info-card">
+        <h2>今日のカテゴリ</h2>
+        <p>macro・stocks・crypto・fx</p>
+      </div>
+    </section>
+
+    <section class="references-card">
+      <h2>参照ニュース一覧</h2>
+      <ul><li>[1] High-Yield Investments Are Likely to Benefit From This Market Reset（Investing / macro） - <a href="https://www.investing.com/analysis/highyield-investments-are-likely-to-benefit-from-this-market-reset-200676236" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[2] The ’Fiat Collapse’ Narrative Overlooks the US Dollar’s Next Evolution（Investing / macro） - <a href="https://www.investing.com/analysis/usd-stablecoins-and-the-rebasement-of-the-us-dollar-200676197" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[3] Costco Wholesale: Buy Now, Get Paid Later as Cash and Returns Build（Investing / stocks） - <a href="https://www.investing.com/analysis/costco-wholesale-buy-now-get-paid-later-as-cash-and-returns-build-200676237" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[4] The Passive Investing Boom Is Fueling a New Wave of Market Speculation（Investing / macro） - <a href="https://www.investing.com/analysis/the-passive-agressive-market-bogles-warning-came-true-200676030" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[5] Bitcoin slips below $68,000 heading into the weekend as dollar posts steepest weekly gain in a year（CoinDesk / crypto） - <a href="https://www.coindesk.com/markets/2026/03/07/bitcoin-slips-below-usd68-000-heading-into-the-weekend-as-dollar-posts-steepest-weekly-gain-in-a-year" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[6] Bitcoin could crash by another 30% as four-year cycle gains strength, investment firm says（CoinDesk / crypto） - <a href="https://www.coindesk.com/markets/2026/03/07/bitcoin-could-crash-another-30-as-four-year-cycle-gains-strength-investment-firm-says" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[7] China: Inflation and trade data support modest recovery – ING（FXStreet / fx） - <a href="https://www.fxstreet.com/news/china-inflation-and-trade-data-support-modest-recovery-ing-202603062227" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[8] Salesforce: A Week After Earnings, the Market Has Spoken（Investing / stocks） - <a href="https://www.investing.com/analysis/salesforce-a-week-after-earnings-the-market-has-spoken-200676235" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[9] USD/CNH: Upside risks as strong fix meets USD demand – OCBC（FXStreet / fx） - <a href="https://www.fxstreet.com/news/usd-cnh-upside-risks-as-strong-fix-meets-usd-demand-ocbc-202603062134" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[10] Curve Finance accuses PancakeSwap of copying StableSwap code（FXStreet / crypto） - <a href="https://www.fxstreet.com/cryptocurrencies/news/curve-finance-accuses-pancakeswap-of-copying-stableswap-code-202603062126" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[11] Singapore: Limited growth hit from conflict – UOB（FXStreet / fx） - <a href="https://www.fxstreet.com/news/singapore-limited-growth-hit-from-conflict-uob-202603062041" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[12] Weather and Strikes Weigh on February US Jobs（Investing / macro） - <a href="https://www.investing.com/analysis/weather-and-strikes-weigh-on-february-us-jobs-200676234" target="_blank" rel="noopener noreferrer">元記事</a></li></ul>
+    </section>
+
+    <footer class="footer">
+      <p><strong>Macro Daily</strong>｜FX・BTC・マクロ市場のデイリーまとめ</p>
+    </footer>
   </div>
-
-  <h2>参照ニュース一覧</h2>
-  <ul><li>[1] China: Inflation and trade data support modest recovery – ING（FXStreet / fx） - <a href="https://www.fxstreet.com/news/china-inflation-and-trade-data-support-modest-recovery-ing-202603062227" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[2] Salesforce: A Week After Earnings, the Market Has Spoken（Investing / stocks） - <a href="https://www.investing.com/analysis/salesforce-a-week-after-earnings-the-market-has-spoken-200676235" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[3] USD/CNH: Upside risks as strong fix meets USD demand – OCBC（FXStreet / fx） - <a href="https://www.fxstreet.com/news/usd-cnh-upside-risks-as-strong-fix-meets-usd-demand-ocbc-202603062134" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[4] Curve Finance accuses PancakeSwap of copying StableSwap code（FXStreet / crypto） - <a href="https://www.fxstreet.com/cryptocurrencies/news/curve-finance-accuses-pancakeswap-of-copying-stableswap-code-202603062126" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[5] Singapore: Limited growth hit from conflict – UOB（FXStreet / fx） - <a href="https://www.fxstreet.com/news/singapore-limited-growth-hit-from-conflict-uob-202603062041" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[6] Weather and Strikes Weigh on February US Jobs（Investing / macro） - <a href="https://www.investing.com/analysis/weather-and-strikes-weigh-on-february-us-jobs-200676234" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[7] Why bitcoin couldn't hold $70,000 despite its best week of Wall Street news in months（CoinDesk / crypto） - <a href="https://www.coindesk.com/markets/2026/03/06/why-bitcoin-suffered-a-usd110-billion-wipeout-despite-its-best-week-of-wall-street-news-in-months" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[8] Early Impact of Iran War Is Low, but Economic Risks Are Rising（Investing / macro） - <a href="https://www.investing.com/analysis/iran-wars-initial-economic-shock-is-mild-yet-downside-risks-grow-200676207" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[9] Unmanned Profits: The New Kings of the Modern Battlefield（Investing / stocks） - <a href="https://www.investing.com/analysis/unmanned-profits-the-new-kings-of-the-modern-battlefield-200676233" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[10] CNY: Flows diverge as safe haven doubts grow – BNY（FXStreet / fx） - <a href="https://www.fxstreet.com/news/cny-flows-diverge-as-safe-haven-doubts-grow-bny-202603061958" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[11] USD/CHF Price Forecast: Struggles at 0.7800, dives below 50-day SMA（FXStreet / fx） - <a href="https://www.fxstreet.com/news/usd-chf-price-forecast-struggles-at-07800-dives-below-50-day-sma-202603061955" target="_blank" rel="noopener noreferrer">元記事</a></li><li>[12] Fed’s Hammack: Inflation problem is broader than just tariffs（FXStreet / fx） - <a href="https://www.fxstreet.com/news/feds-hammack-inflation-problem-is-broader-than-just-tariffs-202603061954" target="_blank" rel="noopener noreferrer">元記事</a></li></ul>
 </body>
 </html>
