@@ -43,20 +43,26 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: Debug generated files
-        run: |
-          echo "=== pwd ==="
-          pwd
-          echo "=== data ==="
-          find data -maxdepth 3 -type f | sort || true
-          echo "=== data/daily ==="
-          ls -la data/daily || true
-
-      - name: Build article
+      - name: Build articles
         run: npm run build
 
-      - name: Build index and SEO files
+      - name: Build index
         run: npm run build:index
+
+      - name: Build category pages
+        run: npm run build:categories
+
+      - name: Build knowledge pages
+        run: npm run build:knowledge
+
+      - name: Debug generated files
+        run: |
+          echo "=== root html ==="
+          ls -la *.html || true
+          echo "=== basics ==="
+          find basics -maxdepth 3 -type f | sort || true
+          echo "=== site/posts ==="
+          find site/posts -maxdepth 1 -type f | sort || true
 
       - name: Commit and push
         run: |
