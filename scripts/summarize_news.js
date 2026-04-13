@@ -80,6 +80,10 @@ function normalizeCategory(category) {
   return String(category ?? "").trim().toLowerCase();
 }
 
+function normalizeMarket(market) {
+  return String(market ?? "").trim().toLowerCase();
+}
+
 function pickFxNews(news) {
   const fxCategories = new Set(["fx", "macro", "fx_analysis"]);
   return news.filter((item) => fxCategories.has(normalizeCategory(item.category)));
@@ -109,8 +113,109 @@ function dedupeNews(items) {
   return result;
 }
 
-function limitNews(items, limit) {
-  return dedupeNews(items).slice(0, limit);
+function getCategoryPriority(type, item) {
+  const category = normalizeCategory(item.category);
+
+  if (type === "fx") {
+    if (category === "macro") return 100;
+    if (category === "fx_analysis") return 95;
+    if (category === "fx") return 90;
+    return 10;
+  }
+
+  if (type === "crypto") {
+    if (category === "crypto") return 100;
+    return 10;
+  }
+
+  return 0;
+}
+
+function getSourcePriority(item) {
+  const source = String(item.source ?? "").trim();
+  const sourcePriority = {
+    "Reuters JP": 100,
+    "CoinDesk": 98,
+    "FXStreet": 96,
+    "Investing": 94,
+    "CoinDesk Japan": 88,
+    "CoinPost": 86,
+    "外為どっとコム": 78,
+    "みんかぶFX": 74
+  };
+
+  return sourcePriority[source] || 50;
+}
+
+function parsePubDate(value) {
+  const time = value ? new Date(value).getTime() : NaN;
+  return Number.isNaN(time) ? 0 : time;
+}
+
+function sortNewsForType(type, items) {
+  const cloned = [...items];
+
+  cloned.sort((a, b) => {
+    const aMarket = normalizeMarket(a.market);
+    const bMarket = normalizeMarket(b.market);
+
+    const aMarketPriority = aMarket === "global" ? 2 : aMarket === "jp" ? 1 : 0;
+    const bMarketPriority = bMarket === "global" ? 2 : bMarket === "jp" ? 1 : 0;
+
+    if (bMarketPriority !== aMarketPriority) {
+      return bMarketPriority - aMarketPriority;
+    }
+
+    const aCategoryPriority = getCategoryPriority(type, a);
+    const bCategoryPriority = getCategoryPriority(type, b);
+
+    if (bCategoryPriority !== aCategoryPriority) {
+      return bCategoryPriority - aCategoryPriority;
+    }
+
+    const aSourcePriority = getSourcePriority(a);
+    const bSourcePriority = getSourcePriority(b);
+
+    if (bSourcePriority !== aSourcePriority) {
+      return bSourcePriority - aSourcePriority;
+    }
+
+    return parsePubDate(b.pubDate) - parsePubDate(a.pubDate);
+  });
+
+  return cloned;
+}
+
+function buildBalancedNewsSelection(type, items) {
+  const deduped = dedupeNews(items);
+  const sorted = sortNewsForType(type, deduped);
+
+  const globalItems = sorted.filter((item) => normalizeMarket(item.market) === "global");
+  const jpItems = sorted.filter((item) => normalizeMarket(item.market) === "jp");
+  const otherItems = sorted.filter((item) => {
+    const market = normalizeMarket(item.market);
+    return market !== "global" && market !== "jp";
+  });
+
+  let selected = [];
+
+  if (type === "fx") {
+    selected = [
+      ...globalItems.slice(0, 10),
+      ...jpItems.slice(0, 4),
+      ...otherItems.slice(0, 1)
+    ];
+  } else if (type === "crypto") {
+    selected = [
+      ...globalItems.slice(0, 9),
+      ...jpItems.slice(0, 6),
+      ...otherItems.slice(0, 1)
+    ];
+  } else {
+    selected = sorted.slice(0, 15);
+  }
+
+  return dedupeNews(selected).slice(0, 15);
 }
 
 function buildNewsListForPrompt(newsItems) {
@@ -120,14 +225,43 @@ function buildNewsListForPrompt(newsItems) {
         `${index + 1}. タイトル: ${item.title ?? "タイトルなし"}`,
         `   取得元: ${item.source ?? "unknown"}`,
         `   カテゴリ: ${item.category ?? "other"}`,
+        `   市場: ${item.market ?? "unknown"}`,
+        `   言語: ${item.lang ?? "unknown"}`,
         `   公開日: ${item.pubDate ?? ""}`,
-        `   URL: ${item.link ?? ""}`
+        `   URL: ${item.link ?? ""}`,
+        `   補足: ${String(item.contentSnippet ?? "").replace(/\s+/g, " ").trim().slice(0, 240)}`
       ].join("\n");
     })
     .join("\n\n");
 }
 
-function buildFxPrompt(newsListForPrompt) {
+function summarizeSourceBalance(newsItems) {
+  const marketStats = newsItems.reduce((acc, item) => {
+    const market = normalizeMarket(item.market) || "unknown";
+    acc[market] = (acc[market] || 0) + 1;
+    return acc;
+  }, {});
+
+  const categoryStats = newsItems.reduce((acc, item) => {
+    const category = normalizeCategory(item.category) || "unknown";
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, {});
+
+  const sourceStats = newsItems.reduce((acc, item) => {
+    const source = item.source || "unknown";
+    acc[source] = (acc[source] || 0) + 1;
+    return acc;
+  }, {});
+
+  return {
+    marketStats,
+    categoryStats,
+    sourceStats
+  };
+}
+
+function buildFxPrompt(newsListForPrompt, sourceBalance) {
   return `
 あなたはプロトレーダー兼マクロアナリストです。
 ニュースを要約するのではなく、「相場構造の解釈」を日本語で提供してください。
@@ -141,13 +275,19 @@ function buildFxPrompt(newsListForPrompt) {
 - 抽象表現は禁止（例：「上昇圧力」「注意が必要」「可能性があります」など）
 - 因果関係を1段で終わらせず、2〜3段で説明する
 - 単なる要約で終わらず、「なぜその動きが起きたのか」「継続性があるのか」を解釈する
-- source/category の偏りがあれば本文で自然に触れる
 - 初心者にも読めるが、中身は薄くしない
 - 価格の断定予想はしない
 - 見出しはMarkdownの ## を使う
 - 最後は「今日の結論」で締める
 - 断定ベースで書く
 - 曖昧な一般論で逃げない
+
+【ソースの扱い】
+- global 市場のニュースを本筋として使う
+- jp 市場のニュースは補足情報として使う
+- jp ニュースだけで相場の本質を決めない
+- 日本語ニュースは「国内でどう受け止められているか」「初心者にどう説明しやすいか」の補強に使う
+- source/category の偏りがあれば本文で自然に触れる
 
 【数値ルール】
 - 価格、為替レート、変動率、金額、時価総額、指数水準は推定禁止
@@ -178,9 +318,6 @@ function buildFxPrompt(newsListForPrompt) {
 
 ### 2. 今日の主要ドライバー3つ
 - 必ず「原因 → 結果」の形で書く
-- 例：
-  - 原油上昇 → インフレ懸念 → 米金利上昇 → ドル買い
-  - 地政学リスク上昇 → リスク回避 → 安全資産選好 → 通貨・商品に波及
 - 3つに絞る
 - それぞれ2〜4文で、相場への接続まで書く
 - 数値は根拠がある場合のみ使う
@@ -245,6 +382,11 @@ function buildFxPrompt(newsListForPrompt) {
 - ニュースまとめではなく、分析記事だと伝わる表現にする
 - 数値は根拠がある場合のみ入れる
 
+【参考統計】
+- market別件数: ${JSON.stringify(sourceBalance.marketStats)}
+- category別件数: ${JSON.stringify(sourceBalance.categoryStats)}
+- source別件数: ${JSON.stringify(sourceBalance.sourceStats)}
+
 【出力ルール】
 - article はMarkdown形式
 - 各見出しは必ず ## を使う
@@ -257,7 +399,7 @@ ${newsListForPrompt}
 `;
 }
 
-function buildCryptoPrompt(newsListForPrompt) {
+function buildCryptoPrompt(newsListForPrompt, sourceBalance) {
   return `
 あなたは暗号資産市場を分析するリサーチャー兼マーケットアナリストです。
 ニュースを要約するだけではなく、「市場全体の地合い」「主要コインの状態」「個別プロジェクトの進捗」「その後に確認すべきこと」を整理してください。
@@ -276,6 +418,13 @@ function buildCryptoPrompt(newsListForPrompt) {
 - 断定ベースで書く
 - 見出しはMarkdownの ## を使う
 - 「〜可能性があります」は使わない
+
+【ソースの扱い】
+- global 市場のニュースを本筋として使う
+- jp 市場のニュースは補足情報として使う
+- ただし crypto では jp ニュースの比率が高めでもよい
+- jp ニュースは、日本国内での理解補助、規制、話題性、プロジェクト認知の補足に使う
+- global ニュースを優先して市場全体の地合いを判断する
 
 【数値ルール】
 - 価格、変動率、金額、時価総額、TVL、資金流入額は推定禁止
@@ -370,6 +519,11 @@ function buildCryptoPrompt(newsListForPrompt) {
 - 煽りすぎない
 - 数値は根拠がある場合のみ入れる
 
+【参考統計】
+- market別件数: ${JSON.stringify(sourceBalance.marketStats)}
+- category別件数: ${JSON.stringify(sourceBalance.categoryStats)}
+- source別件数: ${JSON.stringify(sourceBalance.sourceStats)}
+
 【出力ルール】
 - article はMarkdown形式
 - 各見出しは必ず ## を使う
@@ -437,23 +591,6 @@ function collectValidationErrors(type, article) {
     }
   }
 
-  const marketCapPatterns = [
-    /時価総額[^\n\r]{0,20}?(\d+(?:\.\d+)?)\s*(兆|億)?\s*ドル/gi,
-    /market cap[^\n\r]{0,20}?(\d+(?:\.\d+)?)\s*(trillion|billion|million)?/gi
-  ];
-
-  for (const pattern of marketCapPatterns) {
-    let match;
-    while ((match = pattern.exec(text)) !== null) {
-      const value = Number(match[1]);
-      if (Number.isNaN(value)) continue;
-
-      if (value <= 0) {
-        errors.push(`時価総額と見られる数値が不正です: ${match[0]}`);
-      }
-    }
-  }
-
   if (type === "fx") {
     const suspiciousFxTerms = [
       /1ドル\s*=\s*1[01]\d(?:\.\d+)?円/gi,
@@ -502,7 +639,7 @@ async function callOpenAI(prompt) {
   const response = await openai.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [{ role: "user", content: prompt }],
-    temperature: 0.7
+    temperature: 0.5
   });
 
   const content = response.choices?.[0]?.message?.content?.trim();
@@ -527,7 +664,8 @@ async function generateArticle({ type, selectedNews, promptBuilder, fallbackTitl
   }
 
   const newsListForPrompt = buildNewsListForPrompt(selectedNews);
-  const prompt = promptBuilder(newsListForPrompt);
+  const sourceBalance = summarizeSourceBalance(selectedNews);
+  const prompt = promptBuilder(newsListForPrompt, sourceBalance);
 
   console.log(`Starting OpenAI summarize... type=${type} date=${today} items=${selectedNews.length}`);
 
@@ -546,6 +684,8 @@ async function generateArticle({ type, selectedNews, promptBuilder, fallbackTitl
 
   const uniqueSources = [...new Set(selectedNews.map((item) => item.source).filter(Boolean))];
   const uniqueCategories = [...new Set(selectedNews.map((item) => item.category).filter(Boolean))];
+  const uniqueMarkets = [...new Set(selectedNews.map((item) => item.market).filter(Boolean))];
+  const uniqueLangs = [...new Set(selectedNews.map((item) => item.lang).filter(Boolean))];
 
   if (!fs.existsSync(dailyDir)) {
     fs.mkdirSync(dailyDir, { recursive: true });
@@ -565,7 +705,10 @@ async function generateArticle({ type, selectedNews, promptBuilder, fallbackTitl
         meta: {
           sources: uniqueSources,
           categories: uniqueCategories,
-          newsCount: selectedNews.length
+          markets: uniqueMarkets,
+          languages: uniqueLangs,
+          newsCount: selectedNews.length,
+          sourceBalance
         },
         news: selectedNews
       },
@@ -583,8 +726,8 @@ async function main() {
 
   const news = loadNews();
 
-  const fxNews = limitNews(pickFxNews(news), 15);
-  const cryptoNews = limitNews(pickCryptoNews(news), 15);
+  const fxNews = buildBalancedNewsSelection("fx", pickFxNews(news));
+  const cryptoNews = buildBalancedNewsSelection("crypto", pickCryptoNews(news));
 
   await generateArticle({
     type: "fx",
@@ -601,7 +744,7 @@ async function main() {
     promptBuilder: buildCryptoPrompt,
     fallbackTitle: `Macro Daily Crypto ${today}｜暗号資産市場整理`,
     fallbackDescription:
-      "BTC・ETH・SOLなど主要コインの地合いと、個別プロジェクトの進捗、次に確認すべきテーマを整理した暗号資産デイリー記事です。"
+      "主要コインの地合いと、個別プロジェクトの進捗、次に確認すべきテーマを整理した暗号資産デイリー記事です。"
   });
 }
 
