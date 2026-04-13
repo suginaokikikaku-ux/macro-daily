@@ -157,6 +157,10 @@ function normalizeSpec(spec = {}) {
     risks: Array.isArray(spec.risks) ? spec.risks : [],
     examples: Array.isArray(spec.examples) ? spec.examples : [],
     relatedPageIds: Array.isArray(spec.relatedPageIds) ? spec.relatedPageIds : [],
+    diagram:
+      spec.diagram && typeof spec.diagram === "object"
+        ? spec.diagram
+        : null,
   };
 }
 
@@ -266,6 +270,7 @@ function buildAutoSpec(page, pageMap) {
       `${page.title}を実際のニュースや市場文脈に当てはめて考えると理解しやすくなります。`,
     ],
     relatedPageIds: parentPage ? [parentPage.id] : [],
+    diagram: null,
   };
 }
 
@@ -482,6 +487,261 @@ function buildNextLinksHtml(currentPage, candidates) {
   `;
 }
 
+function renderDiagramTitle(diagram) {
+  if (!diagram?.title) return "";
+  return `<div class="diagram-title">${escapeHtml(diagram.title)}</div>`;
+}
+
+function renderDiagramNote(diagram) {
+  if (!diagram?.note) return "";
+  return `<p class="diagram-note">${escapeHtml(diagram.note)}</p>`;
+}
+
+function renderFlowDiagram(diagram) {
+  const items = Array.isArray(diagram.items) ? diagram.items : [];
+  if (!items.length) return "";
+
+  return `
+    <div class="diagram-flow-row">
+      ${items
+        .map((item, index) => {
+          const label =
+            typeof item === "string" ? item : item?.label || "";
+          const sublabel =
+            typeof item === "string" ? "" : item?.sublabel || "";
+          const accent =
+            typeof item === "string" ? "" : item?.accent || "";
+          const arrow =
+            index < items.length - 1
+              ? `<div class="diagram-flow-arrow">→</div>`
+              : "";
+
+          return `
+            <div class="diagram-flow-group">
+              <div class="diagram-flow-card ${escapeHtml(accent)}">
+                <div class="diagram-flow-label">${escapeHtml(label)}</div>
+                ${
+                  sublabel
+                    ? `<div class="diagram-flow-sublabel">${escapeHtml(sublabel)}</div>`
+                    : ""
+                }
+              </div>
+              ${arrow}
+            </div>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
+function renderComparisonDiagram(diagram) {
+  const columns = Array.isArray(diagram.columns) ? diagram.columns : [];
+  if (!columns.length) return "";
+
+  return `
+    <div class="diagram-compare-grid">
+      ${columns
+        .map((col) => {
+          const title = col?.title || "";
+          const points = Array.isArray(col?.points) ? col.points : [];
+          const accent = col?.accent || "";
+          return `
+            <div class="diagram-compare-card ${escapeHtml(accent)}">
+              <div class="diagram-compare-title">${escapeHtml(title)}</div>
+              <ul class="diagram-compare-list">
+                ${points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
+              </ul>
+            </div>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
+function renderStepsDiagram(diagram) {
+  const steps = Array.isArray(diagram.steps) ? diagram.steps : [];
+  if (!steps.length) return "";
+
+  return `
+    <div class="diagram-steps">
+      ${steps
+        .map((step, index) => {
+          const title =
+            typeof step === "string" ? step : step?.title || "";
+          const desc =
+            typeof step === "string" ? "" : step?.desc || "";
+          return `
+            <div class="diagram-step">
+              <div class="diagram-step-number">${index + 1}</div>
+              <div class="diagram-step-body">
+                <div class="diagram-step-title">${escapeHtml(title)}</div>
+                ${
+                  desc
+                    ? `<div class="diagram-step-desc">${escapeHtml(desc)}</div>`
+                    : ""
+                }
+              </div>
+            </div>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
+function renderCurrencyPairSvg(diagram) {
+  const left = diagram?.left || "USD";
+  const right = diagram?.right || "JPY";
+  const leftLabel = diagram?.leftLabel || "ベース通貨";
+  const rightLabel = diagram?.rightLabel || "クオート通貨";
+
+  return `
+    <svg viewBox="0 0 640 150" width="100%" role="img" aria-label="${escapeHtml(
+      `${left}/${right} の構造図`
+    )}" class="diagram-svg">
+      <rect x="40" y="34" width="210" height="64" rx="14" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.40)" />
+      <text x="145" y="72" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">${escapeHtml(left)}</text>
+      <text x="145" y="120" text-anchor="middle" fill="#94a3b8" font-size="14">${escapeHtml(leftLabel)}</text>
+
+      <text x="320" y="80" text-anchor="middle" fill="#7dd3fc" font-size="30" font-weight="800">/</text>
+
+      <rect x="390" y="34" width="210" height="64" rx="14" fill="rgba(167,139,250,0.15)" stroke="rgba(167,139,250,0.40)" />
+      <text x="495" y="72" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">${escapeHtml(right)}</text>
+      <text x="495" y="120" text-anchor="middle" fill="#94a3b8" font-size="14">${escapeHtml(rightLabel)}</text>
+    </svg>
+  `;
+}
+
+function renderLeverageSvg() {
+  return `
+    <svg viewBox="0 0 720 200" width="100%" role="img" aria-label="レバレッジのイメージ図" class="diagram-svg">
+      <rect x="40" y="60" width="180" height="80" rx="16" fill="rgba(56,189,248,0.14)" stroke="rgba(56,189,248,0.40)" />
+      <text x="130" y="98" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">自己資金</text>
+      <text x="130" y="126" text-anchor="middle" fill="#94a3b8" font-size="14">手元の資金</text>
+
+      <text x="290" y="108" text-anchor="middle" fill="#7dd3fc" font-size="36" font-weight="800">→</text>
+
+      <rect x="370" y="40" width="300" height="120" rx="16" fill="rgba(167,139,250,0.14)" stroke="rgba(167,139,250,0.40)" />
+      <text x="520" y="94" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">より大きな取引金額</text>
+      <text x="520" y="124" text-anchor="middle" fill="#94a3b8" font-size="14">値動きの影響も大きくなる</text>
+    </svg>
+  `;
+}
+
+function renderRateImpactSvg() {
+  return `
+    <svg viewBox="0 0 760 220" width="100%" role="img" aria-label="金利と為替の関係図" class="diagram-svg">
+      <rect x="40" y="70" width="180" height="72" rx="16" fill="rgba(56,189,248,0.14)" stroke="rgba(56,189,248,0.40)" />
+      <text x="130" y="108" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">利上げ観測</text>
+      <text x="130" y="134" text-anchor="middle" fill="#94a3b8" font-size="14">金利が高くなる期待</text>
+
+      <text x="286" y="110" text-anchor="middle" fill="#7dd3fc" font-size="34" font-weight="800">→</text>
+
+      <rect x="320" y="70" width="180" height="72" rx="16" fill="rgba(56,189,248,0.10)" stroke="rgba(56,189,248,0.28)" />
+      <text x="410" y="108" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">通貨が意識される</text>
+      <text x="410" y="134" text-anchor="middle" fill="#94a3b8" font-size="14">魅力が相対的に上がる</text>
+
+      <text x="566" y="110" text-anchor="middle" fill="#7dd3fc" font-size="34" font-weight="800">→</text>
+
+      <rect x="580" y="70" width="140" height="72" rx="16" fill="rgba(16,185,129,0.14)" stroke="rgba(16,185,129,0.35)" />
+      <text x="650" y="108" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">通貨高</text>
+      <text x="650" y="134" text-anchor="middle" fill="#94a3b8" font-size="14">買われやすい</text>
+    </svg>
+  `;
+}
+
+function renderBlockchainSvg() {
+  return `
+    <svg viewBox="0 0 760 180" width="100%" role="img" aria-label="ブロックチェーンの基本図" class="diagram-svg">
+      <rect x="30" y="60" width="150" height="60" rx="14" fill="rgba(56,189,248,0.14)" stroke="rgba(56,189,248,0.38)" />
+      <text x="105" y="96" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">Block 1</text>
+
+      <line x1="180" y1="90" x2="260" y2="90" stroke="rgba(125,211,252,0.7)" stroke-width="4" />
+      <polygon points="260,90 248,82 248,98" fill="rgba(125,211,252,0.9)" />
+
+      <rect x="280" y="60" width="150" height="60" rx="14" fill="rgba(167,139,250,0.14)" stroke="rgba(167,139,250,0.38)" />
+      <text x="355" y="96" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">Block 2</text>
+
+      <line x1="430" y1="90" x2="510" y2="90" stroke="rgba(125,211,252,0.7)" stroke-width="4" />
+      <polygon points="510,90 498,82 498,98" fill="rgba(125,211,252,0.9)" />
+
+      <rect x="530" y="60" width="150" height="60" rx="14" fill="rgba(52,211,153,0.14)" stroke="rgba(52,211,153,0.35)" />
+      <text x="605" y="96" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">Block 3</text>
+    </svg>
+  `;
+}
+
+function renderDefiSvg() {
+  return `
+    <svg viewBox="0 0 760 240" width="100%" role="img" aria-label="DeFiの構造図" class="diagram-svg">
+      <rect x="60" y="90" width="160" height="64" rx="16" fill="rgba(56,189,248,0.14)" stroke="rgba(56,189,248,0.38)" />
+      <text x="140" y="126" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">ユーザー</text>
+
+      <line x1="220" y1="122" x2="320" y2="122" stroke="rgba(125,211,252,0.7)" stroke-width="4" />
+      <polygon points="320,122 308,114 308,130" fill="rgba(125,211,252,0.9)" />
+
+      <rect x="330" y="60" width="180" height="124" rx="16" fill="rgba(167,139,250,0.14)" stroke="rgba(167,139,250,0.38)" />
+      <text x="420" y="108" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">スマート</text>
+      <text x="420" y="136" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">コントラクト</text>
+
+      <line x1="510" y1="122" x2="610" y2="122" stroke="rgba(125,211,252,0.7)" stroke-width="4" />
+      <polygon points="610,122 598,114 598,130" fill="rgba(125,211,252,0.9)" />
+
+      <rect x="620" y="90" width="100" height="64" rx="16" fill="rgba(52,211,153,0.14)" stroke="rgba(52,211,153,0.35)" />
+      <text x="670" y="126" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">DEX</text>
+    </svg>
+  `;
+}
+
+function renderDiagramHtml(diagram) {
+  if (!diagram || typeof diagram !== "object") return "";
+
+  const type = diagram.type || "";
+  let inner = "";
+
+  switch (type) {
+    case "flow":
+    case "currency-flow":
+      inner = renderFlowDiagram(diagram);
+      break;
+    case "comparison":
+      inner = renderComparisonDiagram(diagram);
+      break;
+    case "steps":
+      inner = renderStepsDiagram(diagram);
+      break;
+    case "pair-structure":
+      inner = renderCurrencyPairSvg(diagram);
+      break;
+    case "leverage-basic":
+      inner = renderLeverageSvg();
+      break;
+    case "rate-impact":
+      inner = renderRateImpactSvg();
+      break;
+    case "blockchain-basic":
+      inner = renderBlockchainSvg();
+      break;
+    case "defi-basic":
+      inner = renderDefiSvg();
+      break;
+    default:
+      return "";
+  }
+
+  if (!inner) return "";
+
+  return `
+    <div class="diagram-box">
+      ${renderDiagramTitle(diagram)}
+      ${inner}
+      ${renderDiagramNote(diagram)}
+    </div>
+  `;
+}
+
 function renderParentPageBody(page, spec, pages, pageMap) {
   const { lead, bodyHtml, normalized } = buildBaseSections(page, spec);
   const children = getChildren(page.id, pages);
@@ -494,6 +754,7 @@ function renderParentPageBody(page, spec, pages, pageMap) {
 
   return {
     lead,
+    diagramHtml: renderDiagramHtml(normalized.diagram),
     bodyHtml: `
       ${bodyHtml}
       ${children.length ? `<h2>このカテゴリで読めるページ</h2>${childCards}` : ""}
@@ -529,6 +790,7 @@ function renderChildPageBody(page, spec, pages, pageMap) {
 
   return {
     lead,
+    diagramHtml: renderDiagramHtml(normalized.diagram),
     bodyHtml: `${bodyHtml}${grandChildListHtml}`,
     nextLinksHtml: buildNextLinksHtml(page, nextCandidates),
   };
@@ -549,6 +811,7 @@ function renderGrandChildPageBody(page, spec, pages, pageMap) {
 
   return {
     lead,
+    diagramHtml: renderDiagramHtml(normalized.diagram),
     bodyHtml,
     nextLinksHtml: buildNextLinksHtml(page, nextCandidates),
   };
@@ -567,7 +830,7 @@ function getPageRenderPayload(page, spec, pages, pageMap) {
 }
 
 function renderPageHtml(page, spec, pages, pageMap) {
-  const { lead, bodyHtml, nextLinksHtml } = getPageRenderPayload(
+  const { lead, diagramHtml, bodyHtml, nextLinksHtml } = getPageRenderPayload(
     page,
     spec,
     pages,
@@ -673,6 +936,162 @@ function renderPageHtml(page, spec, pages, pageMap) {
       font-size: 14px;
     }
 
+    .diagram-box {
+      margin: 28px 0 8px;
+      padding: 20px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow-x: auto;
+    }
+    .diagram-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+    .diagram-note {
+      margin: 14px 0 0;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .diagram-flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .diagram-flow-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .diagram-flow-card {
+      min-width: 140px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: rgba(56,189,248,0.10);
+      border: 1px solid rgba(56,189,248,0.25);
+      text-align: center;
+    }
+    .diagram-flow-card.purple {
+      background: rgba(167,139,250,0.12);
+      border-color: rgba(167,139,250,0.30);
+    }
+    .diagram-flow-card.green {
+      background: rgba(16,185,129,0.12);
+      border-color: rgba(16,185,129,0.28);
+    }
+    .diagram-flow-card.orange {
+      background: rgba(245,158,11,0.12);
+      border-color: rgba(245,158,11,0.28);
+    }
+    .diagram-flow-label {
+      font-size: 17px;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.3;
+    }
+    .diagram-flow-sublabel {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .diagram-flow-arrow {
+      font-size: 26px;
+      font-weight: 800;
+      color: #7dd3fc;
+      line-height: 1;
+    }
+
+    .diagram-compare-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .diagram-compare-card {
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .diagram-compare-card.blue {
+      background: rgba(56,189,248,0.08);
+      border-color: rgba(56,189,248,0.24);
+    }
+    .diagram-compare-card.purple {
+      background: rgba(167,139,250,0.08);
+      border-color: rgba(167,139,250,0.24);
+    }
+    .diagram-compare-card.green {
+      background: rgba(16,185,129,0.08);
+      border-color: rgba(16,185,129,0.22);
+    }
+    .diagram-compare-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+    .diagram-compare-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .diagram-compare-list li {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+
+    .diagram-steps {
+      display: grid;
+      gap: 14px;
+    }
+    .diagram-step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    .diagram-step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(56,189,248,0.14);
+      border: 1px solid rgba(56,189,248,0.28);
+      color: #f8fafc;
+      font-weight: 800;
+    }
+    .diagram-step-body {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .diagram-step-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .diagram-step-desc {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .diagram-svg {
+      min-width: 640px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .next-links {
       margin-top: 40px;
       padding-top: 24px;
@@ -693,6 +1112,24 @@ function renderPageHtml(page, spec, pages, pageMap) {
     }
     .breadcrumb a { color: #7dd3fc; }
     .breadcrumb span::before { content: "/"; margin-right: 6px; }
+
+    @media (max-width: 640px) {
+      .card-wrapper {
+        padding: 22px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      .diagram-flow-row {
+        justify-content: flex-start;
+      }
+      .diagram-flow-group {
+        flex-wrap: wrap;
+      }
+      .diagram-flow-arrow {
+        transform: rotate(90deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -702,6 +1139,7 @@ function renderPageHtml(page, spec, pages, pageMap) {
       <div class="badge ${escapeHtml(badgeClass)}">${escapeHtml(badgeLabel)}</div>
       <h1>${escapeHtml(page.title)}</h1>
       <p class="lead">${escapeHtml(lead)}</p>
+      ${diagramHtml || ""}
       ${bodyHtml}
       ${nextLinksHtml}
     </div>
