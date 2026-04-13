@@ -7,25 +7,117 @@ const parser = new Parser({
 });
 
 const feeds = [
+  // =========================
   // Global Crypto
-  { source: "CoinDesk", category: "crypto", market: "global", lang: "en", url: "https://www.coindesk.com/arc/outboundfeeds/rss/" },
-  { source: "FXStreet", category: "crypto", market: "global", lang: "en", url: "https://www.fxstreet.com/rss/crypto" },
-  { source: "Investing", category: "crypto", market: "global", lang: "en", url: "https://www.investing.com/rss/302.rss" },
+  // =========================
+  {
+    source: "CoinDesk",
+    category: "crypto",
+    market: "global",
+    lang: "en",
+    url: "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  },
+  {
+    source: "FXStreet",
+    category: "crypto",
+    market: "global",
+    lang: "en",
+    url: "https://www.fxstreet.com/rss/crypto"
+  },
+  {
+    source: "Investing",
+    category: "crypto",
+    market: "global",
+    lang: "en",
+    url: "https://www.investing.com/rss/302.rss"
+  },
 
+  // =========================
   // Global FX / Macro
-  { source: "FXStreet", category: "fx", market: "global", lang: "en", url: "https://www.fxstreet.com/rss/news" },
-  { source: "FXStreet", category: "fx_analysis", market: "global", lang: "en", url: "https://www.fxstreet.com/rss/analysis" },
-  { source: "Investing", category: "fx", market: "global", lang: "en", url: "https://www.investing.com/rss/forex.rss" },
-  { source: "Investing", category: "macro", market: "global", lang: "en", url: "https://www.investing.com/rss/market_overview.rss" },
-  { source: "Investing", category: "macro", market: "global", lang: "en", url: "https://www.investing.com/rss/market_overview_Fundamental.rss" },
+  // =========================
+  {
+    source: "FXStreet",
+    category: "fx",
+    market: "global",
+    lang: "en",
+    url: "https://www.fxstreet.com/rss/news"
+  },
+  {
+    source: "FXStreet",
+    category: "fx_analysis",
+    market: "global",
+    lang: "en",
+    url: "https://www.fxstreet.com/rss/analysis"
+  },
+  {
+    source: "Investing",
+    category: "fx",
+    market: "global",
+    lang: "en",
+    url: "https://www.investing.com/rss/forex.rss"
+  },
+  {
+    source: "Investing",
+    category: "macro",
+    market: "global",
+    lang: "en",
+    url: "https://www.investing.com/rss/market_overview.rss"
+  },
+  {
+    source: "Investing",
+    category: "macro",
+    market: "global",
+    lang: "en",
+    url: "https://www.investing.com/rss/market_overview_Fundamental.rss"
+  },
 
+  // =========================
   // Global Stocks / Risk sentiment
-  { source: "FXStreet", category: "stocks", market: "global", lang: "en", url: "https://www.fxstreet.com/rss/stocks" },
-  { source: "Investing", category: "stocks", market: "global", lang: "en", url: "https://www.investing.com/rss/stock.rss" },
+  // =========================
+  {
+    source: "FXStreet",
+    category: "stocks",
+    market: "global",
+    lang: "en",
+    url: "https://www.fxstreet.com/rss/stocks"
+  },
+  {
+    source: "Investing",
+    category: "stocks",
+    market: "global",
+    lang: "en",
+    url: "https://www.investing.com/rss/stock.rss"
+  },
 
+  // =========================
   // Japan supplement
-  { source: "CoinPost", category: "crypto", market: "jp", lang: "ja", url: "https://coinpost.jp/?feed=rss2" }
+  // =========================
+  {
+    source: "CoinPost",
+    category: "crypto",
+    market: "jp",
+    lang: "ja",
+    url: "https://coinpost.jp/?feed=rss2"
+  },
+
+  // あたらしい経済
+  // WordPress系メディアの標準RSSを想定
+  // 取得失敗しても全体は止めないので、安全に試せる
+  {
+    source: "あたらしい経済",
+    category: "crypto",
+    market: "jp",
+    lang: "ja",
+    url: "https://www.neweconomy.jp/feed"
+  }
 ];
+
+/*
+  追加方針メモ
+  - Nikkei系RSSは利用条件の観点から今回は入れない
+  - Reuters日本語版は過去RSSの痕跡はあるが、現行の安定エンドポイント確認が弱いため固定追加しない
+  - 日本語ソースは「毎日落ちずに回る」「利用条件で揉めにくい」ものだけ使う
+*/
 
 const rawDir = "data/raw";
 const outputPath = path.join(rawDir, "news.json");
@@ -48,6 +140,7 @@ function parsePubDate(value) {
 }
 
 function sourcePriority(item) {
+  // global優先、ついで fx_analysis を少し優先
   const marketScore = item.market === "global" ? 0 : 1;
   const categoryScore = item.category === "fx_analysis" ? 0 : 1;
   return marketScore * 10 + categoryScore;
@@ -111,7 +204,19 @@ async function fetchNews() {
 
   fs.writeFileSync(outputPath, JSON.stringify(finalArticles, null, 2), "utf-8");
 
+  const summary = finalArticles.reduce(
+    (acc, item) => {
+      acc.total += 1;
+      acc.byMarket[item.market] = (acc.byMarket[item.market] || 0) + 1;
+      acc.byLang[item.lang] = (acc.byLang[item.lang] || 0) + 1;
+      acc.bySource[item.source] = (acc.bySource[item.source] || 0) + 1;
+      return acc;
+    },
+    { total: 0, byMarket: {}, byLang: {}, bySource: {} }
+  );
+
   console.log(`Saved news.json (${finalArticles.length} items)`);
+  console.log("Summary:", JSON.stringify(summary, null, 2));
 
   if (finalArticles.length === 0) {
     throw new Error("ニュースを1件も取得できませんでした。");
