@@ -26,6 +26,12 @@ function escapeHtml(str = "") {
     .replace(/"/g, "&quot;");
 }
 
+function getPostTypeLabel(type) {
+  if (type === "fx") return "FX";
+  if (type === "crypto") return "CRYPTO";
+  return "OTHER";
+}
+
 const postFiles = fs
   .readdirSync(postsDir)
   .filter((file) => file.endsWith(".html"))
@@ -33,11 +39,13 @@ const postFiles = fs
   .reverse();
 
 const posts = postFiles.map((file) => {
-  const date = file.replace(".html", "");
-  const dailyPath = path.join("data", "daily", `${date}.json`);
+  const name = file.replace(".html", "");
+  const [type, date] = name.split(/-(.+)/);
 
-  let seoTitle = `Macro Daily ${date}`;
-  let seoDescription = "FX・BTC・マクロ市場のデイリーまとめ記事です。";
+  const dailyPath = path.join("data", "daily", `${name}.json`);
+
+  let seoTitle = `Macro Daily ${name}`;
+  let seoDescription = "デイリーまとめ記事です。";
 
   if (fs.existsSync(dailyPath)) {
     try {
@@ -51,6 +59,8 @@ const posts = postFiles.map((file) => {
   }
 
   return {
+    type,
+    typeLabel: getPostTypeLabel(type),
     date,
     file,
     relativeUrl: `./site/posts/${file}`,
@@ -79,7 +89,10 @@ const listHtml = posts.length
         .map(
           (post) => `
         <article class="article-card">
-          <div class="card-meta">${escapeHtml(post.date)}</div>
+          <div class="card-meta-row">
+            <span class="card-badge card-badge-${post.type}">${escapeHtml(post.typeLabel)}</span>
+            <span class="card-meta">${escapeHtml(post.date)}</span>
+          </div>
           <a href="${post.relativeUrl}" class="card-title">${escapeHtml(post.title)}</a>
           <p class="card-description">${escapeHtml(post.description)}</p>
           <div class="card-link-wrap">
@@ -93,19 +106,19 @@ const listHtml = posts.length
 
 const latestDescription =
   latestPost?.description ||
-  "FX・BTC・マクロ市場のデイリー要約と相場への影響をまとめるニュースサイトです。";
+  "FX・暗号資産・マクロ市場のデイリー要約と相場への影響をまとめるニュースサイトです。";
 
 const indexHtml = `<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macro Daily｜FX・BTC・マクロ市場のデイリーまとめ</title>
+  <title>Macro Daily｜FX・暗号資産・マクロ市場のデイリーまとめ</title>
   <meta name="description" content="${escapeHtml(latestDescription)}" />
   <link rel="canonical" href="${siteUrl}/index.html" />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Macro Daily｜FX・BTC・マクロ市場のデイリーまとめ" />
+  <meta property="og:title" content="Macro Daily｜FX・暗号資産・マクロ市場のデイリーまとめ" />
   <meta property="og:description" content="${escapeHtml(latestDescription)}" />
   <meta property="og:url" content="${siteUrl}/index.html" />
   <meta property="og:site_name" content="Macro Daily" />
@@ -317,13 +330,43 @@ const indexHtml = `<!DOCTYPE html>
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
     }
 
+    .card-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
     .card-meta {
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 12px;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .card-badge-fx {
+      background: rgba(14, 165, 233, 0.14);
+      color: #7dd3fc;
+    }
+
+    .card-badge-crypto {
+      background: rgba(168, 85, 247, 0.16);
+      color: #d8b4fe;
     }
 
     .card-title {
@@ -401,12 +444,12 @@ const indexHtml = `<!DOCTYPE html>
         <div class="eyebrow">AI MARKET DIGEST</div>
         <h1>Macro Daily</h1>
         <p>
-          FX・BTC・マクロ市場の注目ニュースを毎日整理し、
-          USD/JPYやビットコインへの影響をわかりやすくまとめるデイリーサイトです。
+          FX・暗号資産・マクロ市場の注目ニュースを毎日整理し、
+          市場構造やテーマ性、次に見るべき論点をわかりやすくまとめるデイリーサイトです。
         </p>
         <div class="hero-actions">
           ${heroButton}
-          <span class="hero-note">毎日更新 / AI要約 / 相場視点で整理</span>
+          <span class="hero-note">毎日更新 / AI要約 / 市場整理</span>
         </div>
       </div>
     </section>
@@ -415,14 +458,14 @@ const indexHtml = `<!DOCTYPE html>
       <div class="section-header">
         <div>
           <h2 class="section-title">最新記事一覧</h2>
-          <p class="section-subtitle">新しい記事から順番に表示しています。</p>
+          <p class="section-subtitle">FX と CRYPTO の記事を新しい順に表示しています。</p>
         </div>
       </div>
       ${listHtml}
     </section>
 
     <footer class="footer">
-      <p><strong>Macro Daily</strong>｜FX・BTC・マクロ市場のデイリーまとめ</p>
+      <p><strong>Macro Daily</strong>｜FX・暗号資産・マクロ市場のデイリーまとめ</p>
     </footer>
   </div>
 </body>
