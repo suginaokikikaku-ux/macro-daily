@@ -1,0 +1,169 @@
+{
+  "type": "crypto",
+  "date": "2026-04-14",
+  "seoTitle": "暗号資産市場の最新動向と分析",
+  "seoDescription": "暗号資産市場の最新ニュースを分析し、主要コインやプロジェクトの進捗を整理。次に確認すべきポイントも明確にします。",
+  "article": "## 1分で読める結論\n本日の暗号資産市場は、SECからの新たなガイダンスや長期収益生成に向けたAaveの動きが注目を集めている。ビットコインは73,400ドルに戻り、ETFへの資金流入も増加している。一方で、XRPは需要の減少に直面。市場全体のセンチメントは弱めである。\n\n## 今日の暗号資産市場の地合い\n市場全体のセンチメントは、いくつかの重要なニュースに影響を受けて弱含みである。特に、ビットコインを中心にETFへの資金流入が増加しているが、全体的な取引量は減少傾向にある。SECの新たなガイダンスはDeFi市場に影響を与える可能性があるが、全体の市場感情は保守的である。\n\n## 今日の主要トピック3つ\n1. **SECの新ガイダンス**: DeFiツールに関する新たな指針が発表され、ブローカー・ディーラー規則が適用されない場合の条件が明示された。\n   - [詳細はこちら](https://www.fxstreet.com/cryptocurrencies/news/sec-issues-new-guidance-on-defi-tools-signals-when-broker-dealer-rules-do-not-apply-202604132308)\n\n2. **Aaveのガバナンス支出**: Aaveが長期的な収益生成に向けた支出を進めている。これはプロジェクトの持続可能性に寄与する可能性がある。\n   - [詳細はこちら](https://www.investing.com/analysis/aave-governance-spending-brings-focus-to-longterm-revenue-generation-200678355)\n\n3. **ビットコインの価格回復**: ビットコインが週末の下落を取り戻し、73,400ドルに戻った。ETFへの資金流入も871百万ドルに達している。\n   - [詳細はこちら](https://www.coindesk.com/markets/2026/04/13/bitcoin-erases-weekend-decline-returns-to-usd73-400-as-oil-retreats-back-under-usd100)\n\n## メインコインの整理\n- **ビットコイン**: 73,400ドルに回復し、ETFへの流入が増加していることから、短期的な底堅さを示している。\n- **イーサリアム**: BitMineが大規模に蓄積を続けているが、未実現損失が大きい状況。\n   - [詳細はこちら](https://www.fxstreet.com/cryptocurrencies/news/ethereum-price-forecast-bitmine-continues-accumulation-despite-huge-unrealized-losses-202604132034)\n- **XRP**: デリバティブ需要の減少により回復が停滞している。\n   - [詳細はこちら](https://www.fxstreet.com/cryptocurrencies/news/ripple-price-forecast-xrp-risks-extending-decline-amid-extreme-fear-sentiment-rising-uncertainty-202604131330)\n\n## 個別プロジェクトの進捗\n- **Aave**: ガバナンスの支出が収益生成に焦点を当て、プロジェクトの持続可能性に貢献する見込み。\n- **Exodus**: W3Cに対して1億7500万ドルの買収を求める訴訟を起こしており、進展が注目される。\n   - [詳細はこちら](https://www.coindesk.com/policy/2026/04/13/crypto-wallet-firm-exodus-sues-w3c-and-its-ceo-garth-howat-to-complete-usd175m-acquisition)\n\n## 今日の要約から見える示唆\nSECの新ガイダンスは、DeFi市場における取引やプロジェクトの運営に明確な指針を提供する可能性がある。Aaveの動きは、プロジェクトの持続可能性を高める要因となりうる。一方で、XRPは需要の低下により厳しい状況にある。\n\n## 次に確認すべきこと\n- SECのガイダンスの具体的な影響を各プロジェクトがどのように受け止めるか。\n- Aaveの収益生成に関する進捗と他のDeFiプロジェクトへの波及効果。\n- XRPの需要の変化と市場の反応。\n\n## 今日の結論\n本日の市場は不安定な状況が続いているが、SECのガイダンスやAaveの収益戦略が新たな流れを生む可能性がある。市場参加者は、これらの進展を注視する必要がある。",
+  "meta": {
+    "sources": [
+      "FXStreet",
+      "Investing",
+      "CoinDesk"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "SEC issues new guidance on DeFi tools, signals when broker-dealer rules do not apply",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/sec-issues-new-guidance-on-defi-tools-signals-when-broker-dealer-rules-do-not-apply-202604132308",
+      "pubDate": "Mon, 13 Apr 2026 23:08:21 Z"
+    },
+    {
+      "source": "Investing",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Aave Governance Spending Brings Focus to Long-Term Revenue Generation",
+      "link": "https://www.investing.com/analysis/aave-governance-spending-brings-focus-to-longterm-revenue-generation-200678355",
+      "pubDate": "Apr 13, 2026 20:50 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ethereum Price Forecast: BitMine continues accumulation despite huge unrealized losses",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-price-forecast-bitmine-continues-accumulation-despite-huge-unrealized-losses-202604132034",
+      "pubDate": "Mon, 13 Apr 2026 20:34:02 Z"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "This little-known token just posted a 6,000% rally — and traders are trying to figure out why",
+      "link": "https://www.coindesk.com/markets/2026/04/13/this-little-known-token-just-posted-a-6-000-rally-and-traders-are-trying-to-figure-out-why",
+      "pubDate": "Mon, 13 Apr 2026 20:20:24 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin erases weekend decline, returns to $73,400 as oil retreats back under $100",
+      "link": "https://www.coindesk.com/markets/2026/04/13/bitcoin-erases-weekend-decline-returns-to-usd73-400-as-oil-retreats-back-under-usd100",
+      "pubDate": "Mon, 13 Apr 2026 19:59:33 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": " Coinbase VP of international policy leaves for OpenAI",
+      "link": "https://www.coindesk.com/policy/2026/04/13/coinbase-vp-of-international-policy-leaves-the-exchange-for-openai",
+      "pubDate": "Mon, 13 Apr 2026 19:14:06 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto wallet firm Exodus sues W3C and its CEO Garth Howat, seeking to compel $175M acquisition ",
+      "link": "https://www.coindesk.com/policy/2026/04/13/crypto-wallet-firm-exodus-sues-w3c-and-its-ceo-garth-howat-to-complete-usd175m-acquisition",
+      "pubDate": "Mon, 13 Apr 2026 19:04:07 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "White House crypto adviser Witt says other Clarity Act hurdles being cleared",
+      "link": "https://www.coindesk.com/policy/2026/04/13/white-house-s-top-crypto-adviser-witt-says-talks-clearing-other-points-on-clarity-act",
+      "pubDate": "Mon, 13 Apr 2026 18:39:36 +0000"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Strategy resumes large BTC purchases as ETF inflows hit $871 million",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/strategy-resumes-large-btc-purchases-as-etf-inflows-hit-871-million-202604131824",
+      "pubDate": "Mon, 13 Apr 2026 18:24:43 Z"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "U.S. SEC says software allowing crypto wallet transactions not considered broker",
+      "link": "https://www.coindesk.com/policy/2026/04/13/u-s-sec-says-software-allowing-crypto-wallet-transactions-aren-t-considered-brokers",
+      "pubDate": "Mon, 13 Apr 2026 17:17:12 +0000"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto Weekly Radar: Bitcoin gains constrained, sentiment weak amid ceasefire, token unlocks",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/crypto-weekly-radar-bitcoin-gains-constrained-sentiment-weak-amid-ceasefire-token-unlocks-202604131636",
+      "pubDate": "Mon, 13 Apr 2026 16:36:51 Z"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "XRP recovery stalls amid fading derivatives demand",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/ripple-price-forecast-xrp-risks-extending-decline-amid-extreme-fear-sentiment-rising-uncertainty-202604131330",
+      "pubDate": "Mon, 13 Apr 2026 16:30:00 Z"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto exchange Kraken targeted in extortion attempt but says there was no breach and no client funds at risk",
+      "link": "https://www.coindesk.com/business/2026/04/13/crypto-exchange-kraken-targeted-in-extortion-attempt-but-says-there-was-no-breach-and-no-client-funds-at-risk",
+      "pubDate": "Mon, 13 Apr 2026 15:58:20 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Circle CEO says he won’t freeze USDC without a court order even as hackers walk away with millions",
+      "link": "https://www.coindesk.com/business/2026/04/13/circle-ceo-says-he-won-t-freeze-usdc-without-a-court-order-even-as-hackers-walk-away-with-millions",
+      "pubDate": "Mon, 13 Apr 2026 15:37:58 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bankers rebuff White House claim that stablecoin yield doesn't threaten deposits ",
+      "link": "https://www.coindesk.com/policy/2026/04/13/bankers-rebuff-white-house-claim-that-stablecoin-yield-doesn-t-threaten-deposits",
+      "pubDate": "Mon, 13 Apr 2026 15:35:11 +0000"
+    }
+  ]
+}
