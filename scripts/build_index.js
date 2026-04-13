@@ -3,10 +3,10 @@ import fs from "fs";
 import path from "path";
 
 const siteDir = "site";
-const postsDir = path.join(siteDir, "posts");
-const indexPath = path.join(siteDir, "index.html");
-const sitemapPath = path.join(siteDir, "sitemap.xml");
-const robotsPath = path.join(siteDir, "robots.txt");
+const postsDir = "posts";
+const indexPath = "index.html";
+const sitemapPath = "sitemap.xml";
+const robotsPath = "robots.txt";
 
 const heroImageRelativePath = "assets/img/hero.jpg";
 const heroImageFsPath = path.join(siteDir, "assets", "img", "hero.jpg");
