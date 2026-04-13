@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://suginaokikikaku-ux.github.io/macro-daily/index.html</loc>
-  </url>
+  <url><loc>https://suginaokikikaku-ux.github.io/macro-daily/index.html</loc></url>
+  <url><loc>https://suginaokikikaku-ux.github.io/macro-daily/fx.html</loc></url>
+  <url><loc>https://suginaokikikaku-ux.github.io/macro-daily/crypto.html</loc></url>
+  <url><loc>https://suginaokikikaku-ux.github.io/macro-daily/basics/index.html</loc></url>
   
   <url>
     <loc>https://suginaokikikaku-ux.github.io/macro-daily/site/posts/fx-2026-04-13.html</loc>
