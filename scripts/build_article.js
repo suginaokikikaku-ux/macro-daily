@@ -14,16 +14,29 @@ function getJstDateString() {
 }
 
 const today = getJstDateString();
-const dailyPath = path.join("data", "daily", `${today}.json`);
 const postsDir = path.join("site", "posts");
-const postMdPath = path.join(postsDir, `${today}.md`);
-const postHtmlPath = path.join(postsDir, `${today}.html`);
 
 const heroImageRelativePath = "../assets/img/hero.jpg";
 const heroImageFsPath = path.join("site", "assets", "img", "hero.jpg");
 
 const siteUrl = (process.env.SITE_URL || "https://YOUR_USERNAME.github.io/macro-daily").replace(/\/$/, "");
-const pageUrl = `${siteUrl}/posts/${today}.html`;
+
+const articleTypes = [
+  {
+    type: "fx",
+    label: "FX",
+    defaultTitle: `Macro Daily FX ${today}｜USD/JPY・マクロ市場分析`,
+    defaultDescription:
+      "USD/JPYを中心に、金利・地政学・マクロ材料が為替市場へどう波及しているかを整理したデイリー分析記事です。"
+  },
+  {
+    type: "crypto",
+    label: "CRYPTO",
+    defaultTitle: `Macro Daily Crypto ${today}｜暗号資産市場整理`,
+    defaultDescription:
+      "主要コインの地合いと、個別プロジェクトの進捗、次に確認すべきテーマを整理した暗号資産デイリー記事です。"
+  }
+];
 
 function escapeHtml(str = "") {
   return str
@@ -52,79 +65,86 @@ function markdownToHtml(markdown = "") {
   return html;
 }
 
-if (!fs.existsSync(dailyPath)) {
-  console.error(`${dailyPath} がありません。先に summarize を実行してください。`);
-  process.exit(1);
-}
+function buildOneArticle(config) {
+  const { type, label, defaultTitle, defaultDescription } = config;
 
-const raw = fs.readFileSync(dailyPath, "utf-8").trim();
+  const dailyPath = path.join("data", "daily", `${type}-${today}.json`);
+  const postMdPath = path.join(postsDir, `${type}-${today}.md`);
+  const postHtmlPath = path.join(postsDir, `${type}-${today}.html`);
+  const pageUrl = `${siteUrl}/site/posts/${type}-${today}.html`;
 
-if (!raw) {
-  console.error(`${dailyPath} が空です。`);
-  process.exit(1);
-}
+  if (!fs.existsSync(dailyPath)) {
+    console.error(`${dailyPath} がありません。先に summarize を実行してください。`);
+    process.exit(1);
+  }
 
-let daily;
-try {
-  daily = JSON.parse(raw);
-} catch (error) {
-  console.error(`${dailyPath} のJSON解析に失敗しました。`);
-  console.error(error);
-  process.exit(1);
-}
+  const raw = fs.readFileSync(dailyPath, "utf-8").trim();
 
-const article = daily.article ?? "";
-const seoTitle = daily.seoTitle ?? `Macro Daily ${today}｜FX・BTC・マクロ市場まとめ`;
-const seoDescription =
-  daily.seoDescription ??
-  "FX・BTC・マクロ市場の注目ニュースを整理。USD/JPYとビットコインへの影響、監視ポイント、今日の結論までまとめています。";
+  if (!raw) {
+    console.error(`${dailyPath} が空です。`);
+    process.exit(1);
+  }
 
-const meta = daily.meta ?? {};
-const news = Array.isArray(daily.news) ? daily.news : [];
-const sources = Array.isArray(meta.sources) ? meta.sources : [];
-const categories = Array.isArray(meta.categories) ? meta.categories : [];
+  let daily;
+  try {
+    daily = JSON.parse(raw);
+  } catch (error) {
+    console.error(`${dailyPath} のJSON解析に失敗しました。`);
+    console.error(error);
+    process.exit(1);
+  }
 
-if (!article) {
-  console.error("article が空です。");
-  process.exit(1);
-}
+  const article = daily.article ?? "";
+  const seoTitle = daily.seoTitle ?? defaultTitle;
+  const seoDescription = daily.seoDescription ?? defaultDescription;
 
-if (!fs.existsSync(postsDir)) {
-  fs.mkdirSync(postsDir, { recursive: true });
-}
+  const meta = daily.meta ?? {};
+  const news = Array.isArray(daily.news) ? daily.news : [];
+  const sources = Array.isArray(meta.sources) ? meta.sources : [];
+  const categories = Array.isArray(meta.categories) ? meta.categories : [];
 
-const sourceText = sources.length > 0 ? sources.join(" / ") : "不明";
-const categoryText = categories.length > 0 ? categories.join("・") : "other";
-const introLine = `この記事は${categoryText}を中心に、${sourceText}のニュースをもとに整理しています。`;
+  if (!article) {
+    console.error(`${type}: article が空です。`);
+    process.exit(1);
+  }
 
-const heroImageExists = fs.existsSync(heroImageFsPath);
+  if (!fs.existsSync(postsDir)) {
+    fs.mkdirSync(postsDir, { recursive: true });
+  }
 
-const heroImageHtml = heroImageExists
-  ? `<div class="hero-image" aria-label="記事ヘッダー画像"></div>`
-  : `<div class="hero-image hero-image-fallback">
-       <div class="hero-image-fallback-text">Macro Daily</div>
-     </div>`;
+  const sourceText = sources.length > 0 ? sources.join(" / ") : "不明";
+  const categoryText = categories.length > 0 ? categories.join("・") : "other";
+  const introLine = `この記事は${categoryText}を中心に、${sourceText}のニュースをもとに整理しています。`;
 
-const references = news
-  .map((item, index) => {
-    const title = item.title || "タイトルなし";
-    const source = item.source || "unknown";
-    const category = item.category || "other";
-    const link = item.link || "";
-    return `- [${index + 1}] ${title}（${source} / ${category}）${link ? ` - ${link}` : ""}`;
-  })
-  .join("\n");
+  const heroImageExists = fs.existsSync(heroImageFsPath);
 
-const markdown = `---
+  const heroImageHtml = heroImageExists
+    ? `<div class="hero-image" aria-label="記事ヘッダー画像"></div>`
+    : `<div class="hero-image hero-image-fallback">
+         <div class="hero-image-fallback-text">Macro Daily</div>
+       </div>`;
+
+  const references = news
+    .map((item, index) => {
+      const title = item.title || "タイトルなし";
+      const source = item.source || "unknown";
+      const category = item.category || "other";
+      const link = item.link || "";
+      return `- [${index + 1}] ${title}（${source} / ${category}）${link ? ` - ${link}` : ""}`;
+    })
+    .join("\n");
+
+  const markdown = `---
 title: "${seoTitle}"
 date: "${today}"
+type: "${type}"
 sources: "${sourceText}"
 categories: "${categoryText}"
 description: "${seoDescription}"
 canonical: "${pageUrl}"
 ---
 
-# Macro Daily ${today}
+# ${seoTitle}
 
 ${introLine}
 
@@ -142,41 +162,41 @@ ${categoryText}
 ${references || "- 参照ニュースなし"}
 `;
 
-const articleHtml = markdownToHtml(article);
+  const articleHtml = markdownToHtml(article);
 
-const referencesHtml = news.length
-  ? `<ul>${news
-      .map((item, index) => {
-        const title = escapeHtml(item.title || "タイトルなし");
-        const source = escapeHtml(item.source || "unknown");
-        const category = escapeHtml(item.category || "other");
-        const link = item.link || "";
-        return `<li>[${index + 1}] ${title}（${source} / ${category}）${
-          link ? ` - <a href="${link}" target="_blank" rel="noopener noreferrer">元記事</a>` : ""
-        }</li>`;
-      })
-      .join("")}</ul>`
-  : "<p>参照ニュースなし</p>";
+  const referencesHtml = news.length
+    ? `<ul>${news
+        .map((item, index) => {
+          const title = escapeHtml(item.title || "タイトルなし");
+          const source = escapeHtml(item.source || "unknown");
+          const category = escapeHtml(item.category || "other");
+          const link = item.link || "";
+          return `<li>[${index + 1}] ${title}（${source} / ${category}）${
+            link ? ` - <a href="${link}" target="_blank" rel="noopener noreferrer">元記事</a>` : ""
+          }</li>`;
+        })
+        .join("")}</ul>`
+    : "<p>参照ニュースなし</p>";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: seoTitle,
-  description: seoDescription,
-  datePublished: today,
-  dateModified: today,
-  author: {
-    "@type": "Organization",
-    name: "Macro Daily"
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Macro Daily"
-  },
-  mainEntityOfPage: pageUrl
-};
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: seoTitle,
+    description: seoDescription,
+    datePublished: today,
+    dateModified: today,
+    author: {
+      "@type": "Organization",
+      name: "Macro Daily"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Macro Daily"
+    },
+    mainEntityOfPage: pageUrl
+  };
 
-const html = `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
@@ -470,12 +490,12 @@ const html = `<!DOCTYPE html>
 </head>
 <body>
   <div class="container">
-    <a class="back-link" href="../index.html">← 記事一覧へ戻る</a>
+    <a class="back-link" href="../../index.html">← 記事一覧へ戻る</a>
 
     <section class="hero">
       <div class="hero-inner">
         ${heroImageHtml}
-        <div class="eyebrow">DAILY MARKET ARTICLE</div>
+        <div class="eyebrow">${escapeHtml(label)} DAILY ARTICLE</div>
         <h1>${escapeHtml(seoTitle)}</h1>
         <p>${escapeHtml(seoDescription)}</p>
         <div class="hero-actions">
@@ -507,18 +527,23 @@ const html = `<!DOCTYPE html>
     </section>
 
     <footer class="footer">
-      <p><strong>Macro Daily</strong>｜FX・BTC・マクロ市場のデイリーまとめ</p>
+      <p><strong>Macro Daily</strong>｜${escapeHtml(label)} デイリー記事</p>
     </footer>
   </div>
 </body>
 </html>`;
 
-fs.writeFileSync(postMdPath, markdown, "utf-8");
-fs.writeFileSync(postHtmlPath, html, "utf-8");
+  fs.writeFileSync(postMdPath, markdown, "utf-8");
+  fs.writeFileSync(postHtmlPath, html, "utf-8");
 
-console.log(`Saved ${postMdPath}`);
-console.log(`Saved ${postHtmlPath}`);
+  console.log(`Saved ${postMdPath}`);
+  console.log(`Saved ${postHtmlPath}`);
 
-if (!heroImageExists) {
-  console.log("NOTE: site/assets/img/hero.jpg が見つからなかったため、記事ページは代替表示を出しています。");
+  if (!heroImageExists) {
+    console.log("NOTE: site/assets/img/hero.jpg が見つからなかったため、記事ページは代替表示を出しています。");
+  }
+}
+
+for (const config of articleTypes) {
+  buildOneArticle(config);
 }
