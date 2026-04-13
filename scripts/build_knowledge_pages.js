@@ -117,7 +117,11 @@ function indexBy(arr, keyName) {
 }
 
 function getBadgeClass(page) {
-  return BADGE_CLASS_BY_CATEGORY[page.category] || SECTION_META[page.section]?.badgeClass || "common";
+  return (
+    BADGE_CLASS_BY_CATEGORY[page.category] ||
+    SECTION_META[page.section]?.badgeClass ||
+    "common"
+  );
 }
 
 function getBadgeLabel(page) {
@@ -156,6 +160,115 @@ function normalizeSpec(spec = {}) {
   };
 }
 
+function buildAutoSpec(page, pageMap) {
+  const parentPage = page.parentId ? pageMap.get(page.parentId) : null;
+
+  const baseSummary =
+    page.description ||
+    `${page.title}について初心者向けに整理する学習ページです。`;
+
+  const lead = parentPage
+    ? `${page.title}は、${parentPage.title}の中で理解しておきたい基本テーマです。このページでは、初心者が全体像をつかめるように、意味・背景・具体例・注意点の順で整理します。`
+    : `${page.title}の全体像を初心者向けに整理するページです。まず結論を押さえたうえで、仕組み・見方・具体例・注意点を順番に確認できる構成にしています。`;
+
+  return {
+    id: page.id,
+    summary: baseSummary,
+    lead,
+    learningGoal: `${page.title}の基本を説明できる状態にする。`,
+    mustSections:
+      page.type === "parent"
+        ? [
+            `${page.title}の全体像`,
+            "最初に押さえるべきポイント",
+            "よくある誤解",
+            "次に学ぶべきこと",
+          ]
+        : page.type === "child"
+          ? [
+              `${page.title}とは何か`,
+              "なぜ重要なのか",
+              "具体例で理解する",
+              "注意点",
+            ]
+          : [
+              `${page.title}の基本`,
+              "具体例",
+              "注意点と見方",
+            ],
+    sectionBodies:
+      page.type === "parent"
+        ? {
+            [`${page.title}の全体像`]: [
+              `${page.title}は、このカテゴリ全体を理解するための入口です。まずは個別の用語を暗記するよりも、どんな論点がつながっているのかを全体でつかむことが大切です。`,
+              "つまり、このページは学習の地図として使うのが適しています。",
+            ],
+            "最初に押さえるべきポイント": [
+              "初心者は、細かい例外よりも基本構造を先に理解した方が整理しやすくなります。",
+              "つまり、最初は意味・背景・使われ方の3つを押さえるのが近道です。",
+            ],
+            "よくある誤解": [
+              "最初から細部だけを追いかけると、全体像が見えにくくなります。",
+              "つまり、親ページでは細かさより流れを優先して理解するのが重要です。",
+            ],
+            "次に学ぶべきこと": [
+              "このページで全体像をつかんだら、次は関連する子ページで個別テーマを順番に確認していくのが自然です。",
+              "つまり、親ページは入口であり、子ページで理解を深める設計です。",
+            ],
+          }
+        : page.type === "child"
+          ? {
+              [`${page.title}とは何か`]: [
+                `${page.title}は、このカテゴリの中でも基礎となるテーマです。まずは用語の意味と、どんな場面で使われるかを整理することが大切です。`,
+                "つまり、定義と役割をセットで理解すると整理しやすくなります。",
+              ],
+              "なぜ重要なのか": [
+                "このテーマを理解しておくと、ニュースや関連ページの意味がつながりやすくなります。",
+                "つまり、単独の知識ではなく、他の概念を理解する土台になります。",
+              ],
+              "具体例で理解する": [
+                "抽象的な説明だけではイメージしにくいため、実際のニュースや市場の文脈に当てはめて考えることが有効です。",
+                "つまり、具体例に置き換えると理解が定着しやすくなります。",
+              ],
+              "注意点": [
+                "言葉だけを覚えても、背景や文脈を見ないと誤解しやすくなります。",
+                "つまり、意味と使われ方を一緒に確認することが重要です。",
+              ],
+            }
+          : {
+              [`${page.title}の基本`]: [
+                `${page.title}は、親テーマを細かく理解するための詳細トピックです。まずは定義と位置づけを押さえると整理しやすくなります。`,
+                "つまり、孫ページでは用語を深掘りして理解するのが目的です。",
+              ],
+              "具体例": [
+                "具体的な場面に当てはめて考えると、用語の意味が抽象論で終わりにくくなります。",
+                "つまり、実例と一緒に覚えると理解しやすくなります。",
+              ],
+              "注意点と見方": [
+                "細かい言葉ほど単独で覚えると誤解しやすいため、必ず親テーマとのつながりで見ることが大切です。",
+                "つまり、孫ページは単体ではなく流れの中で読むのが基本です。",
+              ],
+            },
+    keyPoints: [
+      `${page.title}はカテゴリ理解の一部として見る`,
+      "意味だけでなく背景も一緒に押さえる",
+      "具体例で理解する",
+      "関連ページとつなげて読む",
+    ],
+    commonMistakes: [
+      "言葉だけ覚えて背景を見ない",
+      "単独ページとして見て流れを意識しない",
+    ],
+    risks: [
+      "定義だけで理解した気になると、ニュースや関連テーマで誤読しやすくなります。",
+    ],
+    examples: [
+      `${page.title}を実際のニュースや市場文脈に当てはめて考えると理解しやすくなります。`,
+    ],
+    relatedPageIds: parentPage ? [parentPage.id] : [],
+  };
+}
+
 function validateData(pages, specs) {
   const pageMap = indexBy(pages, "id");
   const specMap = indexBy(specs, "id");
@@ -178,10 +291,6 @@ function validateData(pages, specs) {
     if (page.parentId && !pageMap.has(page.parentId)) {
       throw new Error(`parentId が存在しません: ${page.id} -> ${page.parentId}`);
     }
-
-    if (!specMap.has(page.id)) {
-      throw new Error(`spec が存在しません: ${page.id}`);
-    }
   }
 
   const pathSet = new Set();
@@ -197,10 +306,15 @@ function validateData(pages, specs) {
       throw new Error(`manifest に存在しない spec があります: ${spec.id}`);
     }
 
-    const relatedPageIds = Array.isArray(spec.relatedPageIds) ? spec.relatedPageIds : [];
+    const relatedPageIds = Array.isArray(spec.relatedPageIds)
+      ? spec.relatedPageIds
+      : [];
+
     for (const relatedId of relatedPageIds) {
       if (!pageMap.has(relatedId)) {
-        throw new Error(`relatedPageIds に存在しない id があります: ${spec.id} -> ${relatedId}`);
+        throw new Error(
+          `relatedPageIds に存在しない id があります: ${spec.id} -> ${relatedId}`
+        );
       }
     }
   }
@@ -262,7 +376,10 @@ function buildBaseSections(page, spec) {
     const body = normalized.sectionBodies[heading];
     sections.push(`
       <h2>${escapeHtml(heading)}</h2>
-      ${renderParagraphBlock(body, `${page.title}について理解するうえで重要なポイントを整理するセクションです。`)}
+      ${renderParagraphBlock(
+        body,
+        `${page.title}について理解するうえで重要なポイントを整理するセクションです。`
+      )}
     `);
   }
 
@@ -344,7 +461,10 @@ function uniquePagesById(pages) {
 }
 
 function buildNextLinksHtml(currentPage, candidates) {
-  const pages = uniquePagesById(candidates).filter((page) => page.id !== currentPage.id);
+  const pages = uniquePagesById(candidates).filter(
+    (page) => page.id !== currentPage.id
+  );
+
   if (!pages.length) return "";
 
   return `
@@ -365,7 +485,6 @@ function buildNextLinksHtml(currentPage, candidates) {
 function renderParentPageBody(page, spec, pages, pageMap) {
   const { lead, bodyHtml, normalized } = buildBaseSections(page, spec);
   const children = getChildren(page.id, pages);
-
   const childCards = buildCardGridHtml(page, children);
 
   const nextCandidates = [
@@ -448,7 +567,12 @@ function getPageRenderPayload(page, spec, pages, pageMap) {
 }
 
 function renderPageHtml(page, spec, pages, pageMap) {
-  const { lead, bodyHtml, nextLinksHtml } = getPageRenderPayload(page, spec, pages, pageMap);
+  const { lead, bodyHtml, nextLinksHtml } = getPageRenderPayload(
+    page,
+    spec,
+    pages,
+    pageMap
+  );
   const canonical = filePathToCanonical(page.path);
   const badgeLabel = getBadgeLabel(page);
   const badgeClass = getBadgeClass(page);
@@ -601,7 +725,9 @@ function renderKnowledgeIndex(pages) {
       const meta = SECTION_META[section];
       const pagesInSection = groupedBySection[section];
       const parentPages = pagesInSection.filter((page) => page.type === "parent");
-      const childPages = pagesInSection.filter((page) => page.type !== "parent").slice(0, 8);
+      const childPages = pagesInSection
+        .filter((page) => page.type !== "parent")
+        .slice(0, 8);
 
       return `
         <section class="section" id="${section}-area">
@@ -615,13 +741,15 @@ function renderKnowledgeIndex(pages) {
 
           <div class="parent-grid">
             ${parentPages
-              .map((page) => `
+              .map(
+                (page) => `
                 <a class="parent-card" href="./${escapeHtml(page.path.replace(/^basics\//, ""))}">
                   <div class="badge ${escapeHtml(meta.badgeClass)}">${escapeHtml(getBadgeLabel(page))}</div>
                   <h3>${escapeHtml(page.title)}</h3>
                   <p>${escapeHtml(page.description || "")}</p>
                 </a>
-              `)
+              `
+              )
               .join("")}
           </div>
 
@@ -632,12 +760,14 @@ function renderKnowledgeIndex(pages) {
                   <h3>主要ページ</h3>
                   <div class="child-grid">
                     ${childPages
-                      .map((page) => `
+                      .map(
+                        (page) => `
                         <a class="child-card" href="./${escapeHtml(page.path.replace(/^basics\//, ""))}">
                           <h3>${escapeHtml(page.title)}</h3>
                           <p>${escapeHtml(page.description || "")}</p>
                         </a>
-                      `)
+                      `
+                      )
                       .join("")}
                   </div>
                 </div>
@@ -939,7 +1069,7 @@ function main() {
   console.log(`Saved ${BASICS_INDEX_PATH}`);
 
   for (const page of pages) {
-    const spec = specMap.get(page.id);
+    const spec = specMap.get(page.id) || buildAutoSpec(page, pageMap);
     const html = renderPageHtml(page, spec, pages, pageMap);
     writeFile(page.path, html);
     console.log(`Saved ${page.path}`);
