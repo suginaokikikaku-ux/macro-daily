@@ -32,13 +32,13 @@ function getPostTypeLabel(type) {
   return "OTHER";
 }
 
-const postFiles = fs
-  .readdirSync(postsDir)
-  .filter((file) => file.endsWith(".html"))
-  .sort()
-  .reverse();
+function getPostTypeClass(type) {
+  if (type === "fx") return "fx";
+  if (type === "crypto") return "crypto";
+  return "other";
+}
 
-const posts = postFiles.map((file) => {
+function readPostMeta(file) {
   const name = file.replace(".html", "");
   const [type, date] = name.split(/-(.+)/);
 
@@ -61,6 +61,7 @@ const posts = postFiles.map((file) => {
   return {
     type,
     typeLabel: getPostTypeLabel(type),
+    typeClass: getPostTypeClass(type),
     date,
     file,
     relativeUrl: `./site/posts/${file}`,
@@ -68,14 +69,56 @@ const posts = postFiles.map((file) => {
     title: seoTitle,
     description: seoDescription
   };
-});
+}
 
+function buildCard(post) {
+  return `
+    <article class="article-card">
+      <div class="card-meta-row">
+        <span class="card-badge card-badge-${post.typeClass}">${escapeHtml(post.typeLabel)}</span>
+        <span class="card-meta">${escapeHtml(post.date)}</span>
+      </div>
+      <a href="${post.relativeUrl}" class="card-title">${escapeHtml(post.title)}</a>
+      <p class="card-description">${escapeHtml(post.description)}</p>
+      <div class="card-link-wrap">
+        <a href="${post.relativeUrl}" class="card-link">記事を読む →</a>
+      </div>
+    </article>`;
+}
+
+function buildSection(title, subtitle, posts, emptyText) {
+  const content = posts.length
+    ? `<div class="card-grid">${posts.map(buildCard).join("")}</div>`
+    : `<div class="empty-state">${escapeHtml(emptyText)}</div>`;
+
+  return `
+    <section class="content-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">${escapeHtml(title)}</h2>
+          <p class="section-subtitle">${escapeHtml(subtitle)}</p>
+        </div>
+      </div>
+      ${content}
+    </section>
+  `;
+}
+
+const postFiles = fs
+  .readdirSync(postsDir)
+  .filter((file) => file.endsWith(".html"))
+  .sort()
+  .reverse();
+
+const posts = postFiles.map(readPostMeta);
+const fxPosts = posts.filter((post) => post.type === "fx");
+const cryptoPosts = posts.filter((post) => post.type === "crypto");
+
+const latestFx = fxPosts[0] || null;
+const latestCrypto = cryptoPosts[0] || null;
 const latestPost = posts[0] || null;
-const heroImageExists = fs.existsSync(heroImageFsPath);
 
-const heroButton = latestPost
-  ? `<a class="hero-button" href="${latestPost.relativeUrl}">最新記事を読む</a>`
-  : "";
+const heroImageExists = fs.existsSync(heroImageFsPath);
 
 const heroImageHtml = heroImageExists
   ? `<div class="hero-image" aria-label="サイトヘッダー画像"></div>`
@@ -83,30 +126,66 @@ const heroImageHtml = heroImageExists
        <div class="hero-image-fallback-text">Macro Daily</div>
      </div>`;
 
-const listHtml = posts.length
-  ? `<div class="card-grid">
-      ${posts
-        .map(
-          (post) => `
-        <article class="article-card">
-          <div class="card-meta-row">
-            <span class="card-badge card-badge-${post.type}">${escapeHtml(post.typeLabel)}</span>
-            <span class="card-meta">${escapeHtml(post.date)}</span>
-          </div>
-          <a href="${post.relativeUrl}" class="card-title">${escapeHtml(post.title)}</a>
-          <p class="card-description">${escapeHtml(post.description)}</p>
-          <div class="card-link-wrap">
-            <a href="${post.relativeUrl}" class="card-link">記事を読む →</a>
-          </div>
-        </article>`
-        )
-        .join("")}
-    </div>`
-  : `<div class="empty-state">記事がまだありません。</div>`;
+const heroActions = `
+  <div class="hero-actions">
+    <a class="hero-button" href="./fx.html">FXを見る</a>
+    <a class="hero-button hero-button-secondary" href="./crypto.html">暗号資産を見る</a>
+    <a class="hero-link" href="./basics/index.html">初心者向けガイドを見る</a>
+  </div>
+`;
 
 const latestDescription =
   latestPost?.description ||
-  "FX・暗号資産・マクロ市場のデイリー要約と相場への影響をまとめるニュースサイトです。";
+  "FX・暗号資産・マクロ市場の整理記事と初心者向け基礎知識をまとめたサイトです。";
+
+const basicsCards = `
+  <section class="content-section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">初心者向けガイド</h2>
+        <p class="section-subtitle">基礎知識がない人向けに、最初に読むべきページをまとめています。</p>
+      </div>
+    </div>
+
+    <div class="guide-grid">
+      <a class="guide-card" href="./basics/fx/what-is-fx.html">
+        <span class="guide-badge">FX基礎</span>
+        <h3>FXとは？</h3>
+        <p>為替、ドル円、レバレッジの基本を初心者向けに整理。</p>
+      </a>
+
+      <a class="guide-card" href="./basics/fx/what-moves-fx.html">
+        <span class="guide-badge">FX基礎</span>
+        <h3>なぜ為替は動くのか</h3>
+        <p>金利、経済指標、リスクオンオフの基本を理解するページ。</p>
+      </a>
+
+      <a class="guide-card" href="./basics/crypto/what-is-crypto.html">
+        <span class="guide-badge">暗号資産基礎</span>
+        <h3>暗号通貨とは？</h3>
+        <p>ビットコイン、アルトコイン、ブロックチェーンの入口。</p>
+      </a>
+
+      <a class="guide-card" href="./basics/crypto/how-to-read-projects.html">
+        <span class="guide-badge">暗号資産基礎</span>
+        <h3>プロジェクトの見方</h3>
+        <p>進捗、提携、ユーザー数、テーマ性の読み方を整理。</p>
+      </a>
+
+      <a class="guide-card" href="./basics/start/how-to-start.html">
+        <span class="guide-badge">導入</span>
+        <h3>学習から導入までの流れ</h3>
+        <p>基礎学習 → 情報収集 → 比較 → 導入までの全体像を整理。</p>
+      </a>
+
+      <a class="guide-card" href="./basics/index.html">
+        <span class="guide-badge">一覧</span>
+        <h3>基礎知識ページ一覧</h3>
+        <p>初心者向けの固定ページをまとめて確認できます。</p>
+      </a>
+    </div>
+  </section>
+`;
 
 const indexHtml = `<!DOCTYPE html>
 <html lang="ja">
@@ -139,19 +218,15 @@ const indexHtml = `<!DOCTYPE html>
       --heading: #f8fafc;
       --accent: #38bdf8;
       --accent-strong: #0ea5e9;
+      --accent-purple: #a855f7;
       --shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
       --radius-lg: 22px;
       --radius-md: 16px;
       --radius-sm: 12px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -166,7 +241,7 @@ const indexHtml = `<!DOCTYPE html>
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
     }
 
@@ -183,7 +258,7 @@ const indexHtml = `<!DOCTYPE html>
       border-radius: var(--radius-lg);
       padding: 32px;
       box-shadow: var(--shadow);
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .hero::before {
@@ -197,7 +272,6 @@ const indexHtml = `<!DOCTYPE html>
     .hero-inner {
       position: relative;
       z-index: 1;
-      max-width: 100%;
     }
 
     .hero-image {
@@ -241,8 +315,8 @@ const indexHtml = `<!DOCTYPE html>
 
     .hero h1 {
       margin: 0 0 16px;
-      font-size: clamp(36px, 6vw, 54px);
-      line-height: 1.1;
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.08;
       font-weight: 800;
       color: var(--heading);
       letter-spacing: -0.03em;
@@ -252,7 +326,7 @@ const indexHtml = `<!DOCTYPE html>
       margin: 0;
       font-size: 17px;
       color: #cbd5e1;
-      max-width: 680px;
+      max-width: 760px;
     }
 
     .hero-actions {
@@ -273,18 +347,23 @@ const indexHtml = `<!DOCTYPE html>
       border-radius: 999px;
       font-weight: 800;
       font-size: 14px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
       box-shadow: 0 10px 24px rgba(14, 165, 233, 0.28);
     }
 
-    .hero-button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(14, 165, 233, 0.34);
+    .hero-button-secondary {
+      background: linear-gradient(135deg, #c084fc, var(--accent-purple));
+      color: #240046;
+      box-shadow: 0 10px 24px rgba(168, 85, 247, 0.28);
     }
 
-    .hero-note {
+    .hero-link {
       font-size: 14px;
-      color: var(--text-soft);
+      font-weight: 700;
+      color: #cbd5e1;
+    }
+
+    .content-section {
+      margin-bottom: 32px;
     }
 
     .section-header {
@@ -292,7 +371,7 @@ const indexHtml = `<!DOCTYPE html>
       align-items: end;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .section-title {
@@ -304,9 +383,43 @@ const indexHtml = `<!DOCTYPE html>
     }
 
     .section-subtitle {
-      margin: 0;
+      margin: 6px 0 0;
       color: var(--text-soft);
       font-size: 14px;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(17,24,39,0.92), rgba(15,23,42,0.92));
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius-md);
+      padding: 22px 20px 20px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 22px;
+      color: var(--heading);
+    }
+
+    .panel-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
     }
 
     .card-grid {
@@ -315,16 +428,17 @@ const indexHtml = `<!DOCTYPE html>
       gap: 20px;
     }
 
-    .article-card {
+    .article-card, .guide-card {
       background: linear-gradient(180deg, rgba(17,24,39,0.92), rgba(15,23,42,0.92));
       border: 1px solid var(--panel-border);
       border-radius: var(--radius-md);
       padding: 22px 20px 20px;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: block;
     }
 
-    .article-card:hover {
+    .article-card:hover, .guide-card:hover {
       transform: translateY(-4px);
       border-color: rgba(56, 189, 248, 0.28);
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
@@ -346,7 +460,7 @@ const indexHtml = `<!DOCTYPE html>
       color: var(--accent);
     }
 
-    .card-badge {
+    .card-badge, .guide-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -369,17 +483,17 @@ const indexHtml = `<!DOCTYPE html>
       color: #d8b4fe;
     }
 
-    .card-title {
+    .card-title, .guide-card h3 {
       display: block;
       font-size: 22px;
       font-weight: 800;
       line-height: 1.35;
       color: var(--heading);
-      margin-bottom: 12px;
+      margin: 0 0 12px;
       letter-spacing: -0.02em;
     }
 
-    .card-description {
+    .card-description, .guide-card p {
       margin: 0;
       font-size: 15px;
       color: #cbd5e1;
@@ -393,6 +507,18 @@ const indexHtml = `<!DOCTYPE html>
       font-size: 14px;
       font-weight: 700;
       color: var(--accent);
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .guide-badge {
+      margin-bottom: 12px;
+      background: rgba(255,255,255,0.08);
+      color: #e2e8f0;
     }
 
     .empty-state {
@@ -415,6 +541,12 @@ const indexHtml = `<!DOCTYPE html>
       color: var(--heading);
     }
 
+    @media (max-width: 900px) {
+      .split-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 640px) {
       .hero {
         padding: 22px;
@@ -430,7 +562,7 @@ const indexHtml = `<!DOCTYPE html>
         align-items: flex-start;
       }
 
-      .card-title {
+      .card-title, .guide-card h3 {
         font-size: 20px;
       }
     }
@@ -447,22 +579,40 @@ const indexHtml = `<!DOCTYPE html>
           FX・暗号資産・マクロ市場の注目ニュースを毎日整理し、
           市場構造やテーマ性、次に見るべき論点をわかりやすくまとめるデイリーサイトです。
         </p>
-        <div class="hero-actions">
-          ${heroButton}
-          <span class="hero-note">毎日更新 / AI要約 / 市場整理</span>
+        ${heroActions}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">カテゴリ別の最新記事</h2>
+          <p class="section-subtitle">FX と CRYPTO を分けて見やすく整理しています。</p>
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="panel">
+          <div class="panel-header">
+            <h3 class="panel-title">FX</h3>
+            <a class="panel-link" href="./fx.html">一覧を見る →</a>
+          </div>
+          ${latestFx ? buildCard(latestFx) : `<div class="empty-state">FX記事がまだありません。</div>`}
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3 class="panel-title">CRYPTO</h3>
+            <a class="panel-link" href="./crypto.html">一覧を見る →</a>
+          </div>
+          ${latestCrypto ? buildCard(latestCrypto) : `<div class="empty-state">暗号資産記事がまだありません。</div>`}
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">最新記事一覧</h2>
-          <p class="section-subtitle">FX と CRYPTO の記事を新しい順に表示しています。</p>
-        </div>
-      </div>
-      ${listHtml}
-    </section>
+    ${buildSection("最新FX記事一覧", "為替・マクロを中心に整理した記事です。", fxPosts.slice(0, 6), "FX記事がまだありません。")}
+    ${buildSection("最新Crypto記事一覧", "主要コインとプロジェクト動向を整理した記事です。", cryptoPosts.slice(0, 6), "暗号資産記事がまだありません。")}
+    ${basicsCards}
 
     <footer class="footer">
       <p><strong>Macro Daily</strong>｜FX・暗号資産・マクロ市場のデイリーまとめ</p>
@@ -473,9 +623,10 @@ const indexHtml = `<!DOCTYPE html>
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${siteUrl}/index.html</loc>
-  </url>
+  <url><loc>${siteUrl}/index.html</loc></url>
+  <url><loc>${siteUrl}/fx.html</loc></url>
+  <url><loc>${siteUrl}/crypto.html</loc></url>
+  <url><loc>${siteUrl}/basics/index.html</loc></url>
   ${posts
     .map(
       (post) => `
