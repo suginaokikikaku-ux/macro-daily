@@ -1,0 +1,50 @@
+name: Build Knowledge Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-knowledge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      TZ: Asia/Tokyo
+      SITE_URL: ${{ vars.SITE_URL }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build knowledge pages
+        run: npm run build:knowledge
+
+      - name: Debug generated files
+        run: |
+          echo "=== basics ==="
+          find basics -maxdepth 4 -type f | sort || true
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "build knowledge pages"
+          git fetch origin main
+          git pull --rebase origin main
+          git push origin main
