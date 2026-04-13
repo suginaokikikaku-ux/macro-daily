@@ -10,7 +10,8 @@
     "build:index": "node scripts/build_index.js",
     "build:categories": "node scripts/build_category_pages.js",
     "build:knowledge": "node scripts/build_knowledge_pages.js",
-    "build:all": "npm run fetch && npm run summarize && npm run build && npm run build:index && npm run build:categories && npm run build:knowledge"
+    "build:daily": "npm run fetch && npm run summarize && npm run build && npm run build:index && npm run build:categories",
+    "build:all": "npm run build:daily && npm run build:knowledge"
   },
   "dependencies": {
     "dotenv": "^17.3.1",
