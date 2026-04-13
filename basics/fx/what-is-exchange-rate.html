@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>為替とは何か？通貨交換の仕組みを理解する｜Macro Daily</title>
-  <meta name="description" content="為替とは何か、為替レートの意味、なぜ毎日変動するのかを初心者向けにわかりやすく解説します。" />
+  <title>為替とは何か｜Macro Daily</title>
+  <meta name="description" content="為替の基本となる『通貨交換の仕組み』と『為替レートの意味』を理解するページです。なぜ毎日数字が動くのかを、初心者にも分かる言葉で整理します。" />
   <link rel="canonical" href="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/fx/what-is-exchange-rate.html" />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="為替とは何か？通貨交換の仕組みを理解する｜Macro Daily" />
-  <meta property="og:description" content="為替とは何か、為替レートの意味、なぜ毎日変動するのかを初心者向けにわかりやすく解説します。" />
+  <meta property="og:title" content="為替とは何か｜Macro Daily" />
+  <meta property="og:description" content="為替の基本となる『通貨交換の仕組み』と『為替レートの意味』を理解するページです。なぜ毎日数字が動くのかを、初心者にも分かる言葉で整理します。" />
   <meta property="og:url" content="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/fx/what-is-exchange-rate.html" />
   <meta property="og:site_name" content="Macro Daily" />
   <meta name="twitter:card" content="summary" />
@@ -28,7 +28,6 @@
     .container { max-width: 860px; margin: 0 auto; }
     a { color: #7dd3fc; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .back { display: inline-block; margin-bottom: 18px; font-weight: 700; }
     .card-wrapper {
       background: rgba(15, 23, 42, 0.92);
       border: 1px solid rgba(255,255,255,0.08);
@@ -56,21 +55,6 @@
     p, li { color: #d1d5db; font-size: 16px; }
     ul { padding-left: 22px; }
     li { margin-bottom: 6px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .grid a {
-      display: block; padding: 18px; border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: inherit; transition: background 0.2s;
-    }
-    .grid a:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
-    .grid a h3 { margin: 0 0 8px; font-size: 18px; color: #f8fafc; }
-    .grid a p { margin: 0; color: #94a3b8; font-size: 14px; }
     .next-links {
       margin-top: 40px; padding-top: 24px;
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -89,45 +73,58 @@
 </head>
 <body>
   <div class="container">
+    
     <nav class="breadcrumb">
-      <a href="../../index.html">トップ</a>
-      <span><a href="../index.html">基礎知識</a></span>
-      <span><a href="./what-is-fx.html">FXとは？</a></span>
+      <a href="../../index.html">トップ</a><span><a href="../index.html">基礎知識</a></span><span><a href="what-is-fx.html">FXとは？</a></span>
       <span>為替とは何か</span>
     </nav>
-
+  
     <div class="card-wrapper">
       <div class="badge">FX基礎</div>
-      <h1>為替とは何か？通貨交換の仕組みを理解する</h1>
-      <p class="lead">為替とは、ある国の通貨を別の国の通貨に交換することです。FXを理解するうえでは、まず「お金の交換に値段がついている」という感覚を持つことが出発点になります。</p>
-
-      <h2>為替とは通貨を交換すること</h2>
-      <p>結論から言うと、為替とは異なる国の通貨を交換する仕組みです。日本円を米ドルに替える、あるいは米ドルを日本円に戻す、この行為そのものが為替です。</p>
-      <p>たとえば海外旅行でアメリカへ行くとき、日本円のままでは現地で使いにくいため、米ドルに両替します。これはごく身近な為替の例です。FXではこの交換の価格変化を見て、市場が何を織り込んでいるかを学びます。つまり、為替とは「通貨同士の交換」と考えると理解しやすいです。</p>
-
-      <h2>為替レートとは交換の値段</h2>
-      <p>結論として、為替レートとは通貨を交換するときの値段です。ニュースで見る「1ドル＝150円」のような数字は、1米ドルを手に入れるのに何円必要かを表しています。</p>
-      <p>ここで大事なのは、為替レートは固定ではなく常に変わるという点です。スーパーで毎日同じ値段の商品のように見えるかもしれませんが、為替は世界中の参加者が売買するため、状況によって細かく動きます。</p>
-      <p>たとえば昨日は1ドル＝148円だったのに、今日は150円になることがあります。この場合は、以前よりも多くの円を出さないと1ドルを買えない状態です。つまり、為替レートとは「通貨交換の価格」であり、この価格変化が相場の中心です。</p>
-
-      <h2>なぜ為替レートは毎日変わるのか</h2>
-      <p>結論として、為替レートが毎日変わるのは、通貨の需要と供給が常に変化しているからです。簡単に言えば、買いたい人が増えれば上がりやすく、売りたい人が増えれば下がりやすくなります。</p>
-      <p>通貨の需要を動かす要因には、金利、経済指標、中央銀行の発言、地政学リスクなどがあります。たとえばアメリカの金利が上がると、米ドルを持ちたいと考える人が増え、ドルが買われやすくなることがあります。</p>
-      <p>また、投資家の不安が強まる局面では、特定の通貨が安全資産として買われやすくなることもあります。つまり、為替レートは単なる数字ではなく、世界のお金の流れや期待の変化を映しているのです。</p>
-
-      <h2>為替を理解するとニュースの意味が見えてくる</h2>
-      <p>結論として、為替の仕組みを理解すると、ニュースがただの情報ではなくなります。なぜその材料でドル円が動いたのか、なぜ市場が反応したのかを考えられるようになるからです。</p>
-      <p>たとえば「米CPIが市場予想を上回った」というニュースを見たとき、為替の基本が分かっていれば、インフレや金利見通しの変化を通じてドルに影響が出るかもしれない、とつなげて考えられます。逆に仕組みを知らないと、数字だけ見ても意味が分かりにくいままです。</p>
-      <p>FXは価格だけを見るより、為替が何を表しているかを理解する方が学びやすい分野です。つまり、為替の基本を押さえることは、相場のニュースを読むための土台になります。</p>
-
+      <h1>為替とは何か</h1>
+      <p class="lead">為替とは、ある国のお金を別の国のお金に交換することです。FXを理解するには、まず『交換に値段がついていて、その値段が毎日変わる』という感覚を持つことが大切です。</p>
+      
+        <h2>為替とは通貨を交換すること</h2>
+        <p>為替とは、異なる国の通貨を交換することです。日本円を米ドルに替える、ユーロを日本円に戻す、こうした行為そのものが為替です。</p><p>普段は意識しにくいですが、海外旅行、輸入品の価格、海外投資など、私たちの生活にも為替は深く関わっています。つまり、為替は特別な投資の話ではなく、国と国のお金の交換そのものです。</p>
+      
+        <h2>為替レートとは交換の値段</h2>
+        <p>為替レートとは、通貨を交換するときの値段です。『1ドル＝150円』なら、1米ドルを手に入れるために150円必要という意味です。</p><p>ここで重要なのは、為替レートは固定ではなく常に変わることです。スーパーの商品価格のように一定ではなく、市場参加者の売買によって常に更新されます。つまり為替レートは、通貨の交換価格そのものです。</p>
+      
+        <h2>なぜ為替レートは毎日変わるのか</h2>
+        <p>為替レートが毎日変わるのは、通貨の需要と供給が絶えず変化しているからです。ある通貨を買いたい人が増えれば上がりやすく、売りたい人が増えれば下がりやすくなります。</p><p>この需要と供給を動かす要因には、金利、経済指標、中央銀行の発言、地政学リスク、株式市場の動きなどがあります。だから為替レートは単なる数字ではなく、市場の期待や不安を映す鏡でもあります。</p>
+      
+        <h2>為替を理解するとニュースの見え方が変わる</h2>
+        <p>為替の基本を理解すると、ニュースの見方が変わります。たとえば『米CPIが強かった』という話を見たときに、単なる数字ではなく『金利見通しに影響してドルが意識されるかもしれない』とつなげて考えられるようになります。</p><p>逆に為替の仕組みが曖昧なままだと、ニュースを見ても『結局何が起きているのか』が分かりにくいままです。つまり、為替の理解はニュース理解の土台になります。</p>
+      
+      <h2>押さえるべきポイント</h2>
+      <ul>
+        <li>為替は通貨の交換</li><li>為替レートは交換価格</li><li>需要と供給で日々変動する</li><li>為替理解はニュース理解の土台</li>
+      </ul>
+    
+      <h2>具体例で理解する</h2>
+      <p>海外旅行で日本円を米ドルに両替するのは、もっとも身近な為替の例です。</p><p>同じ1ドルでも、昨日148円で買えたのに今日は150円必要なら、為替レートが変化したということです。</p>
+    
+      <h2>よくある誤解</h2>
+      <ul>
+        <li>為替を単なるチャートの数字としてだけ見る</li><li>為替レートの意味を『上がる・下がる』だけで捉える</li><li>ニュースの数字と為替の関係を切り離して考える</li>
+      </ul>
+    
+      <h2>注意点とリスク</h2>
+      <ul>
+        <li>為替の基本構造を理解しないまま相場ニュースを追うと、材料の意味を誤解しやすくなります。</li>
+      </ul>
+    
+      <h2>このページで目指す理解</h2>
+      <p>為替とは何か、為替レートが何を表しているのか、なぜその数字が日々変動するのかを自分の言葉で説明できる状態にする。</p>
+    
+      
       <div class="next-links">
         <h2>次に読むページ</h2>
         <ul>
-          <li><a href="./what-is-currency-pair.html">通貨ペアとは何か</a></li>
-          <li><a href="./what-is-fx.html">FXとは？</a></li>
-          <li><a href="../common/how-to-read-news.html">相場ニュースの読み方</a></li>
+          <li><a href="what-is-currency-pair.html">通貨ペアとは何か</a></li><li><a href="what-is-fx.html">FXとは？</a></li><li><a href="../common/how-to-read-news.html">相場ニュースの読み方</a></li><li><a href="what-is-usdjpy.html">ドル円とは？</a></li>
         </ul>
       </div>
+    
     </div>
   </div>
 </body>

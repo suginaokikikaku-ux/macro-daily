@@ -43,7 +43,7 @@
         radial-gradient(circle at top left, rgba(56, 189, 248, 0.10), transparent 28%),
         radial-gradient(circle at top right, rgba(167, 139, 250, 0.10), transparent 30%),
         linear-gradient(180deg, #020617 0%, #0b1120 100%);
-      color: var(--text);
+        color: var(--text);
     }
 
     .container {
@@ -53,10 +53,6 @@
 
     a {
       color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
       text-decoration: none;
     }
 
@@ -133,10 +129,6 @@
       color: var(--heading);
     }
 
-    .hero-actions a:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
     h2 {
       margin: 0 0 12px;
       font-size: 28px;
@@ -164,7 +156,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 64px;
+      min-width: 72px;
       padding: 6px 10px;
       border-radius: 999px;
       font-size: 12px;
@@ -192,13 +184,6 @@
       background: var(--panel-soft);
       border: 1px solid var(--panel-border);
       transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .toc a:hover,
-    .parent-card:hover,
-    .child-card:hover {
-      background: rgba(255,255,255,0.07);
-      transform: translateY(-2px);
     }
 
     .toc strong {
@@ -289,12 +274,6 @@
       font-size: 14px;
     }
 
-    .footer-note {
-      margin-top: 16px;
-      color: var(--text-soft);
-      font-size: 13px;
-    }
-
     @media (max-width: 640px) {
       .hero, .section, .toc {
         padding: 22px;
@@ -318,7 +297,7 @@
       <div class="eyebrow">Knowledge Map</div>
       <h1>基礎知識一覧</h1>
       <p>
-        Macro Daily の学習ページを、FX・暗号資産・共通知識・実用ガイドに分けて整理しています。
+        Macro Daily の学習ページを、FX・暗号通貨・共通知識・実用ガイドに分けて整理しています。
         まずは親ページで全体像をつかみ、そのあと個別テーマへ進む流れがおすすめです。
       </p>
       <div class="hero-actions">
@@ -339,11 +318,11 @@
       <div class="toc-grid">
         <a href="#fx-area">
           <strong>FXエリア</strong>
-          <span>FX基礎 / ドル円 / 為替の仕組み / 相場構造 / FXニュース</span>
+          <span>基礎 / ドル円 / 為替の仕組み / 相場構造 / FXニュース</span>
         </a>
         <a href="#crypto-area">
           <strong>暗号通貨エリア</strong>
-          <span>暗号資産基礎 / ブロックチェーン / 主要銘柄 / 市場テーマ / プロジェクト分析</span>
+          <span>基礎 / ブロックチェーン / 主要銘柄 / 市場テーマ / プロジェクト分析</span>
         </a>
         <a href="#common-area">
           <strong>共通知識</strong>
@@ -355,263 +334,181 @@
         </a>
       </div>
       <div class="note">
-        この一覧では、今後作成するページの正式なファイル名と導線を固定しています。未作成ページは今後このパスで追加していく前提です。
+        この一覧は manifest をもとに自動生成しています。ページ名・ファイル名・導線をズレにくくするため、今後は manifest を正本として管理します。
       </div>
     </section>
 
-    <section class="section" id="fx-area">
-      <div class="section-head">
-        <div>
-          <h2>FXエリア</h2>
-          <p>為替の基本から、ドル円、金利、経済指標、相場構造、ニュースの読み方までを段階的に学べる構成です。</p>
-        </div>
-        <div class="count">5カテゴリ</div>
-      </div>
+    
+        <section class="section" id="fx-area">
+          <div class="section-head">
+            <div>
+              <h2>FXエリア</h2>
+              <p>為替の基本から、ドル円、金利、経済指標、相場構造、ニュースの読み方までを段階的に学べる構成です。</p>
+            </div>
+            <div class="count">6ページ</div>
+          </div>
 
-      <div class="parent-grid">
-        <a class="parent-card" href="./fx/what-is-fx.html">
-          <div class="badge fx">FX基礎</div>
-          <h3>FXとは？</h3>
-          <p>為替、通貨ペア、レバレッジ、スプレッドなど、FXの土台を理解する入口ページです。</p>
-        </a>
-        <a class="parent-card" href="./fx/what-is-usdjpy.html">
-          <div class="badge fx">ドル円</div>
-          <h3>ドル円とは？USD/JPYの見方</h3>
-          <p>円安・円高、日銀政策、米金利など、日本人がまず押さえるべき通貨ペアの見方を学びます。</p>
-        </a>
-        <a class="parent-card" href="./fx/what-moves-fx.html">
-          <div class="badge fx">為替の仕組み</div>
-          <h3>なぜ為替は動くのか</h3>
-          <p>金利、経済指標、中央銀行、地政学、リスクオン・オフといった主要ドライバーを整理します。</p>
-        </a>
-        <a class="parent-card" href="./fx/how-to-read-market-structure.html">
-          <div class="badge fx">相場構造</div>
-          <h3>相場構造の見方</h3>
-          <p>トレンド、レンジ、ブレイク、サポート・レジスタンスなど、チャートの基本構造を理解します。</p>
-        </a>
-        <a class="parent-card" href="./fx/how-to-read-fx-news.html">
-          <div class="badge fx">FXニュース</div>
-          <h3>FXニュースの読み方</h3>
-          <p>指標、織り込み、材料の強弱、継続テーマの見分け方など、実践的な読み方を学びます。</p>
-        </a>
-      </div>
+          <div class="parent-grid">
+            
+                <a class="parent-card" href="./fx/what-is-fx.html">
+                  <div class="badge fx">FX基礎</div>
+                  <h3>FXとは？</h3>
+                  <p>FXの基本、為替、通貨ペアなどの土台を理解する入口ページ</p>
+                </a>
+              
+                <a class="parent-card" href="./fx/what-is-usdjpy.html">
+                  <div class="badge fx">ドル円</div>
+                  <h3>ドル円とは？</h3>
+                  <p>USD/JPYの基本と見方を理解する</p>
+                </a>
+              
+                <a class="parent-card" href="./fx/what-moves-fx.html">
+                  <div class="badge fx">為替の仕組み</div>
+                  <h3>なぜ為替は動くのか</h3>
+                  <p>金利や経済指標など為替の動く理由を理解する</p>
+                </a>
+              
+                <a class="parent-card" href="./fx/how-to-read-fx-news.html">
+                  <div class="badge fx">ニュース</div>
+                  <h3>FXニュースの読み方</h3>
+                  <p>ニュースをどう解釈するかを学ぶ</p>
+                </a>
+              
+          </div>
 
-      <div class="child-group">
-        <h3>FX基礎の主要ページ</h3>
-        <div class="child-grid">
-          <a class="child-card" href="./fx/what-is-exchange-rate.html">
-            <h3>為替とは何か</h3>
-            <p>通貨交換の仕組み、為替レートの意味、なぜ毎日変動するのかを理解します。</p>
-          </a>
-          <a class="child-card" href="./fx/what-is-currency-pair.html">
-            <h3>通貨ペアとは何か</h3>
-            <p>USD/JPYの読み方、ベース通貨とクオート通貨の意味を押さえます。</p>
-          </a>
-          <a class="child-card" href="./fx/what-is-leverage.html">
-            <h3>レバレッジとは何か</h3>
-            <p>資金効率とリスクの両面から、レバレッジの基本を整理します。</p>
-          </a>
-          <a class="child-card" href="./fx/what-is-spread.html">
-            <h3>スプレッドとは何か</h3>
-            <p>実質コストとしてのスプレッドと、広がりやすい場面を理解します。</p>
-          </a>
-        </div>
-      </div>
+          
+                <div class="child-group">
+                  <h3>主要ページ</h3>
+                  <div class="child-grid">
+                    
+                        <a class="child-card" href="./fx/what-is-exchange-rate.html">
+                          <h3>為替とは何か</h3>
+                          <p>為替レートの意味と通貨交換の仕組みを理解する</p>
+                        </a>
+                      
+                        <a class="child-card" href="./fx/what-is-currency-pair.html">
+                          <h3>通貨ペアとは何か</h3>
+                          <p>USD/JPYなど通貨ペアの読み方を理解する</p>
+                        </a>
+                      
+                  </div>
+                </div>
+              
+        </section>
+      
+        <section class="section" id="crypto-area">
+          <div class="section-head">
+            <div>
+              <h2>暗号通貨エリア</h2>
+              <p>暗号資産の基礎、ブロックチェーン、主要銘柄、市場テーマ、プロジェクト分析、ニュースの読み方まで体系的に学べる構成です。</p>
+            </div>
+            <div class="count">5ページ</div>
+          </div>
 
-      <div class="child-group">
-        <h3>為替の仕組み・ニュース理解で重要なページ</h3>
-        <div class="child-grid">
-          <a class="child-card" href="./fx/interest-and-fx.html">
-            <h3>金利と為替の関係</h3>
-            <p>利上げ・利下げ、金利差、債券利回りが為替にどう波及するかを学びます。</p>
-          </a>
-          <a class="child-card" href="./fx/what-is-economic-indicator.html">
-            <h3>経済指標とは何か</h3>
-            <p>CPI、雇用統計、GDPなど、重要指標の役割と見方を整理します。</p>
-          </a>
-          <a class="child-card" href="./fx/what-is-central-bank.html">
-            <h3>中央銀行とは何か</h3>
-            <p>FRB、日銀、ECBなどが相場に与える影響を理解します。</p>
-          </a>
-          <a class="child-card" href="./fx/what-is-risk-on-off.html">
-            <h3>リスクオン・リスクオフとは何か</h3>
-            <p>市場心理と通貨・株・債券のつながりを学びます。</p>
-          </a>
-        </div>
-      </div>
-    </section>
+          <div class="parent-grid">
+            
+                <a class="parent-card" href="./crypto/what-is-crypto.html">
+                  <div class="badge crypto">基礎</div>
+                  <h3>暗号通貨とは？</h3>
+                  <p>暗号資産の基本と仕組みを理解する</p>
+                </a>
+              
+                <a class="parent-card" href="./crypto/what-is-blockchain.html">
+                  <div class="badge crypto">技術</div>
+                  <h3>ブロックチェーンとは？</h3>
+                  <p>ブロックチェーンの基本構造を理解する</p>
+                </a>
+              
+                <a class="parent-card" href="./crypto/what-is-market-theme.html">
+                  <div class="badge crypto">テーマ</div>
+                  <h3>市場テーマとは何か</h3>
+                  <p>AI・DeFiなどテーマでの資金の動きを理解する</p>
+                </a>
+              
+          </div>
 
-    <section class="section" id="crypto-area">
-      <div class="section-head">
-        <div>
-          <h2>暗号通貨エリア</h2>
-          <p>暗号資産の基礎、ブロックチェーン、主要銘柄、市場テーマ、プロジェクト分析、ニュースの読み方まで体系的に学べる構成です。</p>
-        </div>
-        <div class="count">6カテゴリ</div>
-      </div>
+          
+                <div class="child-group">
+                  <h3>主要ページ</h3>
+                  <div class="child-grid">
+                    
+                        <a class="child-card" href="./crypto/what-is-bitcoin.html">
+                          <h3>ビットコインとは何か</h3>
+                          <p>BTCの役割と価値の考え方を理解する</p>
+                        </a>
+                      
+                        <a class="child-card" href="./crypto/what-is-defi.html">
+                          <h3>DeFiとは何か</h3>
+                          <p>分散型金融の基本と仕組み</p>
+                        </a>
+                      
+                  </div>
+                </div>
+              
+        </section>
+      
+        <section class="section" id="common-area">
+          <div class="section-head">
+            <div>
+              <h2>共通知識</h2>
+              <p>FXと暗号通貨の両方に共通する考え方、ニュースの読み方、比較、リスク管理、情報整理の基礎をまとめています。</p>
+            </div>
+            <div class="count">3ページ</div>
+          </div>
 
-      <div class="parent-grid">
-        <a class="parent-card" href="./crypto/what-is-crypto.html">
-          <div class="badge crypto">暗号資産基礎</div>
-          <h3>暗号通貨とは？</h3>
-          <p>ビットコイン、イーサリアム、アルトコイン、ステーブルコインなどの基本を学ぶ入口です。</p>
-        </a>
-        <a class="parent-card" href="./crypto/what-is-blockchain.html">
-          <div class="badge crypto">ブロックチェーン</div>
-          <h3>ブロックチェーンとは？</h3>
-          <p>分散管理、ノード、コンセンサス、L1/L2などの基礎概念を整理します。</p>
-        </a>
-        <a class="parent-card" href="./crypto/major-coins-overview.html">
-          <div class="badge crypto">主要銘柄</div>
-          <h3>主要コインの違い</h3>
-          <p>BTC・ETH・SOL・XRP・BNB・ADAなど、主要銘柄の役割の違いを学びます。</p>
-        </a>
-        <a class="parent-card" href="./crypto/what-is-market-theme.html">
-          <div class="badge crypto">市場テーマ</div>
-          <h3>市場テーマとは何か</h3>
-          <p>AI、DeFi、NFT、L2、RWA、DePIN、GameFi など、テーマごとの見方を整理します。</p>
-        </a>
-        <a class="parent-card" href="./crypto/how-to-read-projects.html">
-          <div class="badge crypto">プロジェクト分析</div>
-          <h3>暗号資産プロジェクトの見方</h3>
-          <p>ホワイトペーパー、トークノミクス、アンロック、開発進捗などの確認ポイントを学びます。</p>
-        </a>
-        <a class="parent-card" href="./crypto/how-to-read-crypto-news.html">
-          <div class="badge crypto">暗号資産ニュース</div>
-          <h3>暗号通貨ニュースの読み方</h3>
-          <p>ETF、規制、上場、提携、ハッキング、アップグレードなどのニュースをどう読むか整理します。</p>
-        </a>
-      </div>
+          <div class="parent-grid">
+            
+                <a class="parent-card" href="./common/how-to-read-news.html">
+                  <div class="badge common">共通</div>
+                  <h3>相場ニュースの読み方</h3>
+                  <p>ニュースの解釈方法を学ぶ</p>
+                </a>
+              
+                <a class="parent-card" href="./common/fx-vs-crypto-overview.html">
+                  <div class="badge common">共通知識</div>
+                  <h3>FXと暗号通貨の違い</h3>
+                  <p>FXと暗号通貨の違いを、値動き・仕組み・学び方の違いから整理する</p>
+                </a>
+              
+                <a class="parent-card" href="./common/risk-management.html">
+                  <div class="badge common">共通知識</div>
+                  <h3>リスク管理の基本</h3>
+                  <p>資金・情報・判断の3つの観点からリスク管理を整理する</p>
+                </a>
+              
+          </div>
 
-      <div class="child-group">
-        <h3>暗号資産基礎の主要ページ</h3>
-        <div class="child-grid">
-          <a class="child-card" href="./crypto/what-is-bitcoin.html">
-            <h3>ビットコインとは何か</h3>
-            <p>暗号資産市場の中心としてのBTCの役割と価値の見られ方を学びます。</p>
-          </a>
-          <a class="child-card" href="./crypto/what-is-ethereum.html">
-            <h3>イーサリアムとは何か</h3>
-            <p>スマートコントラクトの基盤としてのETHの役割を整理します。</p>
-          </a>
-          <a class="child-card" href="./crypto/what-is-altcoin.html">
-            <h3>アルトコインとは何か</h3>
-            <p>BTC以外の銘柄群をどう見ればよいか、基本から説明します。</p>
-          </a>
-          <a class="child-card" href="./crypto/what-is-stablecoin.html">
-            <h3>ステーブルコインとは何か</h3>
-            <p>USDTやUSDCなど、価格安定型トークンの役割を理解します。</p>
-          </a>
-        </div>
-      </div>
+          
+        </section>
+      
+        <section class="section" id="guide-area">
+          <div class="section-head">
+            <div>
+              <h2>実用ガイド</h2>
+              <p>理解だけで終わらず、学習を継続するための実務的なガイドをまとめています。</p>
+            </div>
+            <div class="count">2ページ</div>
+          </div>
 
-      <div class="child-group">
-        <h3>市場テーマ・分析で重要なページ</h3>
-        <div class="child-grid">
-          <a class="child-card" href="./crypto/what-is-ai-theme.html">
-            <h3>AIとは何か</h3>
-            <p>暗号通貨市場におけるAIテーマの意味と、関連プロジェクトの見方を学びます。</p>
-          </a>
-          <a class="child-card" href="./crypto/what-is-defi.html">
-            <h3>DeFiとは何か</h3>
-            <p>分散型金融の基本と、DEX・レンディング・TVLなどの重要概念を整理します。</p>
-          </a>
-          <a class="child-card" href="./crypto/what-is-nft.html">
-            <h3>NFTとは何か</h3>
-            <p>画像だけでないNFTの用途と、市場の見方を理解します。</p>
-          </a>
-          <a class="child-card" href="./crypto/what-is-l2-theme.html">
-            <h3>L2とは何か</h3>
-            <p>レイヤー2が必要とされる背景と、採用状況の見方を学びます。</p>
-          </a>
-        </div>
-      </div>
-    </section>
+          <div class="parent-grid">
+            
+                <a class="parent-card" href="./guides/best-fx-brokers.html">
+                  <div class="badge guide">導入</div>
+                  <h3>FX口座の選び方</h3>
+                  <p>口座比較と選び方</p>
+                </a>
+              
+                <a class="parent-card" href="./guides/best-crypto-exchanges.html">
+                  <div class="badge guide">導入</div>
+                  <h3>暗号通貨取引所の選び方</h3>
+                  <p>暗号資産の取引所を比較するポイント</p>
+                </a>
+              
+          </div>
 
-    <section class="section" id="common-area">
-      <div class="section-head">
-        <div>
-          <h2>共通知識</h2>
-          <p>FXと暗号通貨の両方に共通する考え方、ニュースの読み方、比較、リスク管理、情報整理の基礎をまとめています。</p>
-        </div>
-        <div class="count">6ページ</div>
-      </div>
-
-      <div class="child-grid">
-        <a class="child-card" href="./common/how-to-read-news.html">
-          <div class="badge common">共通知識</div>
-          <h3>相場ニュースの読み方</h3>
-          <p>事実と解釈を分けて読み、市場反応とのズレを見るための基礎を学びます。</p>
-        </a>
-        <a class="child-card" href="./common/how-to-use-this-site.html">
-          <div class="badge common">共通知識</div>
-          <h3>このサイトの使い方</h3>
-          <p>基礎ページ・日次記事・比較ページをどう使い分けるかを整理します。</p>
-        </a>
-        <a class="child-card" href="./common/fx-vs-crypto-overview.html">
-          <div class="badge common">共通知識</div>
-          <h3>FXと暗号通貨の違い</h3>
-          <p>値動きの要因、学び方、向いている人の違いを比較して理解します。</p>
-        </a>
-        <a class="child-card" href="./common/first-steps-for-beginners.html">
-          <div class="badge common">共通知識</div>
-          <h3>初心者が最初にやるべきこと</h3>
-          <p>最初の学習順序と、何から理解すべきかを整理します。</p>
-        </a>
-        <a class="child-card" href="./common/risk-management.html">
-          <div class="badge common">共通知識</div>
-          <h3>リスク管理の基本</h3>
-          <p>資金・時間・情報の扱い方を含めた、学習と市場の両面のリスク管理を学びます。</p>
-        </a>
-        <a class="child-card" href="./common/how-to-organize-market-information.html">
-          <div class="badge common">共通知識</div>
-          <h3>相場で情報を整理するコツ</h3>
-          <p>ニュース・テーマ・数字・市場反応を混同しない整理の仕方を学びます。</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="section" id="guide-area">
-      <div class="section-head">
-        <div>
-          <h2>実用ガイド</h2>
-          <p>理解だけで終わらず、学習を継続するための実務的なガイドをまとめています。</p>
-        </div>
-        <div class="count">5ページ</div>
-      </div>
-
-      <div class="child-grid">
-        <a class="child-card" href="./guides/best-fx-brokers.html">
-          <div class="badge guide">実用ガイド</div>
-          <h3>FX口座の選び方</h3>
-          <p>手数料、使いやすさ、情報量など、比較の軸を整理します。</p>
-        </a>
-        <a class="child-card" href="./guides/best-crypto-exchanges.html">
-          <div class="badge guide">実用ガイド</div>
-          <h3>暗号通貨取引所の選び方</h3>
-          <p>国内外取引所の違いと、比較時の基本ポイントを整理します。</p>
-        </a>
-        <a class="child-card" href="./guides/wallet-basics.html">
-          <div class="badge guide">実用ガイド</div>
-          <h3>ウォレットの基本</h3>
-          <p>保管方法、ウォレットの役割、取引所保管との違いを理解します。</p>
-        </a>
-        <a class="child-card" href="./guides/how-to-build-learning-habits.html">
-          <div class="badge guide">実用ガイド</div>
-          <h3>学習を続けるための習慣化</h3>
-          <p>理解を積み上げるための学習ルーティンの作り方をまとめます。</p>
-        </a>
-        <a class="child-card" href="./guides/daily-news-learning-routine.html">
-          <div class="badge guide">実用ガイド</div>
-          <h3>毎日のニュース学習ルーティン</h3>
-          <p>毎日何を見て、どう記録し、どう理解を深めるかの流れを整理します。</p>
-        </a>
-      </div>
-
-      <p class="footer-note">
-        今後はこの一覧を正式な固定パスとして扱い、個別ページを順番に追加していく運用にすると、タイトルや内部リンクのズレを防ぎやすくなります。
-      </p>
-    </section>
+          
+        </section>
+      
   </div>
 </body>
 </html>

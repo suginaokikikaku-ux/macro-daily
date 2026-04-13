@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>暗号通貨とは？初心者向け基礎ガイド｜Macro Daily</title>
-  <meta name="description" content="暗号通貨、ビットコイン、アルトコイン、ブロックチェーンの基本を整理します。" />
+  <title>暗号通貨とは？｜Macro Daily</title>
+  <meta name="description" content="暗号資産の基本、主要な種類、ビットコインとイーサリアムの違いなど、暗号通貨全体の入口を整理するページです。" />
   <link rel="canonical" href="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/crypto/what-is-crypto.html" />
   <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="暗号通貨とは？｜Macro Daily" />
+  <meta property="og:description" content="暗号資産の基本、主要な種類、ビットコインとイーサリアムの違いなど、暗号通貨全体の入口を整理するページです。" />
+  <meta property="og:url" content="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/crypto/what-is-crypto.html" />
+  <meta property="og:site_name" content="Macro Daily" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -16,20 +25,10 @@
       background: #0b1120;
       color: #e5e7eb;
     }
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    a {
-      color: #7dd3fc;
-      text-decoration: none;
-    }
-    .back {
-      display: inline-block;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-    .card {
+    .container { max-width: 860px; margin: 0 auto; }
+    a { color: #7dd3fc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card-wrapper {
       background: rgba(15, 23, 42, 0.92);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
@@ -43,46 +42,89 @@
       background: rgba(255,255,255,0.08);
       font-size: 12px;
       font-weight: 700;
+      color: #94a3b8;
     }
-    h1 {
-      margin: 0 0 12px;
-      font-size: 36px;
-      line-height: 1.2;
-    }
+    h1 { margin: 0 0 12px; font-size: 36px; line-height: 1.2; color: #f8fafc; }
+    .lead { color: #94a3b8; font-size: 16px; margin-bottom: 24px; }
     h2 {
-      margin-top: 28px;
-      font-size: 24px;
-      color: #f8fafc;
-      border-left: 4px solid #38bdf8;
-      padding-left: 12px;
+      margin-top: 32px; margin-bottom: 12px;
+      font-size: 22px; color: #f8fafc;
+      border-left: 4px solid #38bdf8; padding-left: 12px;
     }
-    p, li {
-      color: #d1d5db;
-      font-size: 16px;
+    h3 { margin-top: 24px; margin-bottom: 8px; font-size: 18px; color: #e2e8f0; }
+    p, li { color: #d1d5db; font-size: 16px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .next-links {
+      margin-top: 40px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    ul {
-      padding-left: 22px;
+    .next-links h2 { border-left: 4px solid #a78bfa; }
+    .next-links ul { list-style: none; padding: 0; }
+    .next-links li { margin-bottom: 10px; }
+    .next-links li::before { content: "→ "; color: #a78bfa; }
+    .breadcrumb {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 18px; font-size: 13px; color: #64748b;
     }
+    .breadcrumb a { color: #7dd3fc; }
+    .breadcrumb span::before { content: "/"; margin-right: 6px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" href="../index.html">← 基礎知識一覧へ戻る</a>
-    <div class="card">
-      <div class="badge">暗号資産基礎</div>
-      <h1>暗号通貨とは？初心者向け基礎ガイド</h1>
-      <p>暗号通貨、ビットコイン、アルトコイン、ブロックチェーンの基本を整理します。</p>
-      <p>
-<h2>暗号通貨とは</h2>
-暗号通貨は、ブロックチェーンを基盤にしたデジタル資産です。ビットコインだけでなく、多くの用途別プロジェクトがあります。</p><h2>基本の分類</h2>
-<ul><li>ビットコイン</li>
-<li>イーサリアム</li>
-<li>アルトコイン</li>
-<li>ステーブルコイン</li></p><h2>初心者が最初に理解すべきこと</h2>
-<li>価格だけでなく、プロジェクトの目的を見る</li>
-<li>市場テーマごとに資金が動く</li>
-<li>同じ暗号資産でも役割が違う</li></ul>
-</p>
+    
+    <nav class="breadcrumb">
+      <a href="../../index.html">トップ</a><span><a href="../index.html">基礎知識</a></span>
+      <span>暗号通貨とは？</span>
+    </nav>
+  
+    <div class="card-wrapper">
+      <div class="badge">基礎</div>
+      <h1>暗号通貨とは？</h1>
+      <p class="lead">暗号通貨を理解するには、ビットコインだけを知っていれば十分というわけではありません。市場全体の分類と役割の違いを整理することで、ニュースやテーマの理解が進みます。</p>
+      
+        <h2>暗号通貨とは何か</h2>
+        <p>暗号通貨は、ブロックチェーンを基盤にしたデジタル資産です。単なる値動きのある商品ではなく、送金、決済、アプリ基盤、テーマ投資など、役割の違いがあります。</p><p>そのため、同じ『暗号資産』という言葉でくくっても、中身はかなり違います。つまり、最初に分類を理解することが重要です。</p>
+      
+        <h2>まず押さえるべき分類</h2>
+        <p>最初に押さえるべきなのは、ビットコイン、イーサリアム、アルトコイン、ステーブルコインの4分類です。BTCは市場全体の軸、ETHはアプリ基盤、アルトは個別テーマ、ステーブルコインは価格安定型という役割分担があります。</p><p>この違いを理解しないままニュースを追うと、『なぜそのニュースでその銘柄が動いたのか』が見えにくくなります。</p>
+      
+        <h2>価格だけで見ないための視点</h2>
+        <p>暗号資産は価格変動が目立つため、つい数字ばかりに目が向きがちです。しかし重要なのは、何を解決するプロジェクトなのか、どのテーマに属するのか、どれくらい使われているのかといった中身です。</p><p>価格は結果であり、背景には技術、採用、テーマ、資金循環があります。つまり、暗号資産は『価格の裏側』を理解していく市場です。</p>
+      
+        <h2>このカテゴリで学べること</h2>
+        <p>このカテゴリでは、ビットコイン、イーサリアム、アルトコイン、ステーブルコイン、法定通貨との違いなど、暗号資産の基礎を整理します。</p><p>その土台ができると、次の『ブロックチェーン』『市場テーマ』『プロジェクト分析』へ自然に進めます。</p>
+      
+      <h2>押さえるべきポイント</h2>
+      <ul>
+        <li>暗号通貨は役割ごとに分類が必要</li><li>BTC・ETH・アルト・ステーブルの違いを押さえる</li><li>価格だけでなく中身を見る</li><li>基礎理解が次のテーマ学習につながる</li>
+      </ul>
+    
+      <h2>具体例で理解する</h2>
+      <p>BTCは市場全体の軸として見られやすく、ETHはアプリ基盤として見られやすいという違いがあります。</p>
+    
+      <h2>よくある誤解</h2>
+      <ul>
+        <li>すべての暗号資産を同じものとして見る</li><li>価格だけで良し悪しを判断する</li><li>ビットコインだけ理解して市場全体を分かった気になる</li>
+      </ul>
+    
+      <h2>注意点とリスク</h2>
+      <ul>
+        <li>分類を理解しないままテーマやニュースを見ると、情報が混線しやすくなります。</li>
+      </ul>
+    
+      <h2>このページで目指す理解</h2>
+      <p>暗号通貨とは何か、主要な分類には何があり、それぞれをどう見分ければよいかを説明できる状態にする。</p>
+    
+      
+      <div class="next-links">
+        <h2>次に読むページ</h2>
+        <ul>
+          <li><a href="what-is-bitcoin.html">ビットコインとは何か</a></li><li><a href="what-is-blockchain.html">ブロックチェーンとは？</a></li><li><a href="what-is-market-theme.html">市場テーマとは何か</a></li><li><a href="../common/fx-vs-crypto-overview.html">FXと暗号通貨の違い</a></li>
+        </ul>
+      </div>
+    
     </div>
   </div>
 </body>

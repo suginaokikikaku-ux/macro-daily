@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FXとは？初心者向け基礎ガイド｜Macro Daily</title>
-  <meta name="description" content="FXの基本、為替、ドル円、レバレッジの考え方を初心者向けに整理します。" />
+  <title>FXとは？｜Macro Daily</title>
+  <meta name="description" content="FXの全体像を理解するための入口ページです。為替とは何か、通貨ペア、レバレッジ、スプレッドなど、後の学習の土台になる概念をまとめて整理します。" />
   <link rel="canonical" href="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/fx/what-is-fx.html" />
   <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="FXとは？｜Macro Daily" />
+  <meta property="og:description" content="FXの全体像を理解するための入口ページです。為替とは何か、通貨ペア、レバレッジ、スプレッドなど、後の学習の土台になる概念をまとめて整理します。" />
+  <meta property="og:url" content="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/fx/what-is-fx.html" />
+  <meta property="og:site_name" content="Macro Daily" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -16,20 +25,10 @@
       background: #0b1120;
       color: #e5e7eb;
     }
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    a {
-      color: #7dd3fc;
-      text-decoration: none;
-    }
-    .back {
-      display: inline-block;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-    .card {
+    .container { max-width: 860px; margin: 0 auto; }
+    a { color: #7dd3fc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card-wrapper {
       background: rgba(15, 23, 42, 0.92);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
@@ -43,49 +42,89 @@
       background: rgba(255,255,255,0.08);
       font-size: 12px;
       font-weight: 700;
+      color: #94a3b8;
     }
-    h1 {
-      margin: 0 0 12px;
-      font-size: 36px;
-      line-height: 1.2;
-    }
+    h1 { margin: 0 0 12px; font-size: 36px; line-height: 1.2; color: #f8fafc; }
+    .lead { color: #94a3b8; font-size: 16px; margin-bottom: 24px; }
     h2 {
-      margin-top: 28px;
-      font-size: 24px;
-      color: #f8fafc;
-      border-left: 4px solid #38bdf8;
-      padding-left: 12px;
+      margin-top: 32px; margin-bottom: 12px;
+      font-size: 22px; color: #f8fafc;
+      border-left: 4px solid #38bdf8; padding-left: 12px;
     }
-    p, li {
-      color: #d1d5db;
-      font-size: 16px;
+    h3 { margin-top: 24px; margin-bottom: 8px; font-size: 18px; color: #e2e8f0; }
+    p, li { color: #d1d5db; font-size: 16px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .next-links {
+      margin-top: 40px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    ul {
-      padding-left: 22px;
+    .next-links h2 { border-left: 4px solid #a78bfa; }
+    .next-links ul { list-style: none; padding: 0; }
+    .next-links li { margin-bottom: 10px; }
+    .next-links li::before { content: "→ "; color: #a78bfa; }
+    .breadcrumb {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 18px; font-size: 13px; color: #64748b;
     }
+    .breadcrumb a { color: #7dd3fc; }
+    .breadcrumb span::before { content: "/"; margin-right: 6px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" href="../index.html">← 基礎知識一覧へ戻る</a>
-    <div class="card">
+    
+    <nav class="breadcrumb">
+      <a href="../../index.html">トップ</a><span><a href="../index.html">基礎知識</a></span>
+      <span>FXとは？</span>
+    </nav>
+  
+    <div class="card-wrapper">
       <div class="badge">FX基礎</div>
-      <h1>FXとは？初心者向け基礎ガイド</h1>
-      <p>FXの基本、為替、ドル円、レバレッジの考え方を初心者向けに整理します。</p>
-      <p>
-<h2>FXとは</h2>
-FXは、異なる通貨の交換レートの変化を見ていく市場です。日本では特にドル円がよく見られます。</p><h2>まず理解するべきこと</h2>
-<ul><li>通貨は2つで1組で動く</li>
-<li>金利差や経済指標で動きやすい</li>
-<li>レバレッジがあるため、値動きの影響を受けやすい</li></p><h2>初心者が最初に見るべきポイント</h2>
-<li>ドル円とは何か</li>
-<li>金利と為替の関係</li>
-<li>重要指標の種類</li>
-<li>リスクオン / リスクオフの意味</li></p><h2>次に読むページ</h2>
-<li>なぜ為替は動くのか</li>
-<li>ドル円とは何か</li>
-<li>経済指標とは何か</li></ul>
-</p>
+      <h1>FXとは？</h1>
+      <p class="lead">FXを学ぶときに最初にやるべきことは、手法を覚えることではなく、為替市場が何を見て動いているのかを理解することです。このページでは、FX全体の地図を初心者向けに整理します。</p>
+      
+        <h2>FXとは何を見て理解する市場か</h2>
+        <p>FXは、異なる国の通貨の交換レートがどう動くかを見ていく市場です。単に上がるか下がるかを見るだけでなく、なぜその通貨が買われたり売られたりしたのかを理解することが重要です。</p><p>たとえばドル円が上がったとき、それは『ドルが強い』のか『円が弱い』のか、あるいはその両方なのかを分けて考える必要があります。つまりFXは、価格だけではなく背景の構造を読む市場です。</p><p>株のように企業の業績を中心に見るのではなく、FXでは金利、経済指標、中央銀行、地政学、資金の流れといったマクロ要因が強く効きます。だからこそ、ニュースの意味を理解できると学習効率が一気に上がります。</p>
+      
+        <h2>FXを学ぶ前に押さえるべき基本用語</h2>
+        <p>最初に押さえるべきなのは、為替、通貨ペア、レバレッジ、スプレッドという4つの基本です。為替は通貨の交換、通貨ペアは2つの通貨をセットで見る考え方、レバレッジは資金効率の仕組み、スプレッドは実質コストにあたります。</p><p>この4つが曖昧なままだと、ニュースの意味も口座の違いも、価格の動きも理解しにくくなります。逆にここが固まると、その後の『ドル円』『金利』『ニュースの読み方』まで自然につながります。</p>
+      
+        <h2>初心者が最初に誤解しやすいこと</h2>
+        <p>初心者がよくやってしまうのは、FXを『チャートだけ見て判断するもの』だと思い込むことです。しかし実際には、チャートは結果であり、その背景には必ず材料があります。</p><p>もう1つの誤解は、FXを短期売買の技術だけで理解しようとすることです。もちろん技術も大事ですが、土台になる仕組みを理解しないままでは、ニュースの重みや市場のテーマを判断しにくくなります。つまり、最初は手法より構造理解が優先です。</p>
+      
+        <h2>このカテゴリで学べること</h2>
+        <p>このFX基礎カテゴリでは、為替とは何か、通貨ペアとは何か、他の資産との違い、レバレッジやスプレッドの意味、注文やスワップの基本までを順番に学べます。</p><p>この土台ができると、次の『ドル円』『なぜ為替は動くのか』『FXニュースの読み方』に進んだときに理解がつながります。つまり、このカテゴリは後の学習を支える基礎工事です。</p>
+      
+      <h2>押さえるべきポイント</h2>
+      <ul>
+        <li>FXは価格だけでなく背景を読む市場</li><li>最初は通貨ペア・為替・レバレッジ・スプレッドを押さえる</li><li>ニュース理解の土台としてFX基礎が必要</li><li>手法より先に構造理解を優先する</li>
+      </ul>
+    
+      <h2>具体例で理解する</h2>
+      <p>海外旅行で日本円を米ドルに替える行為は、もっとも身近な為替の例です。</p><p>ドル円上昇を見たときに『ドルが買われたのか』『円が売られたのか』を考えることが、FX的な見方の第一歩です。</p>
+    
+      <h2>よくある誤解</h2>
+      <ul>
+        <li>最初から手法やインジケーターだけを覚えようとする</li><li>為替を単なる数字の動きとだけ見てしまう</li><li>株と同じ感覚で企業材料中心に考えてしまう</li><li>通貨ペアの意味を曖昧にしたまま先に進む</li>
+      </ul>
+    
+      <h2>注意点とリスク</h2>
+      <ul>
+        <li>仕組み理解が浅いまま情報量だけ増やすと、ニュースを誤読しやすくなります。</li><li>レバレッジやスプレッドの意味を理解しないまま実際の口座選びに進むと、コストやリスクの感覚がずれやすくなります。</li>
+      </ul>
+    
+      <h2>このページで目指す理解</h2>
+      <p>FXとは何を扱う市場なのか、なぜ日本人がドル円から学ぶと理解しやすいのか、そして次に何を学ぶべきかを説明できる状態にする。</p>
+    
+      
+      <div class="next-links">
+        <h2>次に読むページ</h2>
+        <ul>
+          <li><a href="what-is-exchange-rate.html">為替とは何か</a></li><li><a href="what-is-currency-pair.html">通貨ペアとは何か</a></li><li><a href="what-is-usdjpy.html">ドル円とは？</a></li><li><a href="../common/how-to-read-news.html">相場ニュースの読み方</a></li>
+        </ul>
+      </div>
+    
     </div>
   </div>
 </body>

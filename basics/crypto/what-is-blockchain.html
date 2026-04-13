@@ -4,9 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ブロックチェーンとは？｜Macro Daily</title>
-  <meta name="description" content="ブロックチェーンの役割と、暗号資産プロジェクトで重要な理由を整理します。" />
+  <meta name="description" content="ブロックチェーンの基本概念、なぜ暗号資産の土台として重要なのか、どんな技術用語がつながってくるのかを整理するページです。" />
   <link rel="canonical" href="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/crypto/what-is-blockchain.html" />
   <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ブロックチェーンとは？｜Macro Daily" />
+  <meta property="og:description" content="ブロックチェーンの基本概念、なぜ暗号資産の土台として重要なのか、どんな技術用語がつながってくるのかを整理するページです。" />
+  <meta property="og:url" content="https://suginaokikikaku-ux.github.io/fx-crypto-news/basics/crypto/what-is-blockchain.html" />
+  <meta property="og:site_name" content="Macro Daily" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -16,20 +25,10 @@
       background: #0b1120;
       color: #e5e7eb;
     }
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    a {
-      color: #7dd3fc;
-      text-decoration: none;
-    }
-    .back {
-      display: inline-block;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-    .card {
+    .container { max-width: 860px; margin: 0 auto; }
+    a { color: #7dd3fc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card-wrapper {
       background: rgba(15, 23, 42, 0.92);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
@@ -43,45 +42,89 @@
       background: rgba(255,255,255,0.08);
       font-size: 12px;
       font-weight: 700;
+      color: #94a3b8;
     }
-    h1 {
-      margin: 0 0 12px;
-      font-size: 36px;
-      line-height: 1.2;
-    }
+    h1 { margin: 0 0 12px; font-size: 36px; line-height: 1.2; color: #f8fafc; }
+    .lead { color: #94a3b8; font-size: 16px; margin-bottom: 24px; }
     h2 {
-      margin-top: 28px;
-      font-size: 24px;
-      color: #f8fafc;
-      border-left: 4px solid #38bdf8;
-      padding-left: 12px;
+      margin-top: 32px; margin-bottom: 12px;
+      font-size: 22px; color: #f8fafc;
+      border-left: 4px solid #38bdf8; padding-left: 12px;
     }
-    p, li {
-      color: #d1d5db;
-      font-size: 16px;
+    h3 { margin-top: 24px; margin-bottom: 8px; font-size: 18px; color: #e2e8f0; }
+    p, li { color: #d1d5db; font-size: 16px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .next-links {
+      margin-top: 40px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    ul {
-      padding-left: 22px;
+    .next-links h2 { border-left: 4px solid #a78bfa; }
+    .next-links ul { list-style: none; padding: 0; }
+    .next-links li { margin-bottom: 10px; }
+    .next-links li::before { content: "→ "; color: #a78bfa; }
+    .breadcrumb {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 18px; font-size: 13px; color: #64748b;
     }
+    .breadcrumb a { color: #7dd3fc; }
+    .breadcrumb span::before { content: "/"; margin-right: 6px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" href="../index.html">← 基礎知識一覧へ戻る</a>
-    <div class="card">
-      <div class="badge">暗号資産基礎</div>
+    
+    <nav class="breadcrumb">
+      <a href="../../index.html">トップ</a><span><a href="../index.html">基礎知識</a></span>
+      <span>ブロックチェーンとは？</span>
+    </nav>
+  
+    <div class="card-wrapper">
+      <div class="badge">技術</div>
       <h1>ブロックチェーンとは？</h1>
-      <p>ブロックチェーンの役割と、暗号資産プロジェクトで重要な理由を整理します。</p>
-      <p>
-<h2>ブロックチェーンとは</h2>
-ブロックチェーンは、取引履歴や状態を分散管理する仕組みです。暗号資産の土台になっています。</p><h2>なぜ重要か</h2>
-<ul><li>中央管理者がいなくても記録を維持できる</li>
-<li>改ざん耐性が高い</li>
-<li>プロジェクトごとに用途が違う</li></p><h2>見るべきポイント</h2>
-<li>何を解決するチェーンなのか</li>
-<li>利用者がいるのか</li>
-<li>開発が継続しているのか</li></ul>
-</p>
+      <p class="lead">暗号資産を深く理解するには、価格だけではなく、その土台であるブロックチェーンを知る必要があります。技術の全体像をつかむことで、プロジェクトの違いが見えやすくなります。</p>
+      
+        <h2>ブロックチェーンとは何か</h2>
+        <p>ブロックチェーンは、取引履歴や状態を分散的に記録・共有する仕組みです。特定の企業だけで管理するのではなく、多数の参加者によって記録が維持されることが特徴です。</p><p>暗号資産はこの上で動いており、送金や保有、アプリ利用などの土台になっています。つまり、ブロックチェーンは暗号資産のインフラです。</p>
+      
+        <h2>なぜ暗号資産の理解に必要なのか</h2>
+        <p>同じ暗号資産でも、どのチェーン上で動くのかによって、速さ、コスト、使われ方が変わります。だから価格だけ見ていても、プロジェクトの中身は見えてきません。</p><p>ブロックチェーン理解があると、『なぜこのプロジェクトが注目されるのか』『なぜL2が必要と言われるのか』といった話がつながりやすくなります。</p>
+      
+        <h2>ここから学ぶべき技術概念</h2>
+        <p>次に理解したいのは、分散管理、ノード、コンセンサスアルゴリズム、ガス代、トランザクション、L1、L2といった概念です。</p><p>これらはバラバラに見えて、実際にはブロックチェーンの役割と性能を理解するためにつながっています。</p>
+      
+        <h2>初心者が意識すべきポイント</h2>
+        <p>最初から細かい技術仕様を全部覚える必要はありません。まずは『誰が記録を維持しているのか』『何がコストになるのか』『何を改善しようとしているのか』という視点で見ると整理しやすいです。</p><p>つまり、技術の暗記ではなく、構造の理解を優先するのがコツです。</p>
+      
+      <h2>押さえるべきポイント</h2>
+      <ul>
+        <li>ブロックチェーンは暗号資産の土台</li><li>チェーンの違いで使い勝手が変わる</li><li>L1やL2の理解につながる</li><li>暗記より構造理解が重要</li>
+      </ul>
+    
+      <h2>具体例で理解する</h2>
+      <p>同じ送金でも、使うチェーンによって手数料や反映速度が違うことがあります。</p>
+    
+      <h2>よくある誤解</h2>
+      <ul>
+        <li>暗号資産とブロックチェーンを同義で扱う</li><li>技術用語をバラバラに覚えて全体像を見失う</li>
+      </ul>
+    
+      <h2>注意点とリスク</h2>
+      <ul>
+        <li>技術の背景を理解しないままプロジェクト比較をすると、本質的な違いを見落としやすくなります。</li>
+      </ul>
+    
+      <h2>このページで目指す理解</h2>
+      <p>ブロックチェーンの役割と重要性を説明でき、次に学ぶべき技術概念への橋渡しができる状態にする。</p>
+    
+      
+      <div class="next-links">
+        <h2>次に読むページ</h2>
+        <ul>
+          <li><a href="what-is-market-theme.html">市場テーマとは何か</a></li><li><a href="what-is-crypto.html">暗号通貨とは？</a></li><li><a href="what-is-bitcoin.html">ビットコインとは何か</a></li><li><a href="../common/how-to-read-news.html">相場ニュースの読み方</a></li>
+        </ul>
+      </div>
+    
     </div>
   </div>
 </body>
