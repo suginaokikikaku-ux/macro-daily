@@ -22,7 +22,6 @@ function getJstDateString() {
 }
 
 const today = getJstDateString();
-const outputPath = path.join(dailyDir, `${today}.json`);
 
 function extractJson(text) {
   const trimmed = text.trim();
@@ -43,55 +42,93 @@ function extractJson(text) {
   throw new Error("JSON部分を抽出できませんでした。");
 }
 
-if (!process.env.OPENAI_API_KEY) {
-  console.error("OPENAI_API_KEY が未設定です。");
-  process.exit(1);
+function ensureEnv() {
+  if (!process.env.OPENAI_API_KEY) {
+    console.error("OPENAI_API_KEY が未設定です。");
+    process.exit(1);
+  }
 }
 
-if (!fs.existsSync(rawPath)) {
-  console.error("data/raw/news.json がありません。先に fetch を実行してください。");
-  process.exit(1);
+function loadNews() {
+  if (!fs.existsSync(rawPath)) {
+    console.error("data/raw/news.json がありません。先に fetch を実行してください。");
+    process.exit(1);
+  }
+
+  const rawText = fs.readFileSync(rawPath, "utf-8").trim();
+
+  if (!rawText) {
+    console.error("data/raw/news.json が空です。");
+    process.exit(1);
+  }
+
+  try {
+    const parsed = JSON.parse(rawText);
+    if (!Array.isArray(parsed) || parsed.length === 0) {
+      console.error("news.json の形式が不正、またはニュース件数が0件です。");
+      process.exit(1);
+    }
+    return parsed;
+  } catch (error) {
+    console.error("data/raw/news.json のJSON解析に失敗しました。");
+    console.error(error);
+    process.exit(1);
+  }
 }
 
-const rawText = fs.readFileSync(rawPath, "utf-8").trim();
-
-if (!rawText) {
-  console.error("data/raw/news.json が空です。");
-  process.exit(1);
+function normalizeCategory(category) {
+  return String(category ?? "").trim().toLowerCase();
 }
 
-let news;
-try {
-  news = JSON.parse(rawText);
-} catch (error) {
-  console.error("data/raw/news.json のJSON解析に失敗しました。");
-  console.error(error);
-  process.exit(1);
+function pickFxNews(news) {
+  const fxCategories = new Set(["fx", "macro", "fx_analysis"]);
+  return news.filter((item) => fxCategories.has(normalizeCategory(item.category)));
 }
 
-if (!Array.isArray(news) || news.length === 0) {
-  console.error("news.json の形式が不正、またはニュース件数が0件です。");
-  process.exit(1);
+function pickCryptoNews(news) {
+  const cryptoCategories = new Set(["crypto"]);
+  return news.filter((item) => cryptoCategories.has(normalizeCategory(item.category)));
 }
 
-const selectedNews = news.slice(0, 15);
+function dedupeNews(items) {
+  const seen = new Set();
+  const result = [];
 
-const newsListForPrompt = selectedNews
-  .map((item, index) => {
-    return [
-      `${index + 1}. タイトル: ${item.title ?? "タイトルなし"}`,
-      `   取得元: ${item.source ?? "unknown"}`,
-      `   カテゴリ: ${item.category ?? "other"}`,
-      `   公開日: ${item.pubDate ?? ""}`,
-      `   URL: ${item.link ?? ""}`
-    ].join("\n");
-  })
-  .join("\n\n");
+  for (const item of items) {
+    const key = [
+      String(item.title ?? "").trim().toLowerCase(),
+      String(item.source ?? "").trim().toLowerCase(),
+      String(item.link ?? "").trim().toLowerCase()
+    ].join("||");
 
-async function generate() {
-  console.log(`Starting OpenAI summarize... date=${today}`);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(item);
+  }
 
-  const prompt = `
+  return result;
+}
+
+function limitNews(items, limit) {
+  return dedupeNews(items).slice(0, limit);
+}
+
+function buildNewsListForPrompt(newsItems) {
+  return newsItems
+    .map((item, index) => {
+      return [
+        `${index + 1}. タイトル: ${item.title ?? "タイトルなし"}`,
+        `   取得元: ${item.source ?? "unknown"}`,
+        `   カテゴリ: ${item.category ?? "other"}`,
+        `   公開日: ${item.pubDate ?? ""}`,
+        `   URL: ${item.link ?? ""}`
+      ].join("\n");
+    })
+    .join("\n\n");
+}
+
+function buildFxPrompt(newsListForPrompt) {
+  return `
 あなたはプロトレーダー兼マクロアナリストです。
 ニュースを要約するのではなく、「相場構造の解釈」を日本語で提供してください。
 
@@ -102,8 +139,6 @@ async function generate() {
 - 売買指示（エントリー・損切り・利確）は絶対に書かない
 - 必ず事実ベースで書く
 - 抽象表現は禁止（例：「上昇圧力」「注意が必要」「可能性があります」など）
-- 必ず数値・価格帯・水準・指数名をできるだけ入れる
-- 数値が不足する場合は、与えられたニュース内容から不自然でない範囲の現実的な表現にとどめる
 - 因果関係を1段で終わらせず、2〜3段で説明する
 - 単なる要約で終わらず、「なぜその動きが起きたのか」「継続性があるのか」を解釈する
 - source/category の偏りがあれば本文で自然に触れる
@@ -114,12 +149,20 @@ async function generate() {
 - 断定ベースで書く
 - 曖昧な一般論で逃げない
 
+【数値ルール】
+- 価格、為替レート、変動率、金額、時価総額、指数水準は推定禁止
+- 数値はニュース一覧に明記されたものだけを使う
+- 数値の裏付けがない場合は、具体的な価格帯や為替水準を書かない
+- 数字を書きたくても根拠が無ければ、方向性や構造だけを書く
+- 過去の一般知識や記憶で数値を補完しない
+- 1ドル=○円のような直接的な為替水準は、ニュース一覧に根拠がある場合のみ書く
+
 【記事構成】
 1. 1分で読める結論
 2. 今日の主要ドライバー3つ
 3. 市場構造の解釈
 4. USD/JPY分析
-5. BTC分析
+5. BTCへの波及
 6. 強気・弱気の分岐条件
 7. 今日の示唆
 8. 今日の結論
@@ -129,7 +172,9 @@ async function generate() {
 ### 1. 1分で読める結論
 - 今日の相場の本質を一言で示す
 - 何がトリガーで動いたかを書く
-- USD/JPYとBTCの方向感を簡潔に書く
+- USD/JPYを中心に方向感を簡潔に書く
+- 必要ならBTCへの波及も短く触れる
+- 数値は根拠がある場合のみ使う
 
 ### 2. 今日の主要ドライバー3つ
 - 必ず「原因 → 結果」の形で書く
@@ -138,6 +183,7 @@ async function generate() {
   - 地政学リスク上昇 → リスク回避 → 安全資産選好 → 通貨・商品に波及
 - 3つに絞る
 - それぞれ2〜4文で、相場への接続まで書く
+- 数値は根拠がある場合のみ使う
 
 ### 3. 市場構造の解釈
 - 今回の動きは何主導かを明示する（金利 / 地政学 / 流動性 / ポジション調整 など）
@@ -150,23 +196,25 @@ async function generate() {
 - 現在の相場観を明示する
 - 短期（当日〜翌日）の方向性を書く
 - 中期（数日〜1週間）の見方を書く
-- 上に抜けたら意味が変わる水準を書く
-- 下に割れたらシナリオが崩れる水準を書く
+- 上に抜けたら意味が変わる水準を書く場合は、ニュース一覧に根拠があるときだけにする
+- 下に割れたらシナリオが崩れる水準を書く場合は、ニュース一覧に根拠があるときだけにする
+- 水準根拠がない場合は、価格ではなく構造変化の条件で書く
 - 今回の動きが「継続型」か「ノイズ型」かを明示する
 - 売買指示は書かない
 
-### 5. BTC分析
-- 現在の相場観を明示する
-- リスクオン / リスクオフとの関係を書く
-- USDとの関係性（逆相関 / 同時上昇 / 資金逃避先としての側面 など）を書く
-- 市場参加者が意識している価格帯を書く
-- レンジかトレンドかを判断する
-- 売買指示は書かない
+### 5. BTCへの波及
+- 為替・金利・リスクオンオフがBTCへどう波及しうるかを書く
+- BTC自体の詳しい市場分析はしない
+- 相関や資金の逃避先としての見られ方に絞る
+- 2〜4文で簡潔にまとめる
+- 数値は根拠がある場合のみ使う
 
 ### 6. 強気・弱気の分岐条件
 - どの条件で現行シナリオが維持されるかを書く
 - どの条件で見方が変わるかを書く
 - 条件は価格・材料・イベントベースの両方を織り交ぜる
+- 価格条件はニュース一覧に根拠がある場合のみ使う
+- 根拠がない場合は、イベント・材料・反応ベースで書く
 - 箇条書きでもよい
 
 ### 7. 今日の示唆
@@ -179,8 +227,6 @@ async function generate() {
 ### 8. 今日の結論
 - 最後を1〜3文で締める
 - 今日の相場を一言で定義する
-- 例：
-  「本日の相場はリスク回避型のドル買いが主導であり、構造的には短期反応が先行している」
 - 投資助言にはしない
 
 【SEOも同時に作成】
@@ -194,9 +240,10 @@ async function generate() {
 
 【SEOルール】
 - seoTitle は検索で意味が伝わる具体的なタイトルにする
-- seoDescription は抽象的にせず、USD/JPY、BTC、マクロ、地政学、金利などの主要論点を自然に入れる
+- seoDescription は抽象的にせず、USD/JPY、マクロ、地政学、金利などの主要論点を自然に入れる
 - 煽りすぎない
 - ニュースまとめではなく、分析記事だと伝わる表現にする
+- 数値は根拠がある場合のみ入れる
 
 【出力ルール】
 - article はMarkdown形式
@@ -208,7 +255,250 @@ async function generate() {
 【ニュース一覧】
 ${newsListForPrompt}
 `;
+}
 
+function buildCryptoPrompt(newsListForPrompt) {
+  return `
+あなたは暗号資産市場を分析するリサーチャー兼マーケットアナリストです。
+ニュースを要約するだけではなく、「市場全体の地合い」「主要コインの状態」「個別プロジェクトの進捗」「その後に確認すべきこと」を整理してください。
+
+目的：
+初心者でも流れを理解でき、中級者以上が次に何を調べるべきか分かる、価値のある暗号資産デイリー記事を作ること。
+
+【最重要ルール】
+- 売買指示（買い、売り、エントリー、利確、損切り）は絶対に書かない
+- 単なる価格要約で終わらせない
+- BTCだけに寄せず、主要コイン全体と注目プロジェクトの動きも扱う
+- 必ず「何が起きたか」と「その後に何を見るべきか」を分けて書く
+- 抽象表現は禁止（例：「注目されている」「期待される」だけで終わらない）
+- 可能な限り、対象銘柄、テーマ、プロジェクト名、進捗内容を具体的に書く
+- 短命な話題か、継続ウォッチに値するテーマかを判断する
+- 断定ベースで書く
+- 見出しはMarkdownの ## を使う
+- 「〜可能性があります」は使わない
+
+【数値ルール】
+- 価格、変動率、金額、時価総額、TVL、資金流入額は推定禁止
+- 数値はニュース一覧に明記されたものだけを使う
+- 数値の裏付けがない場合は、具体的な価格や金額を書かない
+- 過去の一般知識や記憶で数値を補完しない
+- 数字を書けない場合は、地合い、テーマ、進捗、資金の向き先を文章で整理する
+
+【記事構成】
+1. 1分で読める結論
+2. 今日の暗号資産市場の地合い
+3. 今日の主要トピック3つ
+4. メインコインの整理
+5. 個別プロジェクトの進捗
+6. 今日の要約から見える示唆
+7. 次に確認すべきこと
+8. 今日の結論
+
+【各セクションの要件】
+
+### 1. 1分で読める結論
+- 今日の市場の本質を一言で示す
+- 何が市場を動かしたかを書く
+- メインコイン全体の方向感を短く整理する
+- 数値は根拠がある場合のみ使う
+
+### 2. 今日の暗号資産市場の地合い
+- BTC、ETH、SOLなど主要コインの強弱感を書く
+- BTC主導か、ETH主導か、アルト循環か、選別相場かを判断する
+- 市場全体がリスクオンなのか、テーマ物色なのか、守りの姿勢なのかを明示する
+- 数値は根拠がある場合のみ使う
+
+### 3. 今日の主要トピック3つ
+- 材料を3つに絞る
+- それぞれ「何が起きたか → なぜ重要か → どこに波及するか」で説明する
+- ETF、規制、アップデート、提携、資金流入、ハッキング、トークンアンロックなどを適切に整理する
+- 数値は根拠がある場合のみ使う
+
+### 4. メインコインの整理
+- BTC、ETH、SOL、XRPなど主要コインの状態を簡潔に整理する
+- 価格だけでなく、資金の集まり方やテーマ性を書く
+- 「市場の軸になっている銘柄」と「存在感が落ちている銘柄」を分けて書く
+- 数値は根拠がある場合のみ使う
+
+### 5. 個別プロジェクトの進捗
+- メインコイン以外でニュースに出てきた重要プロジェクトを整理する
+- 価格ではなく、進捗に重点を置く
+- 例：
+  - 開発進捗
+  - 提携
+  - 新機能リリース
+  - エコシステム拡大
+  - 利用者増減
+  - 規制対応
+  - 資金調達
+- 単発の話題か、継続して追う価値があるかを判断する
+- 数値は根拠がある場合のみ使う
+
+### 6. 今日の要約から見える示唆
+- ニュース全体から見える市場テーマをまとめる
+- いま資金が向かっているのは何かを書く
+- 表面的に盛り上がっているだけか、中身のある進展かを判断する
+- 今日の市場の空気感を一言で定義する
+
+### 7. 次に確認すべきこと
+- 売買ではなく、情報収集アクションを書く
+- 例：
+  - 明日以降も追うべきテーマ
+  - 追加で確認すべきプロジェクト
+  - 開発や提携の続報を待つべき案件
+  - オンチェーンや資金流入を見て判断すべき話題
+  - 短命なので深追い不要なニュース
+- 読者が「この後どこを見るべきか」が分かる内容にする
+
+### 8. 今日の結論
+- 1〜3文で締める
+- 今日の暗号資産市場を一言で定義する
+- 投資助言にはしない
+
+【SEOも同時に作成】
+以下のJSONだけを返してください。コードブロックは不要です。
+
+{
+  "seoTitle": "32文字前後のSEOタイトル",
+  "seoDescription": "90〜140文字前後のメタディスクリプション",
+  "article": "Markdown形式の記事本文"
+}
+
+【SEOルール】
+- 暗号資産、主要コイン、プロジェクト進捗、市場テーマが伝わるタイトルにする
+- 単なるニュースまとめではなく、整理・分析記事だと分かる表現にする
+- 煽りすぎない
+- 数値は根拠がある場合のみ入れる
+
+【出力ルール】
+- article はMarkdown形式
+- 各見出しは必ず ## を使う
+- JSON以外は返さない
+
+【ニュース一覧】
+${newsListForPrompt}
+`;
+}
+
+function collectValidationErrors(type, article) {
+  const errors = [];
+  const text = String(article ?? "");
+
+  if (!text.trim()) {
+    errors.push("article が空です。");
+    return errors;
+  }
+
+  const usdJpyPatterns = [
+    /\bUSD\/JPY\b[^\n\r]{0,30}?(\d{2,3}(?:\.\d+)?)/gi,
+    /\bドル円\b[^\n\r]{0,30}?(\d{2,3}(?:\.\d+)?)/gi,
+    /1ドル\s*=\s*(\d{2,3}(?:\.\d+)?)\s*円/gi,
+    /\$(\d{2,3}(?:\.\d+)?)\s*=\s*(\d{2,3}(?:\.\d+)?)\s*円/gi
+  ];
+
+  for (const pattern of usdJpyPatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const value = Number(match[1]);
+      if (Number.isNaN(value)) continue;
+
+      if (value < 130 || value > 170) {
+        errors.push(`USD/JPY と見られる数値が異常です: ${match[0]}`);
+      }
+    }
+  }
+
+  const btcPatterns = [
+    /\bBTC\b[^\n\r]{0,30}?(\d{3,6}(?:,\d{3})*(?:\.\d+)?)/gi,
+    /\bビットコイン\b[^\n\r]{0,30}?(\d{3,6}(?:,\d{3})*(?:\.\d+)?)/gi
+  ];
+
+  for (const pattern of btcPatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const raw = String(match[1]).replace(/,/g, "");
+      const value = Number(raw);
+      if (Number.isNaN(value)) continue;
+
+      if (value > 0 && value < 1000) {
+        errors.push(`BTC と見られる数値が小さすぎます: ${match[0]}`);
+      }
+    }
+  }
+
+  const percentPattern = /(-?\d+(?:\.\d+)?)\s*%/g;
+  let percentMatch;
+  while ((percentMatch = percentPattern.exec(text)) !== null) {
+    const value = Number(percentMatch[1]);
+    if (Number.isNaN(value)) continue;
+
+    if (Math.abs(value) > 100) {
+      errors.push(`変動率と見られる数値が異常です: ${percentMatch[0]}`);
+    }
+  }
+
+  const marketCapPatterns = [
+    /時価総額[^\n\r]{0,20}?(\d+(?:\.\d+)?)\s*(兆|億)?\s*ドル/gi,
+    /market cap[^\n\r]{0,20}?(\d+(?:\.\d+)?)\s*(trillion|billion|million)?/gi
+  ];
+
+  for (const pattern of marketCapPatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const value = Number(match[1]);
+      if (Number.isNaN(value)) continue;
+
+      if (value <= 0) {
+        errors.push(`時価総額と見られる数値が不正です: ${match[0]}`);
+      }
+    }
+  }
+
+  if (type === "fx") {
+    const suspiciousFxTerms = [
+      /1ドル\s*=\s*1[01]\d(?:\.\d+)?円/gi,
+      /\bUSD\/JPY\b[^\n\r]{0,30}?11\d(?:\.\d+)?/gi,
+      /\bドル円\b[^\n\r]{0,30}?11\d(?:\.\d+)?/gi
+    ];
+
+    for (const pattern of suspiciousFxTerms) {
+      let match;
+      while ((match = pattern.exec(text)) !== null) {
+        errors.push(`USD/JPY の不自然な水準を検出しました: ${match[0]}`);
+      }
+    }
+  }
+
+  return errors;
+}
+
+function validateGeneratedArticle({ type, article, seoTitle, seoDescription }) {
+  const errors = [];
+
+  if (!article || !String(article).trim()) {
+    errors.push("article が空です。");
+  }
+
+  if (!seoTitle || !String(seoTitle).trim()) {
+    errors.push("seoTitle が空です。");
+  }
+
+  if (!seoDescription || !String(seoDescription).trim()) {
+    errors.push("seoDescription が空です。");
+  }
+
+  errors.push(...collectValidationErrors(type, article));
+
+  if (errors.length > 0) {
+    const message = [
+      `${type}: 生成後バリデーションで異常を検出しました。`,
+      ...errors.map((item) => `- ${item}`)
+    ].join("\n");
+    throw new Error(message);
+  }
+}
+
+async function callOpenAI(prompt) {
   const response = await openai.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [{ role: "user", content: prompt }],
@@ -221,22 +511,38 @@ ${newsListForPrompt}
     throw new Error("OpenAIから応答を取得できませんでした。");
   }
 
-  let parsed;
   try {
-    parsed = JSON.parse(extractJson(content));
+    return JSON.parse(extractJson(content));
   } catch (error) {
     console.error("OpenAI raw output:");
     console.error(content);
     throw error;
   }
+}
+
+async function generateArticle({ type, selectedNews, promptBuilder, fallbackTitle, fallbackDescription }) {
+  if (!Array.isArray(selectedNews) || selectedNews.length === 0) {
+    console.log(`Skip ${type}: 対象ニュースが0件です。`);
+    return;
+  }
+
+  const newsListForPrompt = buildNewsListForPrompt(selectedNews);
+  const prompt = promptBuilder(newsListForPrompt);
+
+  console.log(`Starting OpenAI summarize... type=${type} date=${today} items=${selectedNews.length}`);
+
+  const parsed = await callOpenAI(prompt);
 
   const article = parsed.article?.trim();
   const seoTitle = parsed.seoTitle?.trim();
   const seoDescription = parsed.seoDescription?.trim();
 
-  if (!article) {
-    throw new Error("article が空です。");
-  }
+  validateGeneratedArticle({
+    type,
+    article,
+    seoTitle: seoTitle || fallbackTitle,
+    seoDescription: seoDescription || fallbackDescription
+  });
 
   const uniqueSources = [...new Set(selectedNews.map((item) => item.source).filter(Boolean))];
   const uniqueCategories = [...new Set(selectedNews.map((item) => item.category).filter(Boolean))];
@@ -245,15 +551,16 @@ ${newsListForPrompt}
     fs.mkdirSync(dailyDir, { recursive: true });
   }
 
+  const outputPath = path.join(dailyDir, `${type}-${today}.json`);
+
   fs.writeFileSync(
     outputPath,
     JSON.stringify(
       {
+        type,
         date: today,
-        seoTitle: seoTitle || `Macro Daily ${today}｜FX・BTC・マクロ市場まとめ`,
-        seoDescription:
-          seoDescription ||
-          "FX・BTC・マクロ市場の注目ニュースを整理。USD/JPYとビットコインへの影響、監視ポイント、今日の結論までまとめています。",
+        seoTitle: seoTitle || fallbackTitle,
+        seoDescription: seoDescription || fallbackDescription,
         article,
         meta: {
           sources: uniqueSources,
@@ -271,7 +578,34 @@ ${newsListForPrompt}
   console.log(`Saved ${outputPath}`);
 }
 
-generate().catch((error) => {
+async function main() {
+  ensureEnv();
+
+  const news = loadNews();
+
+  const fxNews = limitNews(pickFxNews(news), 15);
+  const cryptoNews = limitNews(pickCryptoNews(news), 15);
+
+  await generateArticle({
+    type: "fx",
+    selectedNews: fxNews,
+    promptBuilder: buildFxPrompt,
+    fallbackTitle: `Macro Daily FX ${today}｜USD/JPY・マクロ市場分析`,
+    fallbackDescription:
+      "USD/JPYを中心に、金利・地政学・マクロ材料が為替市場へどう波及しているかを整理したデイリー分析記事です。"
+  });
+
+  await generateArticle({
+    type: "crypto",
+    selectedNews: cryptoNews,
+    promptBuilder: buildCryptoPrompt,
+    fallbackTitle: `Macro Daily Crypto ${today}｜暗号資産市場整理`,
+    fallbackDescription:
+      "BTC・ETH・SOLなど主要コインの地合いと、個別プロジェクトの進捗、次に確認すべきテーマを整理した暗号資産デイリー記事です。"
+  });
+}
+
+main().catch((error) => {
   console.error("Summarize failed:");
   console.error(error);
   process.exit(1);
