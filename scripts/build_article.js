@@ -14,15 +14,11 @@ function getJstDateString() {
 }
 
 const today = getJstDateString();
-
-// STEP1: 記事の出力先を site/posts ではなく root/posts に統一
 const postsDir = path.join("posts");
 
-// ヒーロー画像は既存配置を維持
 const heroImageRelativePath = "../site/assets/img/hero.jpg";
 const heroImageFsPath = path.join("site", "assets", "img", "hero.jpg");
 
-// SITE_URL は末尾スラッシュを削る
 const siteUrl = (process.env.SITE_URL || "https://YOUR_USERNAME.github.io/macro-daily").replace(/\/$/, "");
 
 const articleTypes = [
@@ -69,14 +65,28 @@ function markdownToHtml(markdown = "") {
   return html;
 }
 
+function buildBasicsLinks(type) {
+  if (type === "fx") {
+    return [
+      { title: "FXとは？", url: "../basics/fx/what-is-fx.html" },
+      { title: "なぜ為替は動くのか", url: "../basics/fx/what-moves-fx.html" },
+      { title: "ドル円とは？USD/JPYの見方", url: "../basics/fx/what-is-usdjpy.html" }
+    ];
+  }
+
+  return [
+    { title: "暗号通貨とは？", url: "../basics/crypto/what-is-crypto.html" },
+    { title: "ブロックチェーンとは？", url: "../basics/crypto/what-is-blockchain.html" },
+    { title: "暗号資産プロジェクトの見方", url: "../basics/crypto/how-to-read-projects.html" }
+  ];
+}
+
 function buildOneArticle(config) {
   const { type, label, defaultTitle, defaultDescription } = config;
 
   const dailyPath = path.join("data", "daily", `${type}-${today}.json`);
   const postMdPath = path.join(postsDir, `${type}-${today}.md`);
   const postHtmlPath = path.join(postsDir, `${type}-${today}.html`);
-
-  // STEP1: canonical も /site/posts ではなく /posts に統一
   const pageUrl = `${siteUrl}/posts/${type}-${today}.html`;
 
   if (!fs.existsSync(dailyPath)) {
@@ -108,6 +118,7 @@ function buildOneArticle(config) {
   const news = Array.isArray(daily.news) ? daily.news : [];
   const sources = Array.isArray(meta.sources) ? meta.sources : [];
   const categories = Array.isArray(meta.categories) ? meta.categories : [];
+  const basicsLinks = Array.isArray(meta.basicsLinks) && meta.basicsLinks.length > 0 ? meta.basicsLinks : buildBasicsLinks(type);
 
   if (!article) {
     console.error(`${type}: article が空です。`);
@@ -140,6 +151,10 @@ function buildOneArticle(config) {
     })
     .join("\n");
 
+  const basicsMarkdown = basicsLinks
+    .map((item) => `- [${item.title}](${item.url})`)
+    .join("\n");
+
   const markdown = `---
 title: "${seoTitle}"
 date: "${today}"
@@ -157,6 +172,9 @@ ${introLine}
 ${article}
 
 ---
+
+## 関連する基礎知識
+${basicsMarkdown}
 
 ## 今日の取得元
 ${sourceText}
@@ -183,6 +201,10 @@ ${references || "- 参照ニュースなし"}
         })
         .join("")}</ul>`
     : "<p>参照ニュースなし</p>";
+
+  const basicsLinksHtml = `<ul>${basicsLinks
+    .map((item) => `<li><a href="${item.url}">${escapeHtml(item.title)}</a></li>`)
+    .join("")}</ul>`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -448,13 +470,24 @@ ${references || "- 参照ニュースなし"}
       margin-bottom: 8px;
     }
 
-    .references-card a {
+    .references-card a,
+    .basics-card a {
       color: var(--accent);
       text-decoration: none;
     }
 
-    .references-card a:hover {
+    .references-card a:hover,
+    .basics-card a:hover {
       text-decoration: underline;
+    }
+
+    .basics-card {
+      background: linear-gradient(180deg, rgba(17,24,39,0.92), rgba(15,23,42,0.92));
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius-md);
+      padding: 22px 20px 20px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
     }
 
     .footer {
@@ -513,6 +546,11 @@ ${references || "- 参照ニュースなし"}
     <section class="content-card">
       <div class="intro-box">${escapeHtml(introLine)}</div>
       ${articleHtml}
+    </section>
+
+    <section class="basics-card">
+      <h2>関連する基礎知識</h2>
+      ${basicsLinksHtml}
     </section>
 
     <section class="info-grid">
