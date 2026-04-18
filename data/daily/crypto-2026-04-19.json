@@ -1,0 +1,170 @@
+{
+  "type": "crypto",
+  "date": "2026-04-19",
+  "seoTitle": "暗号資産市場の最新動向と注目プロジェクト",
+  "seoDescription": "今日の暗号資産市場の地合いや主要コインの状況、注目プロジェクトの進捗を詳しく解説します。",
+  "article": "## 1分で読める結論\n本日は、Kelp DAOから292百万ドルが流出した大規模なハッキング事件が発生しました。さらに、Ripple関連のWrapped XRPがSolanaで実装され、DeFiへのアクセスが広がっています。市場全体では、ビットコインとイーサリアムの価格が安定しており、機関投資家の支持が確認されています。\n\n## 今日の暗号資産市場の地合い\n今日の市場は、Kelp DAOのハッキングによる影響が懸念されつつも、全体としては安定した動きを見せています。特に、ビットコインやイーサリアムには機関投資家からの支持があり、価格は一定の範囲内で推移しています。一方、Wrapped XRPの導入は、Rippleプロジェクトに新たな利点をもたらし、DeFiの拡大に寄与する見込みです。\n\n## 今日の主要トピック3つ\n1. **Kelp DAOの292百万ドルの流出**: この事件は暗号資産市場に大きな影響を与える可能性があり、セキュリティ対策の強化が求められています。\n2. **Wrapped XRPのSolana実装**: Rippleに関連するトークンがDeFiへのアクセスを広げることで、さらなる利用が期待されます。\n3. **Michael SaylorのSTRCの配当を隔月に変更**: これにより、投資家へのリターンが安定し、STRCの人気が高まる可能性があります。\n\n## メインコインの整理\n- **ビットコイン**: 機関投資家からの支持を受けて安定した価格を維持。マクロ経済要因によりレンジ相場が続いている。\n- **イーサリアム**: 政治的な圧力が緩和され、価格が2400ドルを超える動きが見られる。DeFiプロジェクトへの関心が続いている。\n\n## 個別プロジェクトの進捗\n- **Kelp DAO**: 大規模なハッキング事件が発生し、292百万ドルが流出。今後のセキュリティ対策に注目が集まる。\n- **Wrapped XRP**: Solana上での取引が開始され、Ripple関連のトークンがDeFi市場に新たな道を開く。\n- **STRC**: Michael Saylorの戦略により、配当が隔月に変更され、投資家への安定したリターンを提供。\n\n## 今日の要約から見える示唆\nKelp DAOのハッキング事件は、セキュリティの重要性を再認識させるものであり、投資家はプロジェクトのセキュリティ体制を重視する必要があります。また、Wrapped XRPの実装は、Rippleの成長を示唆しており、DeFi市場における新しい機会を提供します。\n\n## 次に確認すべきこと\n- Kelp DAOのハッキングに関する詳細な調査結果と、他プロジェクトへの影響を確認する。\n- Wrapped XRPの実装後の利用状況と、DeFiでの実績を追跡する。\n- STRCの配当変更がどのように投資家に影響を与えるかを観察する。\n\n## 今日の結論\n本日は、Kelp DAOのハッキングによる衝撃と、Wrapped XRPがSolanaでの取引を開始したことが市場に重要な影響を与えています。市場の安定性を保ちながら、個々のプロジェクトの進展にも注目が必要です。",
+  "meta": {
+    "sources": [
+      "CoinDesk",
+      "あたらしい経済",
+      "FXStreet",
+      "Investing"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "2026's biggest crypto exploit: $292 million gets drained from Kelp DAO with wrapped ether stranded across 20 chains",
+      "link": "https://www.coindesk.com/tech/2026/04/19/2026-s-biggest-crypto-exploit-kelp-dao-hit-for-usd292-million-with-wrapped-ether-stranded-across-20-chains",
+      "pubDate": "Sat, 18 Apr 2026 20:53:55 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Why Michael Saylor's Strategy decided to make STRC's dividend bi-monthly",
+      "link": "https://www.coindesk.com/markets/2026/04/18/why-michael-saylor-s-strategy-decided-to-make-strc-s-dividend-bi-monthly",
+      "pubDate": "Sat, 18 Apr 2026 20:27:21 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "From smelters to servers: Alcoa to cash in on crypto’s thirst for energy",
+      "link": "https://www.coindesk.com/business/2026/04/18/from-smelters-to-servers-alcoa-to-cash-in-on-crypto-s-thirst-for-energy",
+      "pubDate": "Sat, 18 Apr 2026 20:21:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "AI is increasingly eating into VC fundings and here is how crypto firms are adapting",
+      "link": "https://www.coindesk.com/business/2026/04/18/ai-is-increasingly-eating-into-vc-fundings-and-here-is-how-crypto-firms-are-adapting",
+      "pubDate": "Sat, 18 Apr 2026 19:18:20 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Binance and Bitget to probe RAVE’s 4,500% token surge as claims of insider-orchestrated rally grow",
+      "link": "https://www.coindesk.com/business/2026/04/18/binance-and-biget-to-probe-rave-s-4-500-token-surge-as-claims-of-insider-orchestrated-rally-grow",
+      "pubDate": "Sat, 18 Apr 2026 16:46:46 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "The Lightning Network isn’t ‘helplessly broken’",
+      "link": "https://www.coindesk.com/opinion/2026/04/18/the-lightning-network-isn-t-helplessly-broken",
+      "pubDate": "Sat, 18 Apr 2026 16:30:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Zondacrypto under fire as Poland's prime minister links exchange to legislative interference",
+      "link": "https://www.coindesk.com/business/2026/04/18/zondacrypto-under-fire-as-poland-s-prime-minister-links-exchange-to-legislative-interference",
+      "pubDate": "Sat, 18 Apr 2026 14:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin 'plebs eat first' mining pool Parasite finds its second BTC block",
+      "link": "https://www.coindesk.com/tech/2026/04/18/bitcoin-plebs-eat-first-mining-pool-parasite-finds-its-second-btc-block",
+      "pubDate": "Sat, 18 Apr 2026 13:21:26 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Wrapped XRP goes live on Solana, broadening DeFi access for Ripple-linked token",
+      "link": "https://www.coindesk.com/markets/2026/04/18/wrapped-xrp-goes-live-on-solana-broadening-defi-access-for-ripple-linked-token",
+      "pubDate": "Sat, 18 Apr 2026 13:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ethereum co-founder Joseph Lubin warns of the dangers of AI being controlled by a few big tech firms",
+      "link": "https://www.coindesk.com/tech/2026/04/18/ethereum-co-founder-joseph-lubin-warns-of-the-dangers-of-ai-being-controlled-by-a-few-big-tech-firms",
+      "pubDate": "Sat, 18 Apr 2026 13:00:00 +0000"
+    },
+    {
+      "source": "あたらしい経済",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "国民民主の玉木代表、ハイパーリキッドに言及。ビットフライヤー加納CEOとDEX規制巡り議論",
+      "link": "https://www.neweconomy.jp/posts/566154",
+      "pubDate": "Sat, 18 Apr 2026 03:46:26 +0000"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Lawmaker Sheri Biggs reports up to $250K Bitcoin ETF investment, draws community scrutiny",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/lawmaker-sheri-biggs-reports-up-to-250k-bitcoin-etf-investment-draws-community-scrutiny-202604172351",
+      "pubDate": "Fri, 17 Apr 2026 23:51:08 Z"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ethereum Weekly Price Forecast: Easing geopolitical pressure pushes ETH above $2,400",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-weekly-price-forecast-easing-geopolitical-pressure-pushes-eth-above-2-400-202604172138",
+      "pubDate": "Fri, 17 Apr 2026 21:38:50 Z"
+    },
+    {
+      "source": "Investing",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin Finds Institutional Support, but Macro Headwinds Keep It Range-Bound",
+      "link": "https://www.investing.com/analysis/bitcoin-finds-institutional-support-but-macro-headwinds-keep-it-rangebound-200678678",
+      "pubDate": "Apr 17, 2026 19:29 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin, crypto market surge as Iran reopens Strait of Hormuz",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-crypto-market-surge-as-iran-reopens-strait-of-hormuz-202604171927",
+      "pubDate": "Fri, 17 Apr 2026 19:27:08 Z"
+    }
+  ]
+}
