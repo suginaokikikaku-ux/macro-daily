@@ -1,0 +1,170 @@
+{
+  "type": "crypto",
+  "date": "2026-04-22",
+  "seoTitle": "最新の暗号資産市場動向と注目プロジェクト",
+  "seoDescription": "暗号資産市場の地合いや主要コインの動向、注目プロジェクトの進捗を解説。次に確認すべきポイントも整理。",
+  "article": "## 1分で読める結論\n本日は、米NY州によるコインベースとジェミニへの提訴や、ポリマーケットの仮想通貨永久先物市場への参入予告が話題となっています。全体的に市場は変動を見せており、特に予測市場に関する動きが注目されています。\n\n## 今日の暗号資産市場の地合い\n全体的に暗号資産市場は不安定な動きを見せています。米NY州の司法長官がコインベースとジェミニを提訴したことが報じられ、これにより市場のセンチメントが影響を受けています。また、予測市場の成長が指摘されており、特に新たな規制や法的な動向が市場に与える影響が注目されています。\n\n## 今日の主要トピック3つ\n1. **米NY州司法長官、コインベースとジェミニを提訴**: 予測市場が「違法賭博」とされ、両社のサービスに影響を与える可能性がある。\n2. **ポリマーケットが仮想通貨永久先物市場に参入予告**: 新たな市場セグメントへの進出が期待され、競争が激化する可能性がある。\n3. **次期米FRB議長候補の発言**: ウォーシュ氏が「仮想通貨は金融界の一部」と述べ、今後の政策に影響を与える可能性がある。\n\n## メインコインの整理\n- **ビットコイン（BTC）**: 市場における地位は依然として強固だが、規制の影響を受けるリスクが高まっている。\n- **イーサリアム（ETH）**: スポット需要は強いが、先物市場での下方向への圧力が懸念されている。\n- **XRP**: 価格が$1.45付近で推移しており、ブレイクアウトの可能性が議論されている。\n\n## 個別プロジェクトの進捗\n- **ポリマーケット**: 仮想通貨永久先物市場への参入を発表し、他のプラットフォームとの競争が激化する見込み。\n- **アービトラム**: KelpDAOの問題から$71百万の回収を果たし、DeFiにおける安全性と信頼性を再評価する動きがある。\n\n## 今日の要約から見える示唆\n市場は新たな規制や法的動向に敏感に反応しており、特に予測市場に関連するトピックは今後も注目される。これに伴い、投資家は法的環境の変化に対する理解を深める必要がある。\n\n## 次に確認すべきこと\n- 米NY州の訴訟の進展とそれが市場に与える影響。\n- ポリマーケットの新サービスの詳細と他プラットフォームとの競争状況。\n- 次期米FRB議長の政策が暗号資産市場に与える可能性。\n\n## 今日の結論\n暗号資産市場は規制の影響を受けて不安定な状況にあります。特に予測市場の動向は今後の市場の流れに大きな影響を与えると考えられます。投資家は法的な動向や新たな市場動向に注目し、情報を常に更新する必要があります。",
+  "meta": {
+    "sources": [
+      "CoinDesk",
+      "CoinPost",
+      "FXStreet",
+      "Investing"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto's great hope in Senate's Clarity Act still has a path to survive tight calendar",
+      "link": "https://www.coindesk.com/news-analysis/2026/04/21/crypto-s-great-hope-in-senate-s-clarity-act-still-has-a-path-to-survive-tight-calendar",
+      "pubDate": "Tue, 21 Apr 2026 22:45:47 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "米NY州司法長官、コインベースとジェミニを提訴　予測市場は「違法賭博」と主張",
+      "link": "https://coinpost.jp/?p=703924",
+      "pubDate": "Wed, 22 Apr 2026 07:25:55 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "予測市場大手ポリマーケットが仮想通貨永久先物市場に参入予告、カルシも追随",
+      "link": "https://coinpost.jp/?p=703925",
+      "pubDate": "Wed, 22 Apr 2026 06:55:04 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Inside the hunt for Satoshi: Filmmakers chase crypto’s biggest mystery",
+      "link": "https://www.coindesk.com/coindesk-news/2026/04/21/inside-the-hunt-for-satoshi-filmmakers-chase-crypto-s-biggest-mystery",
+      "pubDate": "Tue, 21 Apr 2026 21:54:18 +0000"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ethereum Price Forecast: ETH sees strong spot demand but faces downside pressure in futures",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-price-forecast-eth-sees-strong-spot-demand-but-faces-downside-pressure-in-futures-202604212137",
+      "pubDate": "Tue, 21 Apr 2026 21:37:49 Z"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "次期米FRB議長候補ウォーシュ氏、「仮想通貨は金融界の一部」と発言",
+      "link": "https://coinpost.jp/?p=703926",
+      "pubDate": "Wed, 22 Apr 2026 06:25:12 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "New York sues Coinbase, Gemini over prediction market offerings",
+      "link": "https://www.coindesk.com/policy/2026/04/21/new-york-sues-coinbase-gemini-over-prediction-market-offerings",
+      "pubDate": "Tue, 21 Apr 2026 20:58:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ストラテジー、ビットコインETF『IBIT』を抜きBTC保有首位に返り咲き",
+      "link": "https://coinpost.jp/?p=703927",
+      "pubDate": "Wed, 22 Apr 2026 05:50:19 +0900"
+    },
+    {
+      "source": "Investing",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "XRP Price Setup Near $1.45 Tests Breakout Against Weak Momentum",
+      "link": "https://www.investing.com/analysis/xrp-price-setup-near-145-tests-breakout-against-weak-momentum-200678900",
+      "pubDate": "Apr 21, 2026 20:50 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Arbitrum's $71 million recovery from KelpDAO exploit sparks DeFi debate",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/arbitrums-71-million-recovery-from-kelpdao-exploit-sparks-defi-debate-202604212022",
+      "pubDate": "Tue, 21 Apr 2026 20:22:20 Z"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ホルムズ海峡の仮想通貨通航料請求は詐欺か、ギリシャ海事会社が警告＝報道",
+      "link": "https://coinpost.jp/?p=703886",
+      "pubDate": "Wed, 22 Apr 2026 05:00:24 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Prediction markets are the new secret weapon for Coinbase and Robinhood growth",
+      "link": "https://www.coindesk.com/markets/2026/04/21/prediction-markets-are-the-new-secret-weapon-for-coinbase-and-robinhood-growth",
+      "pubDate": "Tue, 21 Apr 2026 19:49:51 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Core Scientific seeks $3.3 billion bond sale to further AI data center pivot",
+      "link": "https://www.coindesk.com/business/2026/04/21/core-scientific-seeks-usd3-3-billion-bond-sale-to-further-ai-data-center-pivot",
+      "pubDate": "Tue, 21 Apr 2026 19:27:43 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Mob boss John Gotti’s grandson is headed to prison for a $1.1 million Covid fraud and crypto scheme",
+      "link": "https://www.coindesk.com/business/2026/04/21/mob-boss-john-gotti-s-grandson-is-headed-to-prison-for-a-usd1-1-million-covid-fraud-and-crypto-scheme",
+      "pubDate": "Tue, 21 Apr 2026 19:10:10 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto's massive exploit may force big banks to rethink their blockchain plans, Jefferies warns",
+      "link": "https://www.coindesk.com/business/2026/04/21/crypto-s-massive-exploit-may-force-big-banks-to-rethink-their-blockchain-plans-jefferies-warns",
+      "pubDate": "Tue, 21 Apr 2026 18:25:41 +0000"
+    }
+  ]
+}
