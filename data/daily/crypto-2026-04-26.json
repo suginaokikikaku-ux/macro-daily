@@ -1,0 +1,168 @@
+{
+  "type": "crypto",
+  "date": "2026-04-26",
+  "seoTitle": "暗号資産市場の最新動向と注目プロジェクト",
+  "seoDescription": "暗号資産市場の最新動向と主要コインの状況を分析。AI、ETF、セキュリティに関する重要な話題を紹介。",
+  "article": "## 1分で読める結論\n今日の暗号資産市場では、AI関連の動きやETFの進展が注目されています。特に、ブラックロックのビットコインETFが新たなマイルストーンに達し、クリプトが主流投資として認識される流れが加速しています。また、トランプ氏の発言が市場に影響を与えています。\n\n## 今日の暗号資産市場の地合い\n市場全体は、AI技術の進展や規制の動向に反応して活発さを見せています。特に、ブラックロックのビットコインETFに関するニュースは、投資家の信頼感を高めており、資金が流入している様子が伺えます。一方で、トランプ氏の発言や地政学的なリスクが市場に影響を与える可能性があります。\n\n## 今日の主要トピック3つ\n1. **ブラックロックのビットコインETFのマイルストーン**: ブラックロックのビットコインETFが重要なマイルストーンを達成し、クリプト市場の主流化が進んでいる。\n2. **トランプ氏のクリプト法案擁護**: トランプ氏がプライベートイベントでクリプト法案を擁護し、業界の注目を集めている。これが市場にどのような影響を与えるかが注目される。\n3. **AI技術とセキュリティの再考**: アンソロピックが提唱する新たなモデルが、クリプト業界のセキュリティに関する考え方を変えつつある。\n\n## メインコインの整理\n- **ビットコイン**: トランプ氏の発言の影響で一時的に価格が下落したが、ETF関連のニュースが支えとなっている。\n- **その他の主要コイン**: イーサリアム、リップルなども市場全体の動向に連動しており、特にAI関連のプロジェクトに注目が集まっている。\n\n## 個別プロジェクトの進捗\n- **チェーンリンク**: アマゾンAWSがチェーンリンクのデータ標準をマーケットプレイスで提供開始し、利用が促進される見込み。\n- **アンソロピック**: Googleからの巨額投資が決まり、トークン化株の時価総額が158兆円に達するなど、影響力が増している。\n\n## 今日の要約から見える示唆\n市場はAIやETFの進展により、クリプトが主流投資として受け入れられる方向に向かっています。トランプ氏の影響力や地政学的リスクも引き続き注視が必要です。\n\n## 次に確認すべきこと\n- ブラックロックのETFが市場に与える影響のさらなる分析。\n- トランプ氏のクリプト法案の詳細とその影響。\n- AI技術の進展がセキュリティに与える影響のフォローアップ。\n\n## 今日の結論\n暗号資産市場は、AI関連の進展やETFの動きにより活況を呈しています。トランプ氏の発言が市場に及ぼす影響や、個別プロジェクトの進展を引き続き観察する必要があります。",
+  "meta": {
+    "sources": [
+      "CoinDesk",
+      "CoinPost"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto is built for AI agents, not humans, says Alchemy's CEO",
+      "link": "https://www.coindesk.com/tech/2026/04/25/crypto-is-built-for-ai-agents-not-humans-says-alchemy-s-ceo",
+      "pubDate": "Sat, 25 Apr 2026 19:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Trump defends crypto legislation at private event featuring boxer Mike Tyson, Tether CEO",
+      "link": "https://www.coindesk.com/policy/2026/04/25/trump-defends-crypto-legislation-at-private-event-featuring-boxer-mike-tyson-tether-ceo",
+      "pubDate": "Sat, 25 Apr 2026 18:53:48 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "BlackRock’s bitcoin ETF just hit a massive milestone that proves crypto is now a mainstream bet",
+      "link": "https://www.coindesk.com/markets/2026/04/25/blackrock-s-bitcoin-etf-just-hit-a-massive-milestone-that-proves-crypto-is-now-a-mainstream-bet",
+      "pubDate": "Sat, 25 Apr 2026 18:29:20 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "How Anthropic’s Mythos model is forcing the crypto industry to rethink everything about security",
+      "link": "https://www.coindesk.com/tech/2026/04/25/how-anthropic-s-mythos-model-is-forcing-the-crypto-industry-to-rethink-everything-about-security",
+      "pubDate": "Sat, 25 Apr 2026 17:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin falls after Trump reportedly canceled Steve Witkoff and Jared Kushner's Iran-talks trip",
+      "link": "https://www.coindesk.com/markets/2026/04/25/bitcoin-falls-after-trump-reportedly-canceled-steve-witkoff-and-jared-kushner-s-iran-talks-trip",
+      "pubDate": "Sat, 25 Apr 2026 16:20:02 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Mike Tyson, Tether CEO, Cathie Wood among speakers at Trump's 'most exclusive' crypto conference",
+      "link": "https://www.coindesk.com/policy/2026/04/25/mike-tyson-tether-ceo-cathie-wood-among-speakers-at-trump-s-most-exclusive-crypto-conference",
+      "pubDate": "Sat, 25 Apr 2026 15:24:31 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin at $40,000 would be 'near-unprecedented' statistical outcome, analyst says",
+      "link": "https://www.coindesk.com/markets/2026/04/25/bitcoin-at-usd40-000-would-be-near-unprecedented-statistical-outcome-analyst-says",
+      "pubDate": "Sat, 25 Apr 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Europe’s banks are going all in on crypto",
+      "link": "https://www.coindesk.com/opinion/2026/04/25/europe-s-banks-are-going-all-in-on-crypto",
+      "pubDate": "Sat, 25 Apr 2026 13:30:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Coinbase’s Jesse Pollak says AI agents are the next big wave for crypto payments ",
+      "link": "https://www.coindesk.com/tech/2026/04/25/coinbase-s-jesse-pollak-says-ai-agents-are-the-next-big-wave-for-crypto-payments",
+      "pubDate": "Sat, 25 Apr 2026 13:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Clock is ticking for bitcoin to prevent quantum threat as it could drain 6.9 million BTC including Satoshi’s",
+      "link": "https://www.coindesk.com/tech/2026/04/25/clock-is-ticking-for-bitcoin-to-prevent-quantum-threat-as-it-could-drain-6-9-million-btc-including-satoshi-s",
+      "pubDate": "Sat, 25 Apr 2026 10:00:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ポーランド最大級仮想通貨取引所Zondacrypto、CEOがイスラエルへ出国　巨額顧客資産の紛失疑惑",
+      "link": "https://coinpost.jp/?p=705156",
+      "pubDate": "Sat, 25 Apr 2026 13:55:28 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "アマゾンAWS、チェーンリンクのデータ標準をマーケットプレイスで提供開始",
+      "link": "https://coinpost.jp/?p=705139",
+      "pubDate": "Sat, 25 Apr 2026 13:15:08 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "アンソロピックにグーグルが最大6.3兆円出資へ、トークン化株は時価総額158兆円到達",
+      "link": "https://coinpost.jp/?p=705137",
+      "pubDate": "Sat, 25 Apr 2026 11:35:38 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "デジタル庁、政府生成AI「源内」をオープンソースで一般公開　全府省庁約18万人の利用へ",
+      "link": "https://coinpost.jp/?p=705126",
+      "pubDate": "Sat, 25 Apr 2026 10:15:18 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "米司法省、パウエル議長への捜査を終結　次期議長候補ウォーシュ氏の承認へ道",
+      "link": "https://coinpost.jp/?p=705097",
+      "pubDate": "Sat, 25 Apr 2026 09:25:41 +0900"
+    }
+  ]
+}
