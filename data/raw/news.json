@@ -1,5 +1,149 @@
 [
   {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "DeFiプロトコルScallopのサイドコントラクトでエクスプロイト、約15万SUI流出",
+    "link": "https://coinpost.jp/?p=705180",
+    "pubDate": "Mon, 27 Apr 2026 07:30:02 +0900"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "US President Donald Trump cancels Witkoff and Kushner's travel to Pakistan for Iran peace talks",
+    "link": "https://www.fxstreet.com/news/us-president-donald-trump-cancels-witkoff-and-kushners-travel-to-pakistan-for-iran-peace-talks-202604262213",
+    "pubDate": "Sun, 26 Apr 2026 22:13:47 Z"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "休眠2年のクジラ、300BTCをバイナンスに入金　含み益は約28億円＝Lookonchain",
+    "link": "https://coinpost.jp/?p=705176",
+    "pubDate": "Mon, 27 Apr 2026 06:42:49 +0900"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Running out of time on Clarity: State of Crypto ",
+    "link": "https://www.coindesk.com/policy/2026/04/26/running-out-of-time-on-clarity-state-of-crypto",
+    "pubDate": "Sun, 26 Apr 2026 18:30:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Aave raises nearly 80% of the $200 million it needs to cover bad debt left by Kelp DAO exploit",
+    "link": "https://www.coindesk.com/business/2026/04/26/aave-raises-nearly-80-of-the-usd200-million-it-needs-to-cover-bad-debt-left-by-kelp-dao-exploit",
+    "pubDate": "Sun, 26 Apr 2026 16:21:01 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Why DeFi isn't dead despite massive exploits and $13 billion investor exodus",
+    "link": "https://www.coindesk.com/business/2026/04/26/why-defi-isn-t-dead-despite-massive-exploits-and-usd13-billion-investor-exodus",
+    "pubDate": "Sun, 26 Apr 2026 16:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Bitcoin whales build long positions as funding stays deeply negative",
+    "link": "https://www.coindesk.com/markets/2026/04/26/bitcoin-whales-build-long-positions-as-funding-stays-deeply-negative",
+    "pubDate": "Sun, 26 Apr 2026 14:13:42 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Freezing 5.6 million dormant bitcoin could trigger ‘worst’ single-day repricing",
+    "link": "https://www.coindesk.com/business/2026/04/26/freezing-5-6-million-dormant-bitcoin-could-trigger-worst-single-day-repricing",
+    "pubDate": "Sun, 26 Apr 2026 14:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Only 3% of traders drive prediction markets' accuracy, not the crowd, study finds",
+    "link": "https://www.coindesk.com/markets/2026/04/26/only-3-of-traders-drive-prediction-markets-accuracy-not-the-crowd-study-finds",
+    "pubDate": "Sun, 26 Apr 2026 13:47:50 +0000"
+  },
+  {
+    "source": "Investing",
+    "category": "stocks",
+    "market": "global",
+    "lang": "en",
+    "title": "1 Stock to Buy, 1 Stock to Sell This Week: Apple, ExxonMobil",
+    "link": "https://www.investing.com/analysis/1-stock-to-buy-1-stock-to-sell-this-week-apple-exxonmobil-200679145",
+    "pubDate": "Apr 26, 2026 13:04 GMT"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "MiCA's not enough: Bybit CEO says firms need other licenses to turn a profit in Europe",
+    "link": "https://www.coindesk.com/policy/2026/04/26/mica-s-not-enough-bybit-ceo-says-firms-need-other-licenses-to-turn-a-profit-in-europe",
+    "pubDate": "Sun, 26 Apr 2026 13:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Coinbase's John D’Agostino says crypto platform stands alone as industry's full-service prime broker",
+    "link": "https://www.coindesk.com/business/2026/04/21/coinbase-s-john-d-agostino-says-exchange-stands-alone-as-crypto-s-full-service-prime-broker",
+    "pubDate": "Sun, 26 Apr 2026 12:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Litecoin hit by denial-of-service attack, rewrites 13 blocks to reverse effect",
+    "link": "https://www.coindesk.com/markets/2026/04/26/litecoin-says-its-13-block-reorg-was-not-a-zero-day-but-github-commit-history-shows-otherwise",
+    "pubDate": "Sun, 26 Apr 2026 08:34:37 +0000"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "米・イラン停戦延長でビットコイン底堅く、今後の鍵は和平交渉とFOMC｜bitbankアナリスト寄稿",
+    "link": "https://coinpost.jp/?p=704976",
+    "pubDate": "Sun, 26 Apr 2026 11:30:40 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "今週の主要仮想通貨材料まとめ、ETH長期価格目標の大幅下方修正やXRPLの量子耐性移行計画など",
+    "link": "https://coinpost.jp/?p=704727",
+    "pubDate": "Sun, 26 Apr 2026 09:30:05 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "週刊仮想通貨ニュース｜特定暗号資産の申告分離課税巡る議論やトークン化ポケカ市場の活況に高い関心",
+    "link": "https://coinpost.jp/?p=704761",
+    "pubDate": "Sun, 26 Apr 2026 09:25:31 +0900"
+  },
+  {
     "source": "CoinDesk",
     "category": "crypto",
     "market": "global",
@@ -7,87 +151,6 @@
     "title": "Crypto is built for AI agents, not humans, says Alchemy's CEO",
     "link": "https://www.coindesk.com/tech/2026/04/25/crypto-is-built-for-ai-agents-not-humans-says-alchemy-s-ceo",
     "pubDate": "Sat, 25 Apr 2026 19:00:00 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Trump defends crypto legislation at private event featuring boxer Mike Tyson, Tether CEO",
-    "link": "https://www.coindesk.com/policy/2026/04/25/trump-defends-crypto-legislation-at-private-event-featuring-boxer-mike-tyson-tether-ceo",
-    "pubDate": "Sat, 25 Apr 2026 18:53:48 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "BlackRock’s bitcoin ETF just hit a massive milestone that proves crypto is now a mainstream bet",
-    "link": "https://www.coindesk.com/markets/2026/04/25/blackrock-s-bitcoin-etf-just-hit-a-massive-milestone-that-proves-crypto-is-now-a-mainstream-bet",
-    "pubDate": "Sat, 25 Apr 2026 18:29:20 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "How Anthropic’s Mythos model is forcing the crypto industry to rethink everything about security",
-    "link": "https://www.coindesk.com/tech/2026/04/25/how-anthropic-s-mythos-model-is-forcing-the-crypto-industry-to-rethink-everything-about-security",
-    "pubDate": "Sat, 25 Apr 2026 17:00:00 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Bitcoin falls after Trump reportedly canceled Steve Witkoff and Jared Kushner's Iran-talks trip",
-    "link": "https://www.coindesk.com/markets/2026/04/25/bitcoin-falls-after-trump-reportedly-canceled-steve-witkoff-and-jared-kushner-s-iran-talks-trip",
-    "pubDate": "Sat, 25 Apr 2026 16:20:02 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Mike Tyson, Tether CEO, Cathie Wood among speakers at Trump's 'most exclusive' crypto conference",
-    "link": "https://www.coindesk.com/policy/2026/04/25/mike-tyson-tether-ceo-cathie-wood-among-speakers-at-trump-s-most-exclusive-crypto-conference",
-    "pubDate": "Sat, 25 Apr 2026 15:24:31 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Bitcoin at $40,000 would be 'near-unprecedented' statistical outcome, analyst says",
-    "link": "https://www.coindesk.com/markets/2026/04/25/bitcoin-at-usd40-000-would-be-near-unprecedented-statistical-outcome-analyst-says",
-    "pubDate": "Sat, 25 Apr 2026 15:00:00 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Europe’s banks are going all in on crypto",
-    "link": "https://www.coindesk.com/opinion/2026/04/25/europe-s-banks-are-going-all-in-on-crypto",
-    "pubDate": "Sat, 25 Apr 2026 13:30:00 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Coinbase’s Jesse Pollak says AI agents are the next big wave for crypto payments ",
-    "link": "https://www.coindesk.com/tech/2026/04/25/coinbase-s-jesse-pollak-says-ai-agents-are-the-next-big-wave-for-crypto-payments",
-    "pubDate": "Sat, 25 Apr 2026 13:00:00 +0000"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Clock is ticking for bitcoin to prevent quantum threat as it could drain 6.9 million BTC including Satoshi’s",
-    "link": "https://www.coindesk.com/tech/2026/04/25/clock-is-ticking-for-bitcoin-to-prevent-quantum-threat-as-it-could-drain-6-9-million-btc-including-satoshi-s",
-    "pubDate": "Sat, 25 Apr 2026 10:00:00 +0000"
   },
   {
     "source": "Investing",
@@ -171,15 +234,6 @@
     "pubDate": "Fri, 24 Apr 2026 23:39:00 Z"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "量子コンピューターで15ビットの暗号解読に成功、研究者が1BTCの報酬獲得",
-    "link": "https://coinpost.jp/?p=705114",
-    "pubDate": "Sat, 25 Apr 2026 08:20:36 +0900"
-  },
-  {
     "source": "FXStreet",
     "category": "crypto",
     "market": "global",
@@ -198,15 +252,6 @@
     "pubDate": "Fri, 24 Apr 2026 22:56:00 Z"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "トランプ大統領、25日にTRUMPコイン保有者向け昼食会で講演予定",
-    "link": "https://coinpost.jp/?p=705098",
-    "pubDate": "Sat, 25 Apr 2026 07:35:58 +0900"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "market": "global",
@@ -214,15 +259,6 @@
     "title": "USD/TWD: Rebound seen as fadeable – OCBC",
     "link": "https://www.fxstreet.com/news/usd-twd-rebound-seen-as-fadeable-ocbc-202604242212",
     "pubDate": "Fri, 24 Apr 2026 22:12:00 Z"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "アーベDAO、ケルプDAOハッキング被害救済に92億円相当ETHの拠出を提案",
-    "link": "https://coinpost.jp/?p=705099",
-    "pubDate": "Sat, 25 Apr 2026 07:00:09 +0900"
   },
   {
     "source": "Investing",
@@ -252,15 +288,6 @@
     "pubDate": "Fri, 24 Apr 2026 21:24:06 Z"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ブラジルが予測市場を全面禁止、ポリマーケット・カルシにアクセス遮断",
-    "link": "https://coinpost.jp/?p=705100",
-    "pubDate": "Sat, 25 Apr 2026 06:20:18 +0900"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "market": "global",
@@ -268,15 +295,6 @@
     "title": "USD/IDR: Upside risks widen on fiscal concerns – MUFG",
     "link": "https://www.fxstreet.com/news/usd-idr-upside-risks-widen-on-fiscal-concerns-mufg-202604242058",
     "pubDate": "Fri, 24 Apr 2026 20:58:00 Z"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "米財務省、イラン関連の仮想通貨ウォレットを制裁",
-    "link": "https://coinpost.jp/?p=705101",
-    "pubDate": "Sat, 25 Apr 2026 05:55:27 +0900"
   },
   {
     "source": "FXStreet",
@@ -340,15 +358,6 @@
     "title": "BoC: Cautious hold and two‑sided risks – TD Securities",
     "link": "https://www.fxstreet.com/news/boc-cautious-hold-and-two-sided-risks-td-securities-202604241944",
     "pubDate": "Fri, 24 Apr 2026 19:44:00 Z"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "BoE: MPC holds vigilant stance – Rabobank",
-    "link": "https://www.fxstreet.com/news/boe-mpc-holds-vigilant-stance-rabobank-202604241907",
-    "pubDate": "Fri, 24 Apr 2026 19:07:00 Z"
   },
   {
     "source": "FXStreet",
@@ -493,15 +502,6 @@
     "title": "ServiceNow Valuation Reset Meets Strong Growth and AI Concerns",
     "link": "https://www.investing.com/analysis/servicenow-valuation-reset-meets-strong-growth-and-ai-concerns-200679124",
     "pubDate": "Apr 24, 2026 14:56 GMT"
-  },
-  {
-    "source": "Investing",
-    "category": "stocks",
-    "market": "global",
-    "lang": "en",
-    "title": "Sonoco Stock Drops as Inflation Hits Q1 Results",
-    "link": "https://www.investing.com/analysis/sonoco-stock-drops-as-inflation-hits-q1-results-200679123",
-    "pubDate": "Apr 24, 2026 14:44 GMT"
   },
   {
     "source": "FXStreet",
