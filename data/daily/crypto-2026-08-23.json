@@ -1,0 +1,169 @@
+{
+  "type": "crypto",
+  "date": "2026-08-23",
+  "seoTitle": "暗号資産市場動向：主要コインの進捗と注目プロジェクト",
+  "seoDescription": "今日の暗号資産市場は活気を帯び、ビットコインの価格上昇や注目プロジェクトの進展が目立ちます。最新の動向をまとめました。",
+  "article": "## 1分で読める結論\n今日の暗号資産市場は、ビットコインが7.9万ドルを突破し、全体的に強気の地合いが見られる一方で、複数のプロジェクトで問題が発生しています。特に、ザ・サンドボックスでは不正発行の疑いが浮上し、注意が必要です。\n\n## 今日の暗号資産市場の地合い\n全体的に暗号資産市場は強気ムードを保っており、ビットコインの急騰に伴い、他の主要コインも好調です。しかし、特定のプロジェクトや取引所では不正や問題が報告されており、投資家はリスク管理に注意を払う必要があります。\n\n## 今日の主要トピック3つ\n1. **ビットコインの価格上昇**：ビットコインが7.9万ドルを突破し、マクロ経済の追い風を受けている。\n2. **ザ・サンドボックスの不正発行問題**：5億SANDの不正発行が疑われ、韓国の大手2社が対応に追われている。\n3. **リップルの新しい融資ファンド**：XRPレジャー上で機関投資家向けの融資ファンドを開始し、前週比46%の価格上昇を記録している。\n\n## メインコインの整理\n- **ビットコイン**：価格が7.9万ドルを突破し、強気相場の兆候が見える。\n- **イーサリアム**：ビットコインの影響を受けて上昇中。特にDeFiやNFT関連での需要が高まっている。\n- **リップル（XRP）**：新しい融資ファンドの立ち上げにより、価格が46%上昇。\n- **ザ・サンドボックス（SAND）**：不正発行問題が浮上し、投資家の動向に影響を与える可能性がある。\n\n## 個別プロジェクトの進捗\n- **ザ・サンドボックス**：不正発行の疑いがあり、韓国の企業が対応に乗り出している。今後の対応と影響を注視する必要がある。\n- **リップル**：機関投資家向けの融資ファンドを立ち上げ、XRPの需要が高まる中で新たな成長が期待される。\n- **ビットマート**：取引所の部分再開と債権者への支払いを検討中で、今後の動向が注目される。\n\n## 今日の要約から見える示唆\n市場全体は強気の流れを維持しているが、個別プロジェクトでは問題が報告されており、投資家は注意を払う必要がある。特に、ザ・サンドボックスやビットマートの動向は短期的に市場に影響を与える可能性が高い。\n\n## 次に確認すべきこと\n- **ザ・サンドボックスの不正発行問題に関する公式発表**：問題の詳細と今後の対策を確認。\n- **リップルの融資ファンドの運用状況**：市場への影響とXRPの動向を追跡。\n- **ビットコインの価格動向とマクロ経済の動き**：今後の価格変動に対する影響を分析。\n\n## 今日の結論\n暗号資産市場は全体的に強気の地合いを維持しているが、特定のプロジェクトで問題が発生している。これにより、投資家はリスク管理を徹底し、問題の進展に注視する必要がある。",
+  "meta": {
+    "sources": [
+      "CoinDesk",
+      "CoinPost",
+      "FXStreet"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto exchange BitMart weighs partial restart and creditor payouts weeks after announcing shutdown",
+      "link": "https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown",
+      "pubDate": "Sat, 22 Aug 2026 15:16:41 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Web3 gaming network Sandbox stops Base and BNB chain bridging after exploit",
+      "link": "https://www.coindesk.com/web3/2026/08/22/web3-gaming-network-sandbox-stops-base-and-bnb-chain-bridging-after-exploit",
+      "pubDate": "Sat, 22 Aug 2026 14:10:17 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Tokenized stocks risk repeating Wall Street’s 1960s ‘paper crisis,’ Fairmint CEO says",
+      "link": "https://www.coindesk.com/tech/2026/08/22/tokenized-stocks-risk-repeating-wall-street-s-1960s-paper-crisis-fairmint-ceo-says",
+      "pubDate": "Sat, 22 Aug 2026 14:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Kalshi off-limits in multiple states as prediction markets, CFTC team up for battle",
+      "link": "https://www.coindesk.com/news-analysis/2026/08/21/kalshi-off-limits-in-multiple-states-as-prediction-markets-cftc-team-up-for-battle",
+      "pubDate": "Sat, 22 Aug 2026 13:30:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin and Ether bears get decimated amid 'squeeze-led' rally and Musk's X wants to pay creators in stablecoins: Crypto's week in 5 stories",
+      "link": "https://www.coindesk.com/business/2026/08/22/bitcoin-and-ether-bears-get-decimated-amid-squeeze-led-rally-and-musk-s-x-wants-to-pay-creators-in-stablecoins-crypto-week-in-5-stories",
+      "pubDate": "Sat, 22 Aug 2026 12:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Zcash jumps 48% to over $800 as Grayscale spot ETF push adds to ‘next bitcoin’ buzz",
+      "link": "https://www.coindesk.com/markets/2026/08/22/zcash-tops-usd800-for-first-time-since-2016",
+      "pubDate": "Sat, 22 Aug 2026 05:37:43 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "How a Treasury buyback tweak helped bitcoin surge 25% to nearly $80,000 in days",
+      "link": "https://www.coindesk.com/markets/2026/08/22/how-a-treasury-buyback-tweak-helped-bitcoin-surge-nearly-25-in-days",
+      "pubDate": "Sat, 22 Aug 2026 05:05:13 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ザ・サンドボックス、5億SAND不正発行発生か　韓国大手2社が対応",
+      "link": "https://coinpost.jp/?p=732613",
+      "pubDate": "Sat, 22 Aug 2026 13:25:41 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ソラナカンパニー、SOLのインフレ抑制・手数料変更案に反対を表明",
+      "link": "https://coinpost.jp/?p=732598",
+      "pubDate": "Sat, 22 Aug 2026 13:05:42 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン金融のバウンスビット、BBトークン不正流出でL1廃止　",
+      "link": "https://coinpost.jp/?p=732576",
+      "pubDate": "Sat, 22 Aug 2026 11:12:55 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン7.9万ドル突破、イラン制裁観測で逃避買い　オプション市場は9万ドルを意識｜仮想NISHI",
+      "link": "https://coinpost.jp/?p=732566",
+      "pubDate": "Sat, 22 Aug 2026 10:35:13 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "リップル、XRPレジャーで機関投資家向け融資ファンド始動　XRPは前週比46%超上昇",
+      "link": "https://coinpost.jp/?p=732565",
+      "pubDate": "Sat, 22 Aug 2026 09:55:10 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ハッキング被害のビットコイン専門ウォレット「コールドカード」、ファームウェアの更新を推奨",
+      "link": "https://coinpost.jp/?p=732568",
+      "pubDate": "Sat, 22 Aug 2026 09:30:13 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン、8.2万ドルが強気相場転換の分岐点に＝ギャラクシー・リサーチ",
+      "link": "https://coinpost.jp/?p=732564",
+      "pubDate": "Sat, 22 Aug 2026 08:40:08 +0900"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin eyes breakout above $80,000 as macro tailwinds build",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-eyes-breakout-above-80-000-as-macro-tailwinds-build-202608212336",
+      "pubDate": "Fri, 21 Aug 2026 23:36:39 GMT"
+    }
+  ]
+}
