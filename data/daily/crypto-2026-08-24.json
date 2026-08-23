@@ -1,0 +1,168 @@
+{
+  "type": "crypto",
+  "date": "2026-08-24",
+  "seoTitle": "暗号資産市場最新動向と注目プロジェクト",
+  "seoDescription": "暗号資産市場の最新ニュースを整理し、主要コインやプロジェクトの進捗を解説。今後のチェックポイントも明示します。",
+  "article": "## 1分で読める結論\n暗号資産市場は、米国の規制強化とビットコインの価格上昇が影響し、全体的に強気の地合いを保っています。XRPは大きな週次上昇を見せ、安定したコインが日常的な支払いに利用される傾向が強まっています。\n\n## 今日の暗号資産市場の地合い\n今日の市場は、米国の財政懸念によるビットコインの高値更新と、規制強化に対する期待感が相まって、強気のトレンドを形成しています。特に、ビットコインが5月以来の高値を記録する中、他の主要コインも活発に取引されています。\n\n## 今日の主要トピック3つ\n1. **米国の規制強化**: 米国が暗号資産に対する規制を強化する動きを見せており、これが市場全体に影響を与えています。詳細は[こちら](https://www.coindesk.com/policy/2026/08/23/regulation-crypto-is-here-state-of-crypto)。\n2. **XRPの大きな上昇**: XRPが21ヶ月ぶりの大きな週次上昇を達成し、米財政の買い戻し政策が影響しています。詳細は[こちら](https://www.coindesk.com/markets/2026/08/23/xrp-on-track-for-biggest-weekly-gain-in-21-months-as-treasury-buyback-spurs-curve-control-hopes)。\n3. **安定したコインの利用拡大**: 安定したコインを使った支出が10億ドルを超え、日常的な購入に利用されるケースが増加しています。詳細は[こちら](https://www.coindesk.com/business/2026/08/23/crypto-card-spending-tops-usd1-billion-as-stablecoins-move-into-everyday-purchases)。\n\n## メインコインの整理\n- **ビットコイン**: 米国の財政懸念からの高値更新が見られる。\n- **イーサリアム**: ビットコインの動きに連動しているが、具体的な価格変動は示されていない。\n- **XRP**: 大きな週次上昇を記録し、市場での注目を集めている。\n- **Zcash**: 48%の上昇があり、GrayscaleのETF推進によって注目されている。\n\n## 個別プロジェクトの進捗\n- **ザ・サンドボックス**: チェーン間のブリッジを停止しており、セキュリティ対策を強化している。詳細は[こちら](https://www.coindesk.com/web3/2026/08/22/web3-gaming-network-sandbox-stops-base-and-bnb-chain-bridging-after-exploit)。\n- **ソラナ**: インフレ抑制案に対する反対意見が表明されており、今後の議論に注目。\n- **BitMart**: 部分再開および債権者への支払いを検討中。詳細は[こちら](https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown)。\n\n## 今日の要約から見える示唆\n規制強化の流れと安定したコインの普及が進む中、主要コインのボラティリティが高まる可能性がある。特に、XRPやZcashの動きは、他のコインに波及効果をもたらす可能性がある。\n\n## 次に確認すべきこと\n- 米国の規制動向に関する最新情報を引き続き追跡する。\n- XRPの価格動向と市場の反応をモニタリング。\n- 安定したコインを利用した新たなビジネスモデルやプロジェクトの進展を調査する。\n\n## 今日の結論\n暗号資産市場は、米国の規制強化に対する期待感とインフレへの懸念から強気の流れを維持しています。特にXRPと安定したコインの動きが注目される中、今後の展開には注意が必要です。",
+  "meta": {
+    "sources": [
+      "CoinDesk",
+      "CoinPost"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Regulation Crypto is here: State of Crypto ",
+      "link": "https://www.coindesk.com/policy/2026/08/23/regulation-crypto-is-here-state-of-crypto",
+      "pubDate": "Sun, 23 Aug 2026 18:30:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "XRP on track for biggest weekly gain in 21 months as Treasury buyback spurs 'curve control' hopes",
+      "link": "https://www.coindesk.com/markets/2026/08/23/xrp-on-track-for-biggest-weekly-gain-in-21-months-as-treasury-buyback-spurs-curve-control-hopes",
+      "pubDate": "Sun, 23 Aug 2026 15:52:21 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto card spending tops $1 billion as stablecoins move into everyday purchases",
+      "link": "https://www.coindesk.com/business/2026/08/23/crypto-card-spending-tops-usd1-billion-as-stablecoins-move-into-everyday-purchases",
+      "pubDate": "Sun, 23 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto’s next billion users might be AI agents, and they’re paying with stablecoins",
+      "link": "https://www.coindesk.com/business/2026/08/23/crypto-s-next-billion-users-might-be-ai-agents-and-they-re-paying-with-stablecoins",
+      "pubDate": "Sun, 23 Aug 2026 13:00:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン米財政懸念で5月以来の高値、来週はGDP・PCEが焦点｜bitbankアナリスト寄稿",
+      "link": "https://coinpost.jp/?p=732405",
+      "pubDate": "Sun, 23 Aug 2026 11:30:23 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "週刊仮想通貨ニュース（8/21）｜相場上昇・米政府のBTC購入検討・米SECの新規則提案のまとめ",
+      "link": "https://coinpost.jp/?p=732315",
+      "pubDate": "Sun, 23 Aug 2026 09:25:32 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto exchange BitMart weighs partial restart and creditor payouts weeks after announcing shutdown",
+      "link": "https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown",
+      "pubDate": "Sat, 22 Aug 2026 15:16:41 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Web3 gaming network Sandbox stops Base and BNB chain bridging after exploit",
+      "link": "https://www.coindesk.com/web3/2026/08/22/web3-gaming-network-sandbox-stops-base-and-bnb-chain-bridging-after-exploit",
+      "pubDate": "Sat, 22 Aug 2026 14:10:17 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Tokenized stocks risk repeating Wall Street’s 1960s ‘paper crisis,’ Fairmint CEO says",
+      "link": "https://www.coindesk.com/tech/2026/08/22/tokenized-stocks-risk-repeating-wall-street-s-1960s-paper-crisis-fairmint-ceo-says",
+      "pubDate": "Sat, 22 Aug 2026 14:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Kalshi off-limits in multiple states as prediction markets, CFTC team up for battle",
+      "link": "https://www.coindesk.com/news-analysis/2026/08/21/kalshi-off-limits-in-multiple-states-as-prediction-markets-cftc-team-up-for-battle",
+      "pubDate": "Sat, 22 Aug 2026 13:30:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin and Ether bears get decimated amid 'squeeze-led' rally and Musk's X wants to pay creators in stablecoins: Crypto's week in 5 stories",
+      "link": "https://www.coindesk.com/business/2026/08/22/bitcoin-and-ether-bears-get-decimated-amid-squeeze-led-rally-and-musk-s-x-wants-to-pay-creators-in-stablecoins-crypto-week-in-5-stories",
+      "pubDate": "Sat, 22 Aug 2026 12:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Zcash jumps 48% to over $800 as Grayscale spot ETF push adds to ‘next bitcoin’ buzz",
+      "link": "https://www.coindesk.com/markets/2026/08/22/zcash-tops-usd800-for-first-time-since-2016",
+      "pubDate": "Sat, 22 Aug 2026 05:37:43 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ザ・サンドボックス、5億SAND不正発行発生か　韓国大手2社が対応",
+      "link": "https://coinpost.jp/?p=732613",
+      "pubDate": "Sat, 22 Aug 2026 13:25:41 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ソラナカンパニー、SOLのインフレ抑制・手数料変更案に反対を表明",
+      "link": "https://coinpost.jp/?p=732598",
+      "pubDate": "Sat, 22 Aug 2026 13:05:42 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン金融のバウンスビット、BBトークン不正流出でL1廃止　",
+      "link": "https://coinpost.jp/?p=732576",
+      "pubDate": "Sat, 22 Aug 2026 11:12:55 +0900"
+    }
+  ]
+}
