@@ -1,0 +1,169 @@
+{
+  "type": "fx",
+  "date": "2026-08-28",
+  "seoTitle": "USD/JPYの市場動向とマクロ要因分析",
+  "seoDescription": "USD/JPYの価格動向を中心に、金利や地政学的リスクがどのように影響を与えているかを解説します。",
+  "article": "## 1. 1分で読める結論\n本日の相場は、米国の金利政策に対する懸念からUSD/JPYが下方向に動いている。特に、ジャクソンホールでのパウエル議長の発言を控えた状況がトリガーとなっている。今後の動向は、米国の経済指標や金利の見通しに大きく依存する。\n\n## 2. 今日の主要ドライバー3つ\n- **米国の金利見通し → USDの強さに影響**: パウエル議長の発言を前に、金利の先行きに対する不透明感が市場を圧迫している。これにより、投資家はリスク回避の姿勢を強め、ドルが安定している。\n- **地政学的リスク → 投資家の避難先の選定**: 地政学的な緊張が高まる中、投資家は安全資産としてのドルを求める傾向が強まっている。この流れが短期的なドルの需要を押し上げている。\n- **米貿易赤字の拡大 → 経済の健全性への疑念**: 米国の貿易赤字が17.2%増加したことで、経済のファンダメンタルズに対する懸念が高まり、ドルの安定性が試される状況となっている。\n\n## 3. 市場構造の解釈\n現在の市場は、主に金利政策に敏感な状況にある。特に、ジャクソンホールでの発表が近づく中、機関投資家や短期トレーダーがポジションを調整している。これまでの流れから、金利の見通しに対して強い関心を持つプレイヤーが主導権を握っている。市場の反応は、米国の経済データや地政学的リスクの変化に依存している。今後、金利の動きが相場に与える影響は継続的であると考えられる。\n\n## 4. USD/JPY分析\n現時点では、USD/JPYは短期的に下向きの圧力にさらされているが、長期的には金利の動向次第で変わる可能性がある。特に、ジャクソンホールでの発表があるため、相場のボラティリティは高まりやすい。今回の動きは主に金利政策に起因したものであり、流れが継続する可能性がある。\n\n## 5. BTCへの波及\nドル高が進む中、BTCは相対的に資金の逃避先としての役割を果たしづらくなる可能性がある。リスクオフの動きが強まる中、投資家がBTCを選好するかどうかは、米国の金利や地政学的な状況に強く依存する。\n\n## 6. 強気・弱気の分岐条件\n- **強気の条件**: パウエル議長の発言が市場の期待を上回る場合、USD/JPYの上昇が続く可能性がある。加えて、米国の経済指標が予想以上に好調であれば、ドルは支持される。\n- **弱気の条件**: 米国の経済指標が予想を下回る場合、あるいはジャクソンホールでの発言がネガティブな内容であった場合、USD/JPYは下落するリスクが高まる。\n\n## 7. 今日の示唆\n現在の相場では、米国の金利動向や経済指標に注目することが重要である。特に、ジャクソンホールでの発表内容が相場に与える影響は大きい。投資家は、金利の動向や地政学的なリスクに対する市場の反応を注視する必要がある。\n\n## 8. 今日の結論\n本日の相場は、米国の金利見通しと地政学的リスクが影響を及ぼしている。特に、ジャクソンホールでのパウエル議長の発言を控え、相場のボラティリティが高まる可能性がある。",
+  "meta": {
+    "sources": [
+      "FXStreet",
+      "Investing"
+    ],
+    "categories": [
+      "fx",
+      "macro"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "FXとは？",
+        "url": "../basics/fx/what-is-fx.html"
+      },
+      {
+        "title": "なぜ為替は動くのか",
+        "url": "../basics/fx/what-moves-fx.html"
+      },
+      {
+        "title": "ドル円とは？USD/JPYの見方",
+        "url": "../basics/fx/what-is-usdjpy.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "EUR/JPY Price Forecast: Holds ground above 185.50 near nine-day EMA",
+      "link": "https://www.fxstreet.com/news/eur-jpy-price-forecast-holds-ground-above-18550-near-nine-day-ema-202608280551",
+      "pubDate": "Fri, 28 Aug 2026 05:51:42 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "Canadian Dollar flatlines as traders await Jackson Hole Symposium",
+      "link": "https://www.fxstreet.com/news/canadian-dollar-flatlines-as-traders-await-jackson-hole-symposium-202608280510",
+      "pubDate": "Fri, 28 Aug 2026 05:10:43 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "United States Dollar Index steadies above 99.00 before Fed Chair Warsh speech",
+      "link": "https://www.fxstreet.com/news/united-states-dollar-index-steadies-above-9900-before-fed-chair-warsh-speech-202608280448",
+      "pubDate": "Fri, 28 Aug 2026 04:48:03 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "India Gold price today: Gold falls, according to FXStreet data",
+      "link": "https://www.fxstreet.com/news/india-gold-price-today-gold-falls-according-to-fxstreet-data-202608280435",
+      "pubDate": "Fri, 28 Aug 2026 04:35:21 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "Silver Price Forecast: XAG/USD slips below $69.00 ahead of Fed Chair speech",
+      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-slips-below-6900-ahead-of-fed-chair-speech-202608280408",
+      "pubDate": "Fri, 28 Aug 2026 04:08:38 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "Euro gains on hawkish ECB policy outlook",
+      "link": "https://www.fxstreet.com/news/euro-gains-on-hawkish-ecb-policy-outlook-202608280326",
+      "pubDate": "Fri, 28 Aug 2026 03:26:54 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "New Zealand Dollar gains ground above 0.5950, markets eye Jackson Hole Symposium",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-gains-ground-above-05950-markets-eye-jackson-hole-symposium-202608280253",
+      "pubDate": "Fri, 28 Aug 2026 02:53:24 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "Australian Dollar rises as RBA rate hike odds increase",
+      "link": "https://www.fxstreet.com/news/australian-dollar-rises-as-rba-rate-hike-odds-increase-202608280214",
+      "pubDate": "Fri, 28 Aug 2026 02:14:37 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "Gold slumps below $4,600 as attention turns to Jackson Hole Symposium",
+      "link": "https://www.fxstreet.com/news/gold-edges-lower-below-4-600-all-eyes-on-jackson-hole-symposium-202608280156",
+      "pubDate": "Fri, 28 Aug 2026 01:56:23 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "British Pound edges higher despite delaying BoE rate hike expectations",
+      "link": "https://www.fxstreet.com/news/british-pound-edges-higher-despite-delaying-boe-rate-hike-expectations-202608280140",
+      "pubDate": "Fri, 28 Aug 2026 01:40:19 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "macro",
+      "market": "global",
+      "lang": "en",
+      "title": "US Trade Deficit Jumps 17.2% as Tariff Strategy Backfires",
+      "link": "https://www.investing.com/analysis/us-trade-deficit-jumps-172-as-tariff-strategy-backfires-200686702",
+      "pubDate": "Aug 27, 2026 20:49 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "macro",
+      "market": "global",
+      "lang": "en",
+      "title": "US Debt Tops $40 Trillion—but Investors Should Look Beyond the Headline",
+      "link": "https://www.investing.com/analysis/us-debt-tops-40-trillionbut-investors-should-look-beyond-the-headline-200686698",
+      "pubDate": "Aug 27, 2026 20:03 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "fx",
+      "market": "global",
+      "lang": "en",
+      "title": "EUR/USD Holds Bullish Structure Despite Rejection Near 1.1700",
+      "link": "https://www.investing.com/analysis/eurusd-holds-bullish-structure-despite-rejection-near-11700-200686693",
+      "pubDate": "Aug 27, 2026 18:42 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "macro",
+      "market": "global",
+      "lang": "en",
+      "title": "Disinflation Stalls and the Fed’s Margin for Error Just Got Thinner",
+      "link": "https://www.investing.com/analysis/disinflation-stalls-and-the-feds-margin-for-error-just-got-thinner-200686671",
+      "pubDate": "Aug 27, 2026 18:14 GMT"
+    },
+    {
+      "source": "Investing",
+      "category": "macro",
+      "market": "global",
+      "lang": "en",
+      "title": "Jackson Hole 2026: Fed Chair Kevin Warsh Faces a High-Stakes Market Test",
+      "link": "https://www.investing.com/analysis/jackson-hole-2026-fed-chair-kevin-warsh-faces-a-highstakes-market-test-200686685",
+      "pubDate": "Aug 27, 2026 16:37 GMT"
+    }
+  ]
+}
