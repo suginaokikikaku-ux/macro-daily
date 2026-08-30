@@ -1,0 +1,169 @@
+{
+  "type": "crypto",
+  "date": "2026-08-30",
+  "seoTitle": "今日の暗号資産市場分析",
+  "seoDescription": "本日の暗号資産市場の地合いと主要トピックを分析。個別プロジェクトの進捗と今後の注目点を整理しました。",
+  "article": "## 1分で読める結論\n本日は、暗号資産市場において重要な動きが見られた。特に、ネオバンクのトークンがサイバー攻撃により49%下落したことが影響を及ぼしている。また、Solanaコミュニティが二重のインフレ対策を承認し、Rippleが量子コンピュータに備えた準備を進めている。\n\n## 今日の暗号資産市場の地合い\n市場全体では、最近のサイバー攻撃やデジタル通貨に関する新たな研究の結果が影響を与えており、リスク回避の動きが強まっている。特に、ネオバンクのトークンの急落は市場心理に影響を与え、投資家の警戒感を高めている。\n\n## 今日の主要トピック3つ\n1. **ネオバンクのトークン急落**: サイバー攻撃により1.1百万ドルが流出し、トークンが49%下落。\n2. **Solanaのガバナンス投票**: 二重のインフレ対策が承認され、コミュニティの意向が反映された。\n3. **Rippleの量子コンピュータ対策**: XRPレジャーが量子コンピュータに対応するための準備を進めている。\n\n## メインコインの整理\nビットコインやイーサリアムの価格動向には目立った変動は見られないが、特にビットコインは長期保有者による動きがあり、過去10年間未使用のウォレットから4000万ドル相当のビットコインが移動した。この動きが市場に与える影響に注目する必要がある。\n\n## 個別プロジェクトの進捗\n- **Ripple**: XRPレジャーが量子コンピュータに対応する準備を進め、将来の技術革新に備えている。\n- **Solana**: 二重のインフレ対策がコミュニティ投票で承認され、今後の経済運営に影響を与える可能性がある。\n- **ネオバンク**: サイバー攻撃の影響でトークンが急落し、信頼性に疑問が持たれている。\n\n## 今日の要約から見える示唆\n市場の変動は外部要因に大きく影響を受けることが再確認された。特にサイバーセキュリティの脅威やコミュニティのガバナンスが重要な要素となる。これにより、投資家はプロジェクトの信頼性やセキュリティ対策を重視する必要がある。\n\n## 次に確認すべきこと\n- ネオバンクのトークンの価格回復の兆しや、サイバーセキュリティ対策の強化の進捗。\n- Rippleの量子コンピュータ対策が実際にどのような影響を及ぼすか。\n- Solanaの二重インフレ対策がコミュニティや市場に与える影響。\n\n## 今日の結論\n本日は市場全体がリスク回避の動きが強まる中、特定のプロジェクトに注目が集まる結果となった。特に、サイバー攻撃の影響やコミュニティの決定が市場の流れを左右しているため、今後の動向をしっかりと観察することが重要である。",
+  "meta": {
+    "sources": [
+      "CoinDesk",
+      "CoinPost",
+      "FXStreet"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "A $1.1 million crypto card hack crashed a neobank's token 49%",
+      "link": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
+      "pubDate": "Sat, 29 Aug 2026 23:49:17 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ditching 'digital gold': BPI study suggests everyday Americans prefer control and micro-investing",
+      "link": "https://www.coindesk.com/business/2026/08/28/ditch-digital-gold-bpi-study-suggests-everyday-americans-prefer-control-and-micro-investing",
+      "pubDate": "Sat, 29 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Inside the high-stakes battle between digital dollars and Swift's massive money engine",
+      "link": "https://www.coindesk.com/business/2026/08/29/swift-s-usd1-5-quadrillion-network-faces-a-blockchain-test",
+      "pubDate": "Sat, 29 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "The next trillion-dollar currency may not be a stablecoin — it might not even have a name yet",
+      "link": "https://www.coindesk.com/business/2026/08/29/the-next-trillion-dollar-currency-may-not-be-a-stablecoin-it-might-not-even-have-a-name-yet",
+      "pubDate": "Sat, 29 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Tokenized assets are busier than the data shows",
+      "link": "https://www.coindesk.com/opinion/2026/08/29/tokenized-assets-are-busier-than-the-data-shows",
+      "pubDate": "Sat, 29 Aug 2026 13:00:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ECB専務理事、中銀マネーのブロックチェーン活用を提唱",
+      "link": "https://coinpost.jp/?p=734190",
+      "pubDate": "Sat, 29 Aug 2026 14:30:59 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "仮想通貨相場の急反転、「実需の見極め必要」とコインシェアーズCEOが指摘",
+      "link": "https://coinpost.jp/?p=734176",
+      "pubDate": "Sat, 29 Aug 2026 13:30:38 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Bitcoin wallets untouched for 10 years moved $40 million worth of coins",
+      "link": "https://www.coindesk.com/markets/2026/08/28/bitcoin-wallets-untouched-for-10-years-moved-usd40-million-most-avoided-exchanges",
+      "pubDate": "Sat, 29 Aug 2026 04:30:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "Aviciのカード残高から約50万ドル流出、Triaも被害　全額補償を約束",
+      "link": "https://coinpost.jp/?p=734151",
+      "pubDate": "Sat, 29 Aug 2026 13:10:06 +0900"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ethereum Weekly Price Forecast: Profit-taking slows rally as network activity lags",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-weekly-price-forecast-profit-taking-slows-rally-as-network-activity-lags-202608290345",
+      "pubDate": "Sat, 29 Aug 2026 03:45:23 GMT"
+    },
+    {
+      "source": "FXStreet",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Solana community narrowly approves double disinflation proposal in dramatic governance vote",
+      "link": "https://www.fxstreet.com/cryptocurrencies/news/solana-community-narrowly-approves-double-disinflation-proposal-in-dramatic-governance-vote-202608290259",
+      "pubDate": "Sat, 29 Aug 2026 02:59:12 GMT"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "キャピタルB、38億円調達しビットコイン追加取得へ",
+      "link": "https://coinpost.jp/?p=734150",
+      "pubDate": "Sat, 29 Aug 2026 11:50:04 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ripple is preparing XRP Ledger for quantum computers before ‘Q-Day’ arrives",
+      "link": "https://www.coindesk.com/tech/2026/08/28/ripple-is-preparing-xrp-ledger-for-quantum-computers-before-q-day-arrives",
+      "pubDate": "Sat, 29 Aug 2026 02:30:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ストライブ、優先株発行で1192BTC相当の資金を調達した可能性　ビットコイン蓄積続ける",
+      "link": "https://coinpost.jp/?p=734165",
+      "pubDate": "Sat, 29 Aug 2026 11:05:20 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ストラテジーのビットコイン売却懸念後退　ビットフィネックス分析",
+      "link": "https://coinpost.jp/?p=734149",
+      "pubDate": "Sat, 29 Aug 2026 09:50:02 +0900"
+    }
+  ]
+}
