@@ -1,5 +1,104 @@
 [
   {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "Tectonicで7500万ドル流出と推計、Cronosが緊急停止",
+    "link": "https://coinpost.jp/?p=734235",
+    "pubDate": "Mon, 31 Aug 2026 09:10:02 +0900"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "US Treasury Secretary Bessent: Japanese Yen moves 'pretty contained' and not disorderly",
+    "link": "https://www.fxstreet.com/news/us-treasury-secretary-bessent-japanese-yen-moves-pretty-contained-and-not-disorderly-202608302347",
+    "pubDate": "Sun, 30 Aug 2026 23:47:20 GMT"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "Australian Dollar weakens to near 0.7150 as Fed's Warsh signals rate hikes, China's PMI data loom",
+    "link": "https://www.fxstreet.com/news/australian-dollar-weakens-to-near-07150-as-feds-warsh-signals-rate-hikes-chinas-pmi-data-loom-202608302332",
+    "pubDate": "Sun, 30 Aug 2026 23:32:48 GMT"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "バイビット、スペースXとエヌビディアの無期限先物オプション開始へ",
+    "link": "https://coinpost.jp/?p=734232",
+    "pubDate": "Mon, 31 Aug 2026 08:23:33 +0900"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "US military strikes Iranian rocket launchers in first attack in week",
+    "link": "https://www.fxstreet.com/news/us-military-strikes-iranian-rocket-launchers-in-first-attack-in-week-202608302226",
+    "pubDate": "Sun, 30 Aug 2026 22:26:31 GMT"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "ビットコイン実現時価総額、週間約7360億円増　資金流入の兆候＝アナリスト",
+    "link": "https://coinpost.jp/?p=734227",
+    "pubDate": "Mon, 31 Aug 2026 07:23:19 +0900"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Michael Saylor hints at first bitcoin purchase in two months",
+    "link": "https://www.coindesk.com/markets/2026/08/30/bitcoin-nears-usd79-000-as-michael-saylor-hints-at-first-bitcoin-purchase-in-two-months",
+    "pubDate": "Sun, 30 Aug 2026 15:39:55 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "From Hawala to Swift: Inside the 1,000-year battle to move money safely",
+    "link": "https://www.coindesk.com/business/2026/08/30/from-hawala-to-swift-inside-the-1-000-year-battle-to-move-money-safely",
+    "pubDate": "Sun, 30 Aug 2026 15:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Crypto market makers are cashing in on bitcoin's rally - without betting on direction",
+    "link": "https://www.coindesk.com/markets/2026/08/28/crypto-market-makers-are-cashing-in-on-bitcoin-s-rally-without-betting-on-direction",
+    "pubDate": "Sun, 30 Aug 2026 12:00:00 +0000"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "ビットコイン1300万円手前で上げ渋り、ジャクソンホール後のイールドカーブが焦点｜bitbankアナリスト寄稿",
+    "link": "https://coinpost.jp/?p=734100",
+    "pubDate": "Sun, 30 Aug 2026 11:30:49 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "週刊仮想通貨ニュース（8/28）｜BTC市場・量子脅威対策・日本政府と日銀の動向まとめ",
+    "link": "https://coinpost.jp/?p=733914",
+    "pubDate": "Sun, 30 Aug 2026 09:25:36 +0900"
+  },
+  {
     "source": "CoinDesk",
     "category": "crypto",
     "market": "global",
@@ -171,15 +270,6 @@
     "pubDate": "Sat, 29 Aug 2026 11:05:20 +0900"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ストラテジーのビットコイン売却懸念後退　ビットフィネックス分析",
-    "link": "https://coinpost.jp/?p=734149",
-    "pubDate": "Sat, 29 Aug 2026 09:50:02 +0900"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "market": "global",
@@ -187,15 +277,6 @@
     "title": "South Korean Won: BoK tightening supports KRW against US Dollar – Commerzbank",
     "link": "https://www.fxstreet.com/news/south-korean-won-bok-tightening-supports-krw-against-us-dollar-commerzbank-202608282341",
     "pubDate": "Fri, 28 Aug 2026 23:41:00 GMT"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ビザ、アップビットの運営企業と提携　ステーブルコインとAIで金融サービス提供を計画",
-    "link": "https://coinpost.jp/?p=734155",
-    "pubDate": "Sat, 29 Aug 2026 08:20:29 +0900"
   },
   {
     "source": "FXStreet",
@@ -216,24 +297,6 @@
     "pubDate": "Fri, 28 Aug 2026 22:33:00 GMT"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "仮想通貨投資商品に3営業日で2640億円超流入、マイナーのAI収益比率が大幅増加の見通し＝レポート",
-    "link": "https://coinpost.jp/?p=734148",
-    "pubDate": "Sat, 29 Aug 2026 07:30:00 +0900"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ソラナ、初のガバナンス投票でトークン発行抑制の加速案を採用",
-    "link": "https://coinpost.jp/?p=734147",
-    "pubDate": "Sat, 29 Aug 2026 07:02:52 +0900"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "market": "global",
@@ -243,15 +306,6 @@
     "pubDate": "Fri, 28 Aug 2026 21:56:00 GMT"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Kalshi takes legal blow in court ruling confirming state powers over prediction markets",
-    "link": "https://www.coindesk.com/policy/2026/08/28/kalshi-takes-legal-blow-in-court-ruling-confirming-state-powers-over-prediction-markets",
-    "pubDate": "Fri, 28 Aug 2026 21:28:12 +0000"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "market": "global",
@@ -259,15 +313,6 @@
     "title": "South Korean Won: Higher rates and chip boom support gains – ING",
     "link": "https://www.fxstreet.com/news/south-korean-won-higher-rates-and-chip-boom-support-gains-ing-202608282118",
     "pubDate": "Fri, 28 Aug 2026 21:18:00 GMT"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "米FRBウォーシュ議長のタカ派発言を受け、ビットコイン・米国株反落",
-    "link": "https://coinpost.jp/?p=734142",
-    "pubDate": "Sat, 29 Aug 2026 06:15:42 +0900"
   },
   {
     "source": "FXStreet",
@@ -297,24 +342,6 @@
     "pubDate": "Fri, 28 Aug 2026 20:08:55 GMT"
   },
   {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "Chinese Yuan: Undervaluation and export gains questioned – Commerzbank",
-    "link": "https://www.fxstreet.com/news/chinese-yuan-undervaluation-and-export-gains-questioned-commerzbank-202608282001",
-    "pubDate": "Fri, 28 Aug 2026 20:01:00 GMT"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "South Korean Won: Strong exports support KRW and KOSPI – DBS",
-    "link": "https://www.fxstreet.com/news/south-korean-won-strong-exports-support-krw-and-kospi-dbs-202608281931",
-    "pubDate": "Fri, 28 Aug 2026 19:31:34 GMT"
-  },
-  {
     "source": "Investing",
     "category": "macro",
     "market": "global",
@@ -322,15 +349,6 @@
     "title": "The Current Blueprint for High Yield Income",
     "link": "https://www.investing.com/analysis/the-current-blueprint-for-high-yield-income-200686761",
     "pubDate": "Aug 28, 2026 19:04 GMT"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "BoE’s Bailey sees muted inflation effects ahead of policy meeting",
-    "link": "https://www.fxstreet.com/news/boes-bailey-sees-muted-inflation-effects-ahead-of-boes-meeting-202608281848",
-    "pubDate": "Fri, 28 Aug 2026 18:48:19 GMT"
   },
   {
     "source": "Investing",
@@ -358,15 +376,6 @@
     "title": "Bitcoin and Gold Outlook: BTC and XAU slide as Fed Chair goes hawkish",
     "link": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-and-gold-outlook-btc-and-xau-slide-as-fed-chair-goes-hawkish-202608281637",
     "pubDate": "Fri, 28 Aug 2026 16:37:23 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "Solana vote to double disinflation passes by a hair in dramatic finish",
-    "link": "https://www.coindesk.com/tech/2026/08/28/solana-vote-to-double-disinflation-passes-by-a-hair-in-dramatic-finish",
-    "pubDate": "Fri, 28 Aug 2026 16:12:45 +0000"
   },
   {
     "source": "FXStreet",
@@ -412,15 +421,6 @@
     "title": "Gold Weekly Forecast: Bulls take a breather following three-week rally",
     "link": "https://www.fxstreet.com/analysis/gold-weekly-forecast-bulls-take-a-breather-following-three-week-rally-202608281440",
     "pubDate": "Fri, 28 Aug 2026 14:40:50 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "BitGo to buy NYDIG trading arm for $42.5M in cash and stock plus $15M earnout",
-    "link": "https://www.coindesk.com/business/2026/08/28/bitgo-to-buy-nydig-trading-arm-for-usd42-5m-in-cash-and-stock-plus-usd15m-earnout",
-    "pubDate": "Fri, 28 Aug 2026 14:37:14 +0000"
   },
   {
     "source": "Investing",

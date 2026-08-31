@@ -1,0 +1,168 @@
+{
+  "type": "crypto",
+  "date": "2026-08-31",
+  "seoTitle": "暗号資産市場の最新動向と注目プロジェクト",
+  "seoDescription": "暗号資産市場の地合いや主要コインの状況、注目プロジェクトの進捗を詳しく解説します。",
+  "article": "## 1分で読める結論\n本日は、Tectonicの流出問題やビットコインの資金流入の兆候が報じられ、暗号資産市場全体に影響を及ぼしています。特に、ビットコインの実現時価総額が大きく増加しており、今後の動向が注目されます。\n\n## 今日の暗号資産市場の地合い\n暗号資産市場全体は、Tectonicの7500万ドルの流出という大きな問題に直面し、投資家の不安が広がっています。一方で、ビットコインには資金流入が見られ、相対的に安定した動きを示しています。緊急停止されたCronosに関連するニュースも、投資家の心理に影響を与えています。\n\n## 今日の主要トピック3つ\n1. **Tectonicで7500万ドル流出と推計、Cronosが緊急停止**: この問題は市場全体に不安をもたらし、特にDeFiプロジェクトへの信頼性に疑問を投げかけています。  \n2. **ビットコイン実現時価総額、週間約7360億円増**: アナリストによると、ビットコインへの資金流入の兆候が見られ、実現時価総額が急増しています。  \n3. **バイビット、スペースXとエヌビディアの無期限先物オプション開始へ**: これは市場の取引スタイルに新たな選択肢を提供し、投資家の参加意欲を促進する可能性があります。\n\n## メインコインの整理\n- **ビットコイン (BTC)**: 資金流入が見られ、実現時価総額が急増。市場の中心的存在としての役割を果たしています。  \n- **イーサリアム (ETH)**: Tectonicの流出問題が影響しているものの、全体的な取引量は安定しています。  \n- **その他の主要コイン**: 市場全体の動向に影響を受けつつ、安定したパフォーマンスを維持。\n\n## 個別プロジェクトの進捗\n- **Tectonic**: 7500万ドルの流出が報じられ、現在の対応策が注目されています。  \n- **Cronos**: 緊急停止が発表され、今後の復旧計画が必要です。  \n- **スペースXとエヌビディア**: 無期限先物オプションの開始は、取引環境を一変させる可能性があります。\n\n## 今日の要約から見える示唆\nTectonicの問題は短期的な影響を与える一方、ビットコインの資金流入は中長期的な市場の安定性を示す要因となります。これにより、投資家はリスク管理を一層強化する必要があります。\n\n## 次に確認すべきこと\n- Tectonicの流出問題に関する進捗や対応策  \n- ビットコインの資金流入の持続性  \n- バイビットの新たな先物オプションが市場に与える影響\n\n## 今日の結論\n市場全体は不安定な要素を抱えつつも、ビットコインの資金流入が見られることで、一定の安定感を保っています。Tectonicの問題がどのように対処されるかが、今後の市場動向に大きな影響を与えるでしょう。",
+  "meta": {
+    "sources": [
+      "CoinPost",
+      "CoinDesk"
+    ],
+    "categories": [
+      "crypto"
+    ],
+    "newsCount": 15,
+    "basicsLinks": [
+      {
+        "title": "暗号通貨とは？",
+        "url": "../basics/crypto/what-is-crypto.html"
+      },
+      {
+        "title": "ブロックチェーンとは？",
+        "url": "../basics/crypto/what-is-blockchain.html"
+      },
+      {
+        "title": "暗号資産プロジェクトの見方",
+        "url": "../basics/crypto/how-to-read-projects.html"
+      }
+    ]
+  },
+  "news": [
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "Tectonicで7500万ドル流出と推計、Cronosが緊急停止",
+      "link": "https://coinpost.jp/?p=734235",
+      "pubDate": "Mon, 31 Aug 2026 09:10:02 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "バイビット、スペースXとエヌビディアの無期限先物オプション開始へ",
+      "link": "https://coinpost.jp/?p=734232",
+      "pubDate": "Mon, 31 Aug 2026 08:23:33 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン実現時価総額、週間約7360億円増　資金流入の兆候＝アナリスト",
+      "link": "https://coinpost.jp/?p=734227",
+      "pubDate": "Mon, 31 Aug 2026 07:23:19 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Michael Saylor hints at first bitcoin purchase in two months",
+      "link": "https://www.coindesk.com/markets/2026/08/30/bitcoin-nears-usd79-000-as-michael-saylor-hints-at-first-bitcoin-purchase-in-two-months",
+      "pubDate": "Sun, 30 Aug 2026 15:39:55 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "From Hawala to Swift: Inside the 1,000-year battle to move money safely",
+      "link": "https://www.coindesk.com/business/2026/08/30/from-hawala-to-swift-inside-the-1-000-year-battle-to-move-money-safely",
+      "pubDate": "Sun, 30 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Crypto market makers are cashing in on bitcoin's rally - without betting on direction",
+      "link": "https://www.coindesk.com/markets/2026/08/28/crypto-market-makers-are-cashing-in-on-bitcoin-s-rally-without-betting-on-direction",
+      "pubDate": "Sun, 30 Aug 2026 12:00:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ビットコイン1300万円手前で上げ渋り、ジャクソンホール後のイールドカーブが焦点｜bitbankアナリスト寄稿",
+      "link": "https://coinpost.jp/?p=734100",
+      "pubDate": "Sun, 30 Aug 2026 11:30:49 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "週刊仮想通貨ニュース（8/28）｜BTC市場・量子脅威対策・日本政府と日銀の動向まとめ",
+      "link": "https://coinpost.jp/?p=733914",
+      "pubDate": "Sun, 30 Aug 2026 09:25:36 +0900"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "A $1.1 million crypto card hack crashed a neobank's token 49%",
+      "link": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
+      "pubDate": "Sat, 29 Aug 2026 23:49:17 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Ditching 'digital gold': BPI study suggests everyday Americans prefer control and micro-investing",
+      "link": "https://www.coindesk.com/business/2026/08/28/ditch-digital-gold-bpi-study-suggests-everyday-americans-prefer-control-and-micro-investing",
+      "pubDate": "Sat, 29 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Inside the high-stakes battle between digital dollars and Swift's massive money engine",
+      "link": "https://www.coindesk.com/business/2026/08/29/swift-s-usd1-5-quadrillion-network-faces-a-blockchain-test",
+      "pubDate": "Sat, 29 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "The next trillion-dollar currency may not be a stablecoin — it might not even have a name yet",
+      "link": "https://www.coindesk.com/business/2026/08/29/the-next-trillion-dollar-currency-may-not-be-a-stablecoin-it-might-not-even-have-a-name-yet",
+      "pubDate": "Sat, 29 Aug 2026 15:00:00 +0000"
+    },
+    {
+      "source": "CoinDesk",
+      "category": "crypto",
+      "market": "global",
+      "lang": "en",
+      "title": "Tokenized assets are busier than the data shows",
+      "link": "https://www.coindesk.com/opinion/2026/08/29/tokenized-assets-are-busier-than-the-data-shows",
+      "pubDate": "Sat, 29 Aug 2026 13:00:00 +0000"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "ECB専務理事、中銀マネーのブロックチェーン活用を提唱",
+      "link": "https://coinpost.jp/?p=734190",
+      "pubDate": "Sat, 29 Aug 2026 14:30:59 +0900"
+    },
+    {
+      "source": "CoinPost",
+      "category": "crypto",
+      "market": "jp",
+      "lang": "ja",
+      "title": "仮想通貨相場の急反転、「実需の見極め必要」とコインシェアーズCEOが指摘",
+      "link": "https://coinpost.jp/?p=734176",
+      "pubDate": "Sat, 29 Aug 2026 13:30:38 +0900"
+    }
+  ]
+}
