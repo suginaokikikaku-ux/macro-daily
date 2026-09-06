@@ -1,10 +1,64 @@
 [
   {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "OPEC+ agrees to keep oil output policy unchanged for October",
+    "link": "https://www.fxstreet.com/news/opec-agrees-to-keep-oil-output-policy-unchanged-for-october-202609062342",
+    "pubDate": "Sun, 06 Sep 2026 23:42:44 GMT"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "Australian Dollar drifts higher above 0.7200 despite as strong US NFP  ",
+    "link": "https://www.fxstreet.com/news/australian-dollar-drifts-higher-above-07200-despite-as-strong-us-nfp-202609062335",
+    "pubDate": "Sun, 06 Sep 2026 23:35:11 GMT"
+  },
+  {
+    "source": "FXStreet",
+    "category": "fx",
+    "market": "global",
+    "lang": "en",
+    "title": "Iran, US trade tanker attacks as Tehran will declare 'prohibited zone' ",
+    "link": "https://www.fxstreet.com/news/iran-us-trade-tanker-attacks-as-tehran-will-declare-prohibited-zone-202609062236",
+    "pubDate": "Sun, 06 Sep 2026 22:36:00 GMT"
+  },
+  {
     "source": "CoinDesk",
     "category": "crypto",
     "market": "global",
     "lang": "en",
-    "title": "Why crypto experts say buying and holding bitcoin easily beats trying to time the market",
+    "title": "Prediction markets inch closer to the Supreme Court: State of Crypto ",
+    "link": "https://www.coindesk.com/news-analysis/2026/09/06/prediction-markets-inch-closer-to-the-supreme-court-state-of-crypto",
+    "pubDate": "Sun, 06 Sep 2026 18:30:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Ukrainian police took down a crypto scam that stole up to $1 million a month",
+    "link": "https://www.coindesk.com/business/2026/09/06/ukrainian-police-took-down-a-crypto-scam-that-stole-up-to-usd1-million-a-month",
+    "pubDate": "Sun, 06 Sep 2026 16:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Better and Coinbase’s bitcoin-backed mortgages can reuse borrowers’ collateral ",
+    "link": "https://www.coindesk.com/business/2026/09/06/better-and-coinbase-s-bitcoin-backed-mortgages-can-reuse-borrowers-collateral",
+    "pubDate": "Sun, 06 Sep 2026 14:00:00 +0000"
+  },
+  {
+    "source": "CoinDesk",
+    "category": "crypto",
+    "market": "global",
+    "lang": "en",
+    "title": "Timing the bitcoin market is exciting but nearly impossible. Here's why",
     "link": "https://www.coindesk.com/markets/2026/09/05/why-crypto-experts-say-buying-and-holding-bitcoin-easily-beats-trying-to-time-the-market",
     "pubDate": "Sat, 05 Sep 2026 18:05:11 +0000"
   },
@@ -72,15 +126,6 @@
     "pubDate": "Sat, 05 Sep 2026 05:30:45 +0000"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "リップル社、フロリダ大学アスレティクスと提携　スタジアムにXRPロゴ掲出へ",
-    "link": "https://coinpost.jp/?p=735744",
-    "pubDate": "Sat, 05 Sep 2026 14:30:28 +0900"
-  },
-  {
     "source": "CoinDesk",
     "category": "crypto",
     "market": "global",
@@ -88,51 +133,6 @@
     "title": "Southeast Asia’s crypto funding rebounds to $680 million as investors focus on mature firms",
     "link": "https://www.coindesk.com/business/2026/09/05/southeast-asia-s-crypto-funding-rebounds-to-usd680-million-as-investors-focus-on-mature-firms",
     "pubDate": "Sat, 05 Sep 2026 05:00:00 +0000"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "新種ETF審査、速度か安全性か　米仮想通貨業界内で意見対立",
-    "link": "https://coinpost.jp/?p=735719",
-    "pubDate": "Sat, 05 Sep 2026 13:35:56 +0900"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ビットコインと金の相関性が6年ぶり高水準に、ビットワイズ",
-    "link": "https://coinpost.jp/?p=735720",
-    "pubDate": "Sat, 05 Sep 2026 11:20:58 +0900"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "バイナンス、MiCAライセンス未取得でもEU事業継続＝報道",
-    "link": "https://coinpost.jp/?p=735695",
-    "pubDate": "Sat, 05 Sep 2026 10:15:05 +0900"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "金融庁、暗号資産・ステーブルコイン政策の戦略的対応などで「目標達成」と報告",
-    "link": "https://coinpost.jp/?p=735726",
-    "pubDate": "Sat, 05 Sep 2026 09:55:40 +0900"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ビットコインが金と同様の値動きに、コインシェアーズ分析",
-    "link": "https://coinpost.jp/?p=735696",
-    "pubDate": "Sat, 05 Sep 2026 09:10:08 +0900"
   },
   {
     "source": "Investing",
@@ -153,24 +153,6 @@
     "pubDate": "Fri, 04 Sep 2026 22:51:00 GMT"
   },
   {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "仮想通貨ウォレットTrezorの配送委託先で情報漏洩、新たに約6.7万人の被害を公表",
-    "link": "https://coinpost.jp/?p=735713",
-    "pubDate": "Sat, 05 Sep 2026 07:45:00 +0900"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ロビンフッド、AMCの株式トークン停止要求を拒否",
-    "link": "https://coinpost.jp/?p=735697",
-    "pubDate": "Sat, 05 Sep 2026 07:15:11 +0900"
-  },
-  {
     "source": "FXStreet",
     "category": "fx",
     "market": "global",
@@ -178,15 +160,6 @@
     "title": "USD/MXN Price Forecast: Peso rally targets April 2024 low",
     "link": "https://www.fxstreet.com/news/usd-mxn-price-forecast-peso-rally-targets-april-2024-low-202609042159",
     "pubDate": "Fri, 04 Sep 2026 21:59:40 GMT"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ロビンフッドチェーン、4日夜約14分のブロック生成障害が発生",
-    "link": "https://coinpost.jp/?p=735698",
-    "pubDate": "Sat, 05 Sep 2026 06:40:13 +0900"
   },
   {
     "source": "FXStreet",
@@ -205,15 +178,6 @@
     "title": "USD/CHF Price Forecast: NFP rally stalls at 0.8100, retraces",
     "link": "https://www.fxstreet.com/news/usd-chf-price-forecast-nfp-rally-stalls-at-08100-retraces-202609042127",
     "pubDate": "Fri, 04 Sep 2026 21:27:24 GMT"
-  },
-  {
-    "source": "CoinPost",
-    "category": "crypto",
-    "market": "jp",
-    "lang": "ja",
-    "title": "ジーキャッシュが約10年ぶりの高値に、時価総額は一時10位突入",
-    "link": "https://coinpost.jp/?p=735699",
-    "pubDate": "Sat, 05 Sep 2026 06:15:22 +0900"
   },
   {
     "source": "Investing",
@@ -313,33 +277,6 @@
     "title": "Solana’s Revenue Discount Tests Whether Activity Can Finally Reprice SOL",
     "link": "https://www.investing.com/analysis/solanas-revenue-discount-tests-whether-activity-can-finally-reprice-sol-200687174",
     "pubDate": "Sep 04, 2026 19:35 GMT"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "Malaysia: Hawkish pause keeps options open – DBS",
-    "link": "https://www.fxstreet.com/news/malaysia-hawkish-pause-keeps-options-open-dbs-202609041934",
-    "pubDate": "Fri, 04 Sep 2026 19:34:53 GMT"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "Indian Rupee: Dollar inflows support INR but impulse may fade – OCBC",
-    "link": "https://www.fxstreet.com/news/indian-rupee-dollar-inflows-support-inr-but-impulse-may-fade-ocbc-202609041932",
-    "pubDate": "Fri, 04 Sep 2026 19:32:00 GMT"
-  },
-  {
-    "source": "FXStreet",
-    "category": "fx",
-    "market": "global",
-    "lang": "en",
-    "title": "Eurozone: Inflation above target into 2027 – Nordea",
-    "link": "https://www.fxstreet.com/news/eurozone-inflation-above-target-into-2027-nordea-202609041850",
-    "pubDate": "Fri, 04 Sep 2026 18:50:36 GMT"
   },
   {
     "source": "Investing",
@@ -504,15 +441,6 @@
     "pubDate": "Fri, 04 Sep 2026 14:23:11 +0000"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "U.S. Sheriff’s association shifts opposition stance to Clarity Act to 'neutral'",
-    "link": "https://www.coindesk.com/policy/2026/09/04/u-s-sheriff-s-association-shifts-opposition-stance-to-clarity-act-to-neutral",
-    "pubDate": "Fri, 04 Sep 2026 14:12:34 +0000"
-  },
-  {
     "source": "あたらしい経済",
     "category": "crypto",
     "market": "jp",
@@ -522,15 +450,6 @@
     "pubDate": "Fri, 04 Sep 2026 13:32:03 +0000"
   },
   {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "U.S. added stronger than expected 162,000 jobs in August as labor market bounced back",
-    "link": "https://www.coindesk.com/markets/2026/09/04/u-s-added-stronger-than-expected-162-000-jobs-in-august-as-labor-market-bounced-back",
-    "pubDate": "Fri, 04 Sep 2026 12:31:47 +0000"
-  },
-  {
     "source": "FXStreet",
     "category": "crypto",
     "market": "global",
@@ -538,15 +457,6 @@
     "title": "XRP consolidates in bullish trend as ledger activity normalizes ",
     "link": "https://www.fxstreet.com/cryptocurrencies/news/ripple-price-forecast-xrp-eyes-150-breakout-despite-softening-on-chain-activity-202609041230",
     "pubDate": "Fri, 04 Sep 2026 12:30:00 GMT"
-  },
-  {
-    "source": "CoinDesk",
-    "category": "crypto",
-    "market": "global",
-    "lang": "en",
-    "title": "We checked 6 years of bitcoin data. The NFP report isn't big price mover",
-    "link": "https://www.coindesk.com/daybook-us/2026/09/04/we-checked-6-years-of-bitcoin-data-the-nfp-report-isn-t-big-price-mover",
-    "pubDate": "Fri, 04 Sep 2026 11:29:05 +0000"
   },
   {
     "source": "Investing",
@@ -1078,5 +988,95 @@
     "title": "Silver Price Forecast: Will the Fed Shape the Trend?",
     "link": "https://www.investing.com/analysis/silver-price-forecast-will-the-fed-shape-the-trend-200684754",
     "pubDate": "Jul 29, 2026 04:01 GMT"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "SBI傘下B2C2、ソラナを主要決済網に採用",
+    "link": "https://coinpost.jp/?p=698600",
+    "pubDate": "Thu, 02 Apr 2026 06:10:51 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "JPモルガンが予測市場参入検討、3兆円規模の巨大市場へ金融巨頭が動くか",
+    "link": "https://coinpost.jp/?p=698601",
+    "pubDate": "Thu, 02 Apr 2026 05:55:00 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "ソラナ基盤DeFiドリフトで大規模ハック被害、最大430億円流出か",
+    "link": "https://coinpost.jp/?p=698602",
+    "pubDate": "Thu, 02 Apr 2026 05:35:08 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "コインシェアーズがナスダック上場実現、欧州最大手仮想通貨運用会社として米国市場へ本格参入",
+    "link": "https://coinpost.jp/?p=698581",
+    "pubDate": "Thu, 02 Apr 2026 05:00:25 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "サトシ・ナカモト、量子コンピュータ脅威を2010年時点で想定　16年前の備えは？",
+    "link": "https://coinpost.jp/?p=698495",
+    "pubDate": "Wed, 01 Apr 2026 17:54:05 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "仮想通貨4社の幹部ら10人を米国で起訴、仮装売買で相場操縦か＝報道",
+    "link": "https://coinpost.jp/?p=698441",
+    "pubDate": "Wed, 01 Apr 2026 15:59:59 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "バフェット氏、銀行システムの脆弱性に警告　FRBに安定維持を最優先するよう求める",
+    "link": "https://coinpost.jp/?p=698405",
+    "pubDate": "Wed, 01 Apr 2026 15:03:15 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "AIエージェント「OpenClaw」に深刻なセキュリティリスク、CertiKが警告",
+    "link": "https://coinpost.jp/?p=698372",
+    "pubDate": "Wed, 01 Apr 2026 13:50:14 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "プライバシー仮想通貨ジーキャッシュ、9億円流出リスクの脆弱性を修正完了",
+    "link": "https://coinpost.jp/?p=698357",
+    "pubDate": "Wed, 01 Apr 2026 13:15:23 +0900"
+  },
+  {
+    "source": "CoinPost",
+    "category": "crypto",
+    "market": "jp",
+    "lang": "ja",
+    "title": "歩くだけでソラナが貯まる「SOLWalk」登場　CoinTradeで手数料ゼロ交換",
+    "link": "https://coinpost.jp/?p=698338",
+    "pubDate": "Wed, 01 Apr 2026 11:59:36 +0900"
   }
 ]
